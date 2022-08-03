@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "cheerio": "latest",
+    "mustache": "^4.2.0",
     "request-promise": "latest"
   }
 }
