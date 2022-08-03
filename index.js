@@ -12,7 +12,7 @@ const scheduleUrl = 'https://minnesotafringe.org/2022/schedule?d=19978';
 // https://minnesotafringe.org/2022/schedule?d=19988
 
 
-// var outRows = '';
+// var events = '';
 
 function buildTest() {
     console.log("buildTest()");
@@ -41,11 +41,15 @@ function build() {
 }
 
 function finalRender(collector) {
-    fs.readFile('schedule.mustache', function (err, data) {
+    // console.log('collector', collector);
+    // @todo sort?
+    data = {
+        docTitle: 'Hello Collector',
+        days: Object.values(collector),
+    };
+    fs.readFile('schedule.mustache', function (err, template) {
         if (err) throw err;
-        const content = mustache.render(data.toString(), {
-            docTitle: "Hello World"
-        });
+        const content = mustache.render(template.toString(), data);
         fs.writeFile(outfile, content, err => {
             if (err) {
               console.error(err);
@@ -60,8 +64,8 @@ function renderRows(collector) {
     const keys = Object.keys(collector).sort();
     keys.forEach( function (k) {
         console.log('rendering', k);
-        collector[k].forEach( function(item) {
-            content += renderRow(item);
+        collector[k].forEach( function(event) {
+            content += renderRow(event);
         });
     });
     return content;
@@ -71,12 +75,12 @@ function testParse() {
     console.log("testParse()");
     // initOutput('sample/sample-schedule.html');
     // var outDoc = cheerio.load('', {xmlMode: false});
-    // var outRows = '';
+    // var events = '';
     let collector = {};
     readLocalFile('sample/2022 Schedule 8-04.html', 19978, collector);
     // readLocalFile('sample/sample-schedule.html', 2, collector);
     // console.log('OUTPUT');
-    // process.stdout.write(outRows);
+    // process.stdout.write(events);
 }
 
 function parseFilePlain(path, i, collector) {
@@ -85,26 +89,29 @@ function parseFilePlain(path, i, collector) {
             console.error(err);
             return;
         }
-        let outRows = parseSchedule(data);
-        console.log('i, output rows:', i, outRows.length);
-        collector[i] = outRows;
+        let events = parseSchedule(data);
+        console.log('i, output rows:', i, events.length);
+        collector[i] = events;
     })
 }
 
 async function readLocalFile(path, i, collector) {
     const data = await fs.promises.readFile(path, 'utf-8');
-    const outRows = parseSchedule(data);
-    console.log('i, output rows:', i, outRows.length);
-    collector[i] = outRows;
+    const events = parseSchedule(data);
+    console.log('i, output rows:', i, events.length);
+    collector[i] = {
+        day: i,
+        events: events
+    };
 }
 
 async function readUrl(url, i, collector) {
     try {
         const response = await axios.get(url);
         console.log('readUrl success');
-        const outRows = parseSchedule(response.data);
-        console.log('i, output rows:', i, outRows.length);
-        collector[i] = outRows;
+        const events = parseSchedule(response.data);
+        console.log('i, output rows:', i, events.length);
+        collector[i] = events;
     } catch (error) {
         console.error(error);
     }
@@ -115,23 +122,23 @@ function parseSchedule(content) {
     let $ = cheerio.load(content, {xmlMode: false});
     let inRows = $('table.theScheduleTable tbody tr');
     console.log('input rows:', inRows.length);
-    var outRows = [];
+    var events = [];
     $(inRows).each( function (i, e) {
-        let item = {};
-        item.time = $(this).find('td.tdevent').text();
-        item.venue = $(this).find('td.tdvenue a').text();
-        item.showTitle = $(this).find('td.tdshow a').text();
-        item.showUrl = baseDomain + $(this).find('td.tdshow a').attr('href');
+        let event = {};
+        event.time = $(this).find('td.tdevent').text();
+        event.venue = $(this).find('td.tdvenue a').text();
+        event.showTitle = $(this).find('td.tdshow a').text();
+        event.showUrl = baseDomain + $(this).find('td.tdshow a').attr('href');
         // parse tags like "AD" from day
         let dayTag = $(this).find('td.tddate').text();
         const dtrx = /^(\d+\/\d+)\s*(.*)/;
-        item.date = dayTag.match(dtrx)[1];
-        item.serviceTags = dayTag.match(dtrx)[2];
-        // console.log('row:', item);
-        // writeRow(item);
-        outRows.push(item);
+        event.date = dayTag.match(dtrx)[1];
+        event.serviceTags = dayTag.match(dtrx)[2];
+        // console.log('row:', event);
+        // writeRow(event);
+        events.push(event);
     });
-    return outRows;
+    return events;
 }
 
 function writeRow(row) {

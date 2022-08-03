@@ -1,8 +1,26 @@
-<html>
-    <head></head>
-    <body>
-        <h1>{{docTitle}} external</h1>
-        <table><tbody>
-        </tbody></table>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>{{docTitle}}</title>
+  </head>
+  <body>
+    <h1>{{docTitle}}</h1>
+    {{#days}}
+        <h2>{{day}}</h2>
+            <table class="table">
+                <tbody>
+                {{#events}}
+                    <tr><td><a href="{{showUrl}}">{{showTitle}}</a></td><td>{{time}}</td><td>{{date}}</td><td>{{serviceTags}}</td><td>{{venue}}</td></tr>
+                {{/events}}
+                </tbody>
+            </table>
+    {{/days}}
+  </body>
 </html>
