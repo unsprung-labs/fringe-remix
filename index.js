@@ -15,11 +15,31 @@ function testMultiParse() {
     console.log("testMultiParse()");
     let collector = {};
     let parsePromises = [
-        loadTest('sample/2022 Schedule 8-04.html', 19978, collector),
-        loadTest('sample/2022 Schedule 8-05.html', 19979, collector),
+        parseFilePromise('sample/2022 Schedule 8-04.html', 19978, collector),
+        parseFilePromise('sample/2022 Schedule 8-05.html', 19979, collector),
+        parseFilePromise('sample/2022 Schedule 8-06.html', 19980, collector),
     ];
     Promise.all(parsePromises).then( (values) => {
-        console.log('all done', collector);
+        console.log('all done');
+        finalRender(collector);
+    });
+}
+
+function finalRender(collector) {
+    process.stdout.write('<html><head></head><body>');
+    process.stdout.write('<table><tbody>');
+    renderRows(collector);
+    process.stdout.write('</tbody></table>');
+    process.stdout.write('</body></html>');
+}
+
+function renderRows(collector) {
+    const keys = Object.keys(collector).sort();
+    keys.forEach( function (k) {
+        console.log('rendering', k);
+        collector[k].forEach( function(item) {
+            process.stdout.write(renderRow(item));
+        });
     });
 }
 
@@ -29,13 +49,13 @@ function testParse() {
     // var outDoc = cheerio.load('', {xmlMode: false});
     // var outRows = '';
     let collector = {};
-    loadTest('sample/2022 Schedule 8-04.html', 19978, collector);
-    // loadTest('sample/sample-schedule.html', 2, collector);
+    parseFile('sample/2022 Schedule 8-04.html', 19978, collector);
+    // parseFile('sample/sample-schedule.html', 2, collector);
     // console.log('OUTPUT');
     // process.stdout.write(outRows);
 }
 
-function loadTest(path, i, collector) {
+function parseFile(path, i, collector) {
     return fs.readFile(path, 'utf-8', (err, data) => {
         if (err) {
             console.error(err);
@@ -45,6 +65,13 @@ function loadTest(path, i, collector) {
         console.log('i, output rows:', i, outRows.length);
         collector[i] = outRows;
     })
+}
+
+async function parseFilePromise(path, i, collector) {
+    const data = await fs.promises.readFile(path, 'utf-8');
+    const outRows = parseSchedule(data);
+    console.log('i, output rows:', i, outRows.length);
+    collector[i] = outRows;
 }
 
 function parseSchedule(content) {
@@ -66,7 +93,7 @@ function parseSchedule(content) {
         item.serviceTags = dayTag.match(dtrx)[2];
         // console.log('row:', item);
         // writeRow(item);
-        outRows.push(renderRow(item));
+        outRows.push(item);
     });
     return outRows;
 }
