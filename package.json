@@ -1,0 +1,15 @@
+{
+  "name": "fringe-schedule-static",
+  "version": "1.0.0",
+  "description": "Pull schedules from slow dynamic pages and save as HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "latest",
+    "request-promise": "latest"
+  }
+}
