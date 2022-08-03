@@ -2,7 +2,8 @@
 const axios = require('axios').default;
 const cheerio = require('cheerio');
 const fs = require('fs');
-const { testElement } = require('domutils');
+const mustache = require('mustache');
+// const { testElement } = require('domutils');
 // const { data } = require('cheerio/lib/api/attributes');
 
 const outfile = 'schedule.html';
@@ -40,11 +41,18 @@ function build() {
 }
 
 function finalRender(collector) {
-    let content = '<html><head></head><body>';
-    content += '<table><tbody>';
-    content += renderRows(collector);
-    content += '</tbody></table>';
-    content += '</body></html>';
+    let template = '<html><head></head><body>';
+    template += '<h1>{{docTitle}}</h1>';
+    template += '<table><tbody>';
+    // content += renderRows(collector);
+    template += '</tbody></table>';
+    template += '</body></html>';
+
+    const view = {
+        docTitle: "Hello World"
+    }
+    const content = mustache.render(template, view);
+
     fs.writeFile(outfile, content, err => {
         if (err) {
           console.error(err);
@@ -142,4 +150,4 @@ function renderRow(row) {
 
 
 // main().catch(console.error);
-build();
+buildTest();
