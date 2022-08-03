@@ -41,23 +41,17 @@ function build() {
 }
 
 function finalRender(collector) {
-    let template = '<html><head></head><body>';
-    template += '<h1>{{docTitle}}</h1>';
-    template += '<table><tbody>';
-    // content += renderRows(collector);
-    template += '</tbody></table>';
-    template += '</body></html>';
-
-    const view = {
-        docTitle: "Hello World"
-    }
-    const content = mustache.render(template, view);
-
-    fs.writeFile(outfile, content, err => {
-        if (err) {
-          console.error(err);
-        }
-        // file written successfully
+    fs.readFile('schedule.mustache', function (err, data) {
+        if (err) throw err;
+        const content = mustache.render(data.toString(), {
+            docTitle: "Hello World"
+        });
+        fs.writeFile(outfile, content, err => {
+            if (err) {
+              console.error(err);
+            }
+            // file written successfully
+        });
     });
 }
 
