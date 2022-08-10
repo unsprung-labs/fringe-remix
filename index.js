@@ -11,49 +11,82 @@ const baseDomain = 'https://minnesotafringe.org';
 const scheduleUrl = 'https://minnesotafringe.org/2022/schedule?d=19978';
 // https://minnesotafringe.org/2022/schedule?d=19988
 
+// Fringe site has an unknown dayNumber concept:
+const dayNumOffset = 19977;
+const festDays = [
+    {dayNum:  1, label: 'Thu 08/04', dateStr: '08/04'},
+    {dayNum:  2, label: 'Fri 08/05', dateStr: '08/05'},
+    {dayNum:  3, label: 'Sat 08/06', dateStr: '08/06'},
+    {dayNum:  4, label: 'Sun 08/07', dateStr: '08/07'},
+    {dayNum:  5, label: 'Mon 08/08', dateStr: '08/08'},
+    {dayNum:  6, label: 'Tue 08/09', dateStr: '08/09'},
+    {dayNum:  7, label: 'Wed 08/10', dateStr: '08/10'},
+    {dayNum:  8, label: 'Thu 08/11', dateStr: '08/11'},
+    {dayNum:  9, label: 'Fri 08/12', dateStr: '08/12'},
+    {dayNum: 10, label: 'Sat 08/13', dateStr: '08/13'},
+    {dayNum: 11, label: 'Sun 08/14', dateStr: '08/14'},
+];
 
-// var events = '';
-
-function buildTest() {
-    console.log("buildTest()");
-    let collector = {};
+function scrapeTest() {
+    console.log("scrapeTest()");
+    let collector = {
+        scrapeTime: + new Date(),
+        days: [],
+    };
     let parsePromises = [
-        readLocalFile('sample/2022 Schedule 8-06.html', 19980, collector),
-        readLocalFile('sample/2022 Schedule 8-05.html', 19979, collector),
-        readLocalFile('sample/2022 Schedule 8-04.html', 19978, collector),
+        readLocalFile('sample/2022 Schedule 8-06.html', 3, collector),
+        readLocalFile('sample/2022 Schedule 8-05.html', 2, collector),
+        readLocalFile('sample/2022 Schedule 8-04.html', 1, collector),
     ];
     Promise.all(parsePromises).then( (values) => {
         console.log('all done');
         finalRender(collector);
+    });
+}
+
+function scrape() {
+    console.log("scrape()");
+    let collector = {
+        scrapeTime: + new Date(),
+        days: [],
+    };
+    let parsePromises = festDays.map( function(d) {
+        let fringeDay = d.dayNum + dayNumOffset;
+        return readUrl(`https://minnesotafringe.org/2022/schedule?d=${fringeDay}`, d.dayNum, collector);
+    });
+    Promise.all(parsePromises).then( (values) => {
+        console.log('all done!');
+        fs.writeFileSync('schedule.json', JSON.stringify(collector));
+       // finalRender(collector);
     });
 }
 
 function build() {
     console.log("build()");
-    let collector = {};
-    let parsePromises = [
-        readUrl('https://minnesotafringe.org/2022/schedule?d=19978', 19978, collector),
-    ];
-    Promise.all(parsePromises).then( (values) => {
-        console.log('all done');
-        finalRender(collector);
-    });
+    const collectorRaw = fs.readFileSync('schedule.json');
+    let collector = JSON.parse(collectorRaw);
+    finalRender(collector);
 }
 
 function finalRender(collector) {
     // console.log('collector', collector);
     // @todo sort?
+    let dayData = Object.values(collector.days).map( function(day) {
+        day.dayLabel = festDays.find(v => v.dayNum == day.dayNum).label;
+        return day;
+    });
+
     data = {
-        docTitle: 'Hello Collector',
-        days: Object.values(collector),
+        docTitle: '2022 Schedule',
+        buildTime: new Date(collector.scrapeTime).toLocaleString(),
+        dayNav: festDays,
+        days: dayData,
     };
     fs.readFile('schedule.mustache', function (err, template) {
         if (err) throw err;
         const content = mustache.render(template.toString(), data);
         fs.writeFile(outfile, content, err => {
-            if (err) {
-              console.error(err);
-            }
+            if (err) throw err;
             // file written successfully
         });
     });
@@ -89,9 +122,12 @@ function parseFilePlain(path, i, collector) {
             console.error(err);
             return;
         }
-        let events = parseSchedule(data);
+        const events = parseSchedule(data);
         console.log('i, output rows:', i, events.length);
-        collector[i] = events;
+        collector.days[i] = {
+            events: events,
+            dayNum: i,
+        };
     })
 }
 
@@ -99,9 +135,11 @@ async function readLocalFile(path, i, collector) {
     const data = await fs.promises.readFile(path, 'utf-8');
     const events = parseSchedule(data);
     console.log('i, output rows:', i, events.length);
-    collector[i] = {
-        day: i,
-        events: events
+    collector.days[i] = {
+        events: events,
+        dayNum: i,
+        prevDay: (i == 1) ? undefined : [{dayNum: i - 1}],
+        nextDay: (i == 11) ? undefined : [{dayNum: i + 1}],
     };
 }
 
@@ -111,7 +149,12 @@ async function readUrl(url, i, collector) {
         console.log('readUrl success');
         const events = parseSchedule(response.data);
         console.log('i, output rows:', i, events.length);
-        collector[i] = events;
+        collector.days[i] = {
+            events: events,
+            dayNum: i,
+            prevDay: (i == 1) ? undefined : [{dayNum: i - 1}],
+            nextDay: (i == 11) ? undefined : [{dayNum: i + 1}],
+        };
     } catch (error) {
         console.error(error);
     }
@@ -135,20 +178,13 @@ function parseSchedule(content) {
         event.date = dayTag.match(dtrx)[1];
         event.serviceTags = dayTag.match(dtrx)[2];
         // console.log('row:', event);
-        // writeRow(event);
         events.push(event);
     });
     return events;
 }
 
-function writeRow(row) {
-    process.stdout.write(`<tr><td><a href="${row.showUrl}">${row.showTitle}</a></td><td>${row.time}</td><td>${row.date}</td><td>${row.serviceTags}</td><td>${row.venue}</td></tr>\n`);
-}
-
-function renderRow(row) {
-    return `<tr><td><a href="${row.showUrl}">${row.showTitle}</a></td><td>${row.time}</td><td>${row.date}</td><td>${row.serviceTags}</td><td>${row.venue}</td></tr>\n`;
-}
-
 
 // main().catch(console.error);
-buildTest();
+// buildTest();
+scrape();
+// build();
