@@ -20,11 +20,13 @@
     <div class="container-fluid">
         <h1>MN Fringe 2022 Global Schedule</h1>
         <p class="small">Updated at {{buildTime}}</p>
-        <div class="dayNav">
-            Jump:
-            {{#dayNav}}
-                <a href="#day{{dayNum}}" class="badge">{{dateStr}}</a>
-            {{/dayNav}}
+        <div class="row dayNav">
+                 <div class="col-1">Day:</div>
+                {{#dayNav}}
+                    <div class="col-1">
+                        <a href="#day{{dayNum}}">{{dateStr}}</a>
+                    </div>
+                {{/dayNav}}
         </div>
         {{#days}}
 
