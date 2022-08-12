@@ -13,34 +13,49 @@
     <style>
         h1 { font-size: 133%; }
         h2 { font-size: 125%; }
-        .dayHead { margin-top: 1em; }
+        .day-head { margin-top: 1em; }
+        .calendar-style li { text-align: center; }
+        .calendar-style.pagination { margin-bottom: 0; }
+        .calendar-style.pagination-sm .page-link { font-size: 14px; }
+        .pagination-sm .page-link { padding: 0.2rem 0.35rem; }
+        .wkdy { font-size: 10px; }
     </style>
   </head>
   <body>
+    <div class="container-fluid bg-light">
+      <section class="header pt-3 pb-1">
+              <h1>FFS <span class="text-muted">&ndash; Faster Fringe Schedule</span></h1>
+      </section>
+    </div>
+    <nav class="navbar sticky-top navbar-light bg-light shadow-sm">
+          <ul class="pagination pagination-sm calendar-style">
+            {{#dayNav}}
+              <li class="page-item {{active}}"><a class="page-link" href="schedule-{{slug}}.html"><span class="wkdy">{{dow}}</span><br/>{{dom}}</a></li>
+            {{/dayNav}}
+          </ul>
+    </nav>
     <div class="container-fluid">
-        <h1>MN Fringe 2022 Global Schedule</h1>
-        <p class="small">Updated at {{buildTime}}</p>
-        <div class="row dayNav">
-                 <div class="col-1">Day:</div>
-                {{#dayNav}}
-                    <div class="col-1">
-                        <a href="#day{{dayNum}}">{{dateStr}}</a>
-                    </div>
-                {{/dayNav}}
-        </div>
-        {{#days}}
+        {{! <h1>FFS <span class="text-muted">Faster Fringe Schedule</span></h1> }}
+        <p class="small text-muted"><em>Updated at {{buildTime}}</em></p>
+        {{! <div class="dayNav">
+          <nav aria-label="...">
 
-                <h2 class="dayHead" id="day{{dayNum}}">{{dayLabel}}</h2>
+          </nav>
+        </div> }}
+
+                {{#dayMeta}}
+                  <h2 class="day-head">{{label}}</h2>
+                {{/dayMeta}}
 
                 {{#events}}
                     <div class="row event border-bottom">
                         <div class="col-12 col-lg-5"><a target="_blank" href="{{showUrl}}">{{showTitle}}</a> <span class="badge">{{serviceTags}}</span> </div>
+                        <div class="col-4  col-lg-2">{{time}}</div>
                         <div class="col-2  col-lg-1">{{date}}</div>
-                        <div class="col-3  col-lg-2">{{time}}</div>
-                        <div class="col-7  col-lg-4">{{venue}}</div>
+                        <div class="col-6  col-lg-4">{{venue}}</div>
                     </div>
                 {{/events}}
-        {{/days}}
+        <p class="small text-muted"><em>That's everything!</em></p>
     </div>
   </body>
 </html>
