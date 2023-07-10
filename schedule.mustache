@@ -19,6 +19,7 @@
         .calendar-style.pagination-sm .page-link { font-size: 14px; }
         .pagination-sm .page-link { padding: 0.2rem 0.35rem; }
         .wkdy { font-size: 10px; }
+        .badge { font-size: 66%; }
     </style>
   </head>
   <body>
@@ -34,9 +35,8 @@
             {{/dayNav}}
           </ul>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid pt-3">
         {{! <h1>FFS <span class="text-muted">Faster Fringe Schedule</span></h1> }}
-        <p class="small text-muted"><em>Updated at {{buildTime}}</em></p>
         {{! <div class="dayNav">
           <nav aria-label="...">
 
@@ -44,18 +44,21 @@
         </div> }}
 
                 {{#dayMeta}}
-                  <h2 class="day-head">{{label}}</h2>
+                  <div class="row border-bottom">
+                    <div class="col-12">
+                      <h2 class="day-head">{{label}}</h2>
+                    </div>
+                  </div>
                 {{/dayMeta}}
 
                 {{#events}}
                     <div class="row event border-bottom">
-                        <div class="col-12 col-lg-5"><a target="_blank" href="{{showUrl}}">{{showTitle}}</a> <span class="badge">{{serviceTags}}</span> </div>
-                        <div class="col-4  col-lg-2">{{time}}</div>
-                        <div class="col-2  col-lg-1">{{date}}</div>
-                        <div class="col-6  col-lg-4">{{venue}}</div>
+                        <div class="col-2  col-lg-2">{{tim}}</div>
+                        <div class="col-10 col-lg-5"><a target="source" href="{{showUrl}}">{{showTitle}}</a></div>
+                        <div class="col-10 offset-2  col-lg-4">{{venue}} <span class="badge badge-info">{{serviceTags}}</span> </div>
                     </div>
                 {{/events}}
-        <p class="small text-muted"><em>That's everything!</em></p>
+        <p class="small text-muted"><em>Updated at {{buildTime}}</em></p>
     </div>
   </body>
 </html>
