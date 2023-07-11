@@ -90,24 +90,36 @@ function renderPage(collector, dayNum) {
         return event;
     });
 
+    let dayTimeEvents = Object.values(collector.days).find( function(day) {
+        return !!day && day.dayNum == dayNum;
+    }).events.reduce((timeSlots, event) => {
+        const timeSlot = (timeSlots[event.time] || {timeSlot: event.time, events: []});
+        timeSlot.events.push(event);
+        // console.log('timeSlot', timeSlot);
+        timeSlots[event.time] = timeSlot;
+        return timeSlots;
+    }, {});
+
     const dayNav = festDays.map( function (dayRef) {
         let day = {...dayRef};
         day['active'] = (day.dayNum == dayNum) ? 'active' : '';
         return day;
     });
-    // console.log('dayNav', dayNav);
+    // console.log('dayTimeEvents', Object.values(dayTimeEvents));
     const dayMeta = festDays.find( function (day) {
         return day.dayNum == dayNum;
     });
 
     const data = {
         docTitle: `${festYear} Schedule`,
-        buildTime: new Date(collector.scrapeTime).toLocaleString(),
+        scrapeTime: new Date(collector.scrapeTime).toLocaleString(),
+        renderTime: new Date().toLocaleString(),
         dayNav: dayNav,
         dayLabel: dayNum,
         dayMeta: dayMeta,
         // days: dayData,
         events: dayEvents,
+        groupedEvents: Object.values(dayTimeEvents),
     };
     fs.readFile('schedule.mustache', function (err, template) {
         if (err) throw err;
@@ -182,6 +194,7 @@ function parseSchedule(content) {
         event.time = $(this).find('td.tdevent').text().trim();
         event.venue = $(this).find('td.tdvenue a').text().trim();
         event.showTitle = $(this).find('td.tdshow a').text();
+        event.showFavId = $(this).attr('data-show_fav_id');
         event.showUrl = baseDomain + $(this).find('td.tdshow a').attr('href');
         // parse tags like "AD" from day
         let dayTag = $(this).find('td.tddate').text().trim();
