@@ -6,7 +6,7 @@ const mustache = require('mustache');
 // const { testElement } = require('domutils');
 // const { data } = require('cheerio/lib/api/attributes');
 
-const outfile = 'schedule.html';
+const scheduleOutfile = 'schedule.html';
 const baseDomain = 'https://minnesotafringe.org';
 const festYear = '2023';
 const scheduleUrl = 'https://minnesotafringe.org/2022/schedule?d=19978';
@@ -30,89 +30,95 @@ const festDays = [
 
 function scrapeTest() {
     console.log("scrapeTest()");
-    let collector = {
+    let scheduleData = {
         scrapeTime: + new Date(),
         days: [],
     };
     let parsePromises = [
-        readLocalFile('sample/2022 Schedule 8-06.html', 3, collector),
-        readLocalFile('sample/2022 Schedule 8-05.html', 2, collector),
-        readLocalFile('sample/2022 Schedule 8-04.html', 1, collector),
+        readLocalFile('sample/2022 Schedule 8-06.html', 3, scheduleData),
+        readLocalFile('sample/2022 Schedule 8-05.html', 2, scheduleData),
+        readLocalFile('sample/2022 Schedule 8-04.html', 1, scheduleData),
     ];
     Promise.all(parsePromises).then( (values) => {
         console.log('all done');
-        finalRender(collector);
+        finalRender(scheduleData);
     });
 }
 
-function scrape() {
+function scrapeSchedule() {
     console.log("scrape()");
-    let collector = {
+    let scheduleData = {
         scrapeTime: + new Date(),
         days: [],
     };
     let parsePromises = festDays.map( function(d) {
         // let fringeDay = d.dayNum + dayNumOffset;
-        return readUrl(`https://minnesotafringe.org/schedule/${festYear}?d=${d.isoDate}`, d.dayNum, collector);
+        return readSchedulePage(`https://minnesotafringe.org/schedule/${festYear}?d=${d.isoDate}`, d.dayNum, scheduleData);
     });
     Promise.all(parsePromises).then( (values) => {
         console.log('all done! writing schedule.json...');
-        fs.writeFileSync('schedule.json', JSON.stringify(collector));
-       // finalRender(collector);
+        fs.writeFileSync('schedule.json', JSON.stringify(scheduleData));
+       // finalRender(scheduleData);
     });
 }
 
-function build() {
-    console.log("build()");
-    const collectorRaw = fs.readFileSync('schedule.json');
-    let collector = JSON.parse(collectorRaw);
-    // finalRender(collector);
+function render() {
+    console.log("render()");
+    const scheduleDataRaw = fs.readFileSync('schedule.json');
+    let scheduleData = JSON.parse(scheduleDataRaw);
+    const showDataRaw = fs.readFileSync('shows.json');
+    let showData = JSON.parse(showDataRaw);
+    // finalRender(scheduleData);
     festDays.forEach( function(day) {
         // console.log('festDay', day);
-        renderPage(collector, day.dayNum);
+        renderPage(scheduleData, showData, day.dayNum);
     });
-    // renderPage(collector, 9);
+    // renderPage(scheduleData, 9);
 
 }
 
-function renderPage(collector, dayNum) {
-    console.log('dayNum', dayNum);
+function renderPage(scheduleData, showData, dayNum) {
+    console.log('renderPage for dayNum', dayNum);
     // @todo sort?
-    // let dayData = Object.values(collector.days).map( function(day) {
+    // let dayData = Object.values(scheduleData.days).map( function(day) {
     //     day.dayLabel = festDays.find(v => v.dayNum == day.dayNum).label;
     //     return day;
     // });
 
-    const dayEvents = Object.values(collector.days).find( function(day) {
+    const dayEvents = Object.values(scheduleData.days).find( function(day) {
         return !!day && day.dayNum == dayNum;
     }).events.map( function(event) {
         event['tim'] = event.time.replace(' PM', '');
         return event;
     });
 
-    let dayTimeEvents = Object.values(collector.days).find( function(day) {
+    let dayTimeEvents = Object.values(scheduleData.days).find( function(day) {
         return !!day && day.dayNum == dayNum;
-    }).events.reduce((timeSlots, event) => {
+    }).events
+    // .map( (e) => ( e.byArtist = showData.find((s) => (s.showTitle == e.showTitle)).byArtist ) )
+    .map( (e) => ( {...e, byArtist: showData.find((s) => s.showUrl == e.showUrl).byArtist } ) )
+    .reduce((timeSlots, event) => {
         const timeSlot = (timeSlots[event.time] || {timeSlot: event.time, events: []});
         timeSlot.events.push(event);
         // console.log('timeSlot', timeSlot);
         timeSlots[event.time] = timeSlot;
         return timeSlots;
-    }, {});
-
+    }, {})
+    ;
+    console.log('dayTimeEvents', Object.values(dayTimeEvents));
     const dayNav = festDays.map( function (dayRef) {
         let day = {...dayRef};
         day['active'] = (day.dayNum == dayNum) ? 'active' : '';
         return day;
     });
-    // console.log('dayTimeEvents', Object.values(dayTimeEvents));
     const dayMeta = festDays.find( function (day) {
         return day.dayNum == dayNum;
     });
 
     const data = {
         docTitle: `${festYear} Schedule`,
-        scrapeTime: new Date(collector.scrapeTime).toLocaleString(),
+        baseDomain: baseDomain,
+        scrapeTime: new Date(scheduleData.scrapeTime).toLocaleString(),
         renderTime: new Date().toLocaleString(),
         dayNav: dayNav,
         dayLabel: dayNum,
@@ -136,14 +142,14 @@ function testParse() {
     // initOutput('sample/sample-schedule.html');
     // var outDoc = cheerio.load('', {xmlMode: false});
     // var events = '';
-    let collector = {};
-    readLocalFile('sample/2022 Schedule 8-04.html', 19978, collector);
-    // readLocalFile('sample/sample-schedule.html', 2, collector);
+    let scheduleData = {};
+    readLocalFile('sample/2022 Schedule 8-04.html', 19978, scheduleData);
+    // readLocalFile('sample/sample-schedule.html', 2, scheduleData);
     // console.log('OUTPUT');
     // process.stdout.write(events);
 }
 
-function parseFilePlain(path, i, collector) {
+function parseFilePlain(path, i, scheduleData) {
     return fs.readFile(path, 'utf-8', (err, data) => {
         if (err) {
             console.error(err);
@@ -151,30 +157,30 @@ function parseFilePlain(path, i, collector) {
         }
         const events = parseSchedule(data);
         console.log('i, output rows:', i, events.length);
-        collector.days[i] = {
+        scheduleData.days[i] = {
             events: events,
             dayNum: i,
         };
     })
 }
 
-async function readLocalFile(path, i, collector) {
+async function readLocalFile(path, i, scheduleData) {
     const data = await fs.promises.readFile(path, 'utf-8');
     const events = parseSchedule(data);
     console.log('i, output rows:', i, events.length);
-    collector.days[i] = {
+    scheduleData.days[i] = {
         events: events,
         dayNum: i,
     };
 }
 
-async function readUrl(url, i, collector) {
+async function readSchedulePage(url, i, scheduleData) {
     try {
         const response = await axios.get(url);
-        console.log('readUrl success');
+        console.log('readSchedulePage success');
         const events = parseSchedule(response.data);
         console.log('i, output rows:', i, events.length);
-        collector.days[i] = {
+        scheduleData.days[i] = {
             events: events,
             dayNum: i,
         };
@@ -195,7 +201,7 @@ function parseSchedule(content) {
         event.venue = $(this).find('td.tdvenue a').text().trim();
         event.showTitle = $(this).find('td.tdshow a').text();
         event.showFavId = $(this).attr('data-show_fav_id');
-        event.showUrl = baseDomain + $(this).find('td.tdshow a').attr('href');
+        event.showUrl = $(this).find('td.tdshow a').attr('href');
         // parse tags like "AD" from day
         let dayTag = $(this).find('td.tddate').text().trim();
         const dtrx = /^(\d+\/\d+)\s*(.*)/;
@@ -207,8 +213,53 @@ function parseSchedule(content) {
     return events;
 }
 
+async function scrapeShows() {
+    // Full list is not available without paging through via "Load More" btn
+    let nextPageUrl = 'https://minnesotafringe.org/shows/2023';
+    // let nextPageUrl = 'https://minnesotafringe.org/shows/2023?&prop_ModuleId=39277&page=6';
+    let showData = [];
+    try {
+        while (nextPageUrl) {
+            console.log('readShowPage', nextPageUrl);
+            const response = await axios.get(nextPageUrl);
+            let $page = cheerio.load(response.data, {xmlMode: false});
+            showData.concat(parseShows($page));
+            nextPageUrl = $page('a.loadMoreBtn').length ? $page('a.loadMoreBtn').attr('href') : false;
+            await sleep(500);
+        }
+        fs.writeFileSync('shows.json', JSON.stringify(showData));
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function parseShows(cheerioObj) {
+    // console.log('shows content:', content.length, 'bytes');
+    let $ = cheerioObj;
+    let showEls = $('div.shows_list .shows_desc');
+    console.log('showEls count:', showEls.length);
+    let shows = [];
+    $(showEls).each( function (i, s) {
+        let show = {};
+        show.showTitle = $(this).find('h6 a').text().trim();
+        show.showUrl   = $(this).find('h6 a').attr('href');
+        show.byArtist  = $(this).find('.mb6 b').text().trim();
+        // showFavId is not available when not logged-in:
+        // show.showFavId = $(this).find('a.js-fav-add').data('id');
+        shows.push(show);
+    });
+    return shows;
+}
+
+async function sleep(millis) {
+    return new Promise(resolve => setTimeout(resolve, millis));
+}
+
+// https://minnesotafringe.org/shows/2023?&prop_ModuleId=39277&page=2
+
 
 // main().catch(console.error);
 // buildTest();
-// scrape();
-build();
+// scrapeSchedule();
+// scrapeShows();
+render();
