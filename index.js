@@ -3,11 +3,10 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const mustache = require('mustache');
 
+// SETUP
+
 const baseDomain = 'https://minnesotafringe.org';
 const festYear = '2023';
-
-// 2023 URLs: https://minnesotafringe.org/schedule/2023?d=2023-08-03#schedule
-
 const festDays = [
     {dayNum:  1, isoDate: '2023-08-03', dateStr: '08/03', slug: '803', dow: 'Thu', dom:  '3', label: 'Thursday 8/03'},
     {dayNum:  2, isoDate: '2023-08-04', dateStr: '08/04', slug: '804', dow: 'Fri', dom:  '4', label: 'Friday 8/04'},
@@ -21,7 +20,6 @@ const festDays = [
     {dayNum: 10, isoDate: '2023-08-12', dateStr: '08/12', slug: '812', dow: 'Sat', dom: '12', label: 'Saturday 8/12'},
     {dayNum: 11, isoDate: '2023-08-13', dateStr: '08/13', slug: '813', dow: 'Sun', dom: '13', label: 'Sunday 8/13'},
 ];
-
 const venues = [
     {venue: "Augsburg Mainstage"},
     {venue: "Augsburg Studio"},
@@ -41,6 +39,8 @@ const venues = [
 ]
 const venueSort = venues.map(i => i.venue);
 
+// SCRAPE
+
 function scrapeTest() {
     console.log("scrapeTest()");
     let scheduleData = {
@@ -59,7 +59,7 @@ function scrapeTest() {
 }
 
 function scrapeSchedule() {
-    console.log("scrape()");
+    console.log("scrapeSchedule()...");
     let scheduleData = {
         scrapeTime: + new Date(),
         days: [],
@@ -70,86 +70,6 @@ function scrapeSchedule() {
     Promise.all(parsePromises).then( (values) => {
         console.log('all done! writing schedule.json...');
         fs.writeFileSync('schedule.json', JSON.stringify(scheduleData));
-    });
-}
-
-function render() {
-    console.log("render()");
-    const scheduleDataRaw = fs.readFileSync('schedule.json');
-    let scheduleData = JSON.parse(scheduleDataRaw);
-    const showDataRaw = fs.readFileSync('shows.json');
-    let showData = JSON.parse(showDataRaw);
-    festDays.forEach( function(day) {
-        // console.log('festDay', day);
-        renderPage(scheduleData, showData, day.dayNum);
-    });
-}
-
-function renderPage(scheduleData, showData, dayNum) {
-    console.log('renderPage for dayNum', dayNum);
-
-    // get events for this day
-    let dayTimeEvents = Object.values(scheduleData.days).find( function(day) {
-        return !!day && day.dayNum == dayNum;
-    }).events
-    // decorate events
-    .map( (e) => ( {...e,
-        byArtist: showData.find((s) => s.showUrl == e.showUrl).byArtist,
-        venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
-     } ) )
-    // sort to match master array
-    .sort((a, b) => venueSort.indexOf(a.venue) - venueSort.indexOf(b.venue))
-    // group by timeSlot (as object keys)
-    .reduce((timeSlots, event) => {
-        const timeSlot = (timeSlots[event.time] || {
-            timeSlot: event.time,
-            timeNum: timeToNum(event.time),
-            events: []
-        });
-        timeSlot.events.push(event);
-        timeSlots[event.time] = timeSlot;
-        return timeSlots;
-    }, {})
-    ;
-
-    let timeSlotList = Object.keys(dayTimeEvents).map((ts) => (timeToNum(ts))).sort();
-
-    // discard timeslot keys and sort
-    dayTimeEvents = Object.values(dayTimeEvents)
-    .sort((a, b) => timeToNum(a.timeSlot) - timeToNum(b.timeSlot));
-
-    // console.log('dayTimeEvents', dayTimeEvents );
-    // log one timeslot to avoid shortening to [Object]
-    // console.log('dayTimeEvents', Object.values(dayTimeEvents)[0] );
-
-    const dayNav = festDays.map( function (dayRef) {
-        let day = {...dayRef};
-        day['active'] = (day.dayNum == dayNum) ? 'active' : '';
-        return day;
-    });
-    const dayMeta = festDays.find( function (day) {
-        return day.dayNum == dayNum;
-    });
-
-    const data = {
-        docTitle: `${festYear} Schedule`,
-        baseDomain: baseDomain,
-        scrapeTime: new Date(scheduleData.scrapeTime).toLocaleString(),
-        renderTime: new Date().toLocaleString(),
-        dayNav: dayNav,
-        dayLabel: dayNum,
-        dayMeta: dayMeta,
-        timeSlots: timeSlotList, // for intra-page scrolling/anchors?
-        timesWithEvents: dayTimeEvents,
-    };
-    console.log('data: ', data.timeSlots);
-    fs.readFile('schedule.mustache', function (err, template) {
-        if (err) throw err;
-        const content = mustache.render(template.toString(), data);
-        fs.writeFile('schedule-' + dayMeta.slug + '.html', content, err => {
-            if (err) throw err;
-            // file written successfully
-        });
     });
 }
 
@@ -267,10 +187,91 @@ function parseShows(cheerioObj) {
     return shows;
 }
 
-
 function scrapeSingleShow() {
     let url = 'https://minnesotafringe.org/shows/2023/1992-mistakes-were-made-';
     // tags, reviews?
+}
+
+// RENDER
+
+function render() {
+    console.log("render()");
+    const scheduleDataRaw = fs.readFileSync('schedule.json');
+    let scheduleData = JSON.parse(scheduleDataRaw);
+    const showDataRaw = fs.readFileSync('shows.json');
+    let showData = JSON.parse(showDataRaw);
+    festDays.forEach( function(day) {
+        // console.log('festDay', day);
+        renderPage(scheduleData, showData, day.dayNum);
+    });
+}
+
+function renderPage(scheduleData, showData, dayNum) {
+    console.log('renderPage for dayNum', dayNum);
+
+    // get events for this day
+    let dayTimeEvents = Object.values(scheduleData.days).find( function(day) {
+        return !!day && day.dayNum == dayNum;
+    }).events
+    // decorate events
+    .map( (e) => ( {...e,
+        byArtist: showData.find((s) => s.showUrl == e.showUrl).byArtist,
+        venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
+     } ) )
+    // sort to match master array
+    .sort((a, b) => venueSort.indexOf(a.venue) - venueSort.indexOf(b.venue))
+    // group by timeSlot (as object keys)
+    .reduce((timeSlots, event) => {
+        const timeSlot = (timeSlots[event.time] || {
+            timeSlot: event.time,
+            timeNum: timeToNum(event.time),
+            events: []
+        });
+        timeSlot.events.push(event);
+        timeSlots[event.time] = timeSlot;
+        return timeSlots;
+    }, {})
+    ;
+
+    let timeSlotList = Object.keys(dayTimeEvents).map((ts) => (timeToNum(ts))).sort();
+
+    // discard timeslot keys and sort
+    dayTimeEvents = Object.values(dayTimeEvents)
+    .sort((a, b) => timeToNum(a.timeSlot) - timeToNum(b.timeSlot));
+
+    // console.log('dayTimeEvents', dayTimeEvents );
+    // log one timeslot to avoid shortening to [Object]
+    // console.log('dayTimeEvents', Object.values(dayTimeEvents)[0] );
+
+    const dayNav = festDays.map( function (dayRef) {
+        let day = {...dayRef};
+        day['active'] = (day.dayNum == dayNum) ? 'active' : '';
+        return day;
+    });
+    const dayMeta = festDays.find( function (day) {
+        return day.dayNum == dayNum;
+    });
+
+    const data = {
+        docTitle: `${festYear} Schedule`,
+        baseDomain: baseDomain,
+        scrapeTime: new Date(scheduleData.scrapeTime).toLocaleString(),
+        renderTime: new Date().toLocaleString(),
+        dayNav: dayNav,
+        dayLabel: dayNum,
+        dayMeta: dayMeta,
+        timeSlots: timeSlotList, // for intra-page scrolling/anchors?
+        timesWithEvents: dayTimeEvents,
+    };
+    console.log('data: ', data.timeSlots);
+    fs.readFile('schedule.mustache', function (err, template) {
+        if (err) throw err;
+        const content = mustache.render(template.toString(), data);
+        fs.writeFile('schedule-' + dayMeta.slug + '.html', content, err => {
+            if (err) throw err;
+            // file written successfully
+        });
+    });
 }
 
 // UTILITIES
@@ -285,6 +286,8 @@ function timeToNum(timeOfDayStr) {
     // return ('' + h + m).padStart(4, '0');
     return (h * 100) + parseInt(m);
 }
+
+// MAIN
 
 // buildTest();
 // scrapeSchedule();
