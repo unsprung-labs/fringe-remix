@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"  crossorigin="anonymous"  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <title>Fast Fringe Schedule</title>
+
+    <style>
+    </style>
+    <script>
+        let daySlugs = ['803','804','805','806','807','808','809','810','811','812','813'];
+        let d = new Date();
+        let slug = '' + (d.getMonth() + 1) + d.getDate();
+        let base = window.location.origin
+            + window.location.pathname.split('/').slice(0,-1).join('/');
+        if (daySlugs.includes(slug)) {
+            window.location.replace(`${base}/schedule-${slug}.html`);
+        }
+        else {
+            window.location.replace(`${base}/schedule-${daySlugs[0]}.html`);
+        }
+    </script>
+  </head>
+  <body>
