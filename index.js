@@ -1,19 +1,13 @@
-// const rp = require('request-promise');
 const axios = require('axios').default;
 const cheerio = require('cheerio');
 const fs = require('fs');
 const mustache = require('mustache');
-// const { testElement } = require('domutils');
-// const { data } = require('cheerio/lib/api/attributes');
 
-const scheduleOutfile = 'schedule.html';
 const baseDomain = 'https://minnesotafringe.org';
 const festYear = '2023';
-const scheduleUrl = 'https://minnesotafringe.org/2022/schedule?d=19978';
-// New fmt: https://minnesotafringe.org/schedule/2023?d=2023-08-03#schedule
 
-// Fringe site had an unknown dayNumber concept:
-const dayNumOffset = 19977;
+// 2023 URLs: https://minnesotafringe.org/schedule/2023?d=2023-08-03#schedule
+
 const festDays = [
     {dayNum:  1, isoDate: '2023-08-03', dateStr: '08/03', slug: '803', dow: 'Thu', dom:  '3', label: 'Thursday 8/03'},
     {dayNum:  2, isoDate: '2023-08-04', dateStr: '08/04', slug: '804', dow: 'Fri', dom:  '4', label: 'Friday 8/04'},
@@ -27,6 +21,25 @@ const festDays = [
     {dayNum: 10, isoDate: '2023-08-12', dateStr: '08/12', slug: '812', dow: 'Sat', dom: '12', label: 'Saturday 8/12'},
     {dayNum: 11, isoDate: '2023-08-13', dateStr: '08/13', slug: '813', dow: 'Sun', dom: '13', label: 'Sunday 8/13'},
 ];
+
+const venues = [
+    {venue: "Augsburg Mainstage"},
+    {venue: "Augsburg Studio"},
+    {venue: "Mixed Blood Theatre"},
+    {venue: "Rarig Center Arena"},
+    {venue: "Rarig Center Thrust"},
+    {venue: "Rarig Center Xperimental"},
+    {venue: "Southern Theater"},
+    {venue: "Theatre in the Round"},
+    {venue: "Bryant Lake Bowl", tag: "IP"},
+    {venue: "Crane Theater", tag: "IP"},
+    {venue: "Four Seasons Dance Studio", tag: "IP"},
+    {venue: "The Hook and Ladder Theater and Lounge", tag: "IP"},
+    {venue: "Maison Bodega", tag: "IP"},
+    {venue: "Phoenix Theater", tag: "IP"},
+    {venue: "Strike Theater", tag: "IP"},
+]
+const venueSort = venues.map(i => i.venue);
 
 function scrapeTest() {
     console.log("scrapeTest()");
@@ -52,13 +65,11 @@ function scrapeSchedule() {
         days: [],
     };
     let parsePromises = festDays.map( function(d) {
-        // let fringeDay = d.dayNum + dayNumOffset;
         return readSchedulePage(`https://minnesotafringe.org/schedule/${festYear}?d=${d.isoDate}`, d.dayNum, scheduleData);
     });
     Promise.all(parsePromises).then( (values) => {
         console.log('all done! writing schedule.json...');
         fs.writeFileSync('schedule.json', JSON.stringify(scheduleData));
-       // finalRender(scheduleData);
     });
 }
 
@@ -68,44 +79,49 @@ function render() {
     let scheduleData = JSON.parse(scheduleDataRaw);
     const showDataRaw = fs.readFileSync('shows.json');
     let showData = JSON.parse(showDataRaw);
-    // finalRender(scheduleData);
     festDays.forEach( function(day) {
         // console.log('festDay', day);
         renderPage(scheduleData, showData, day.dayNum);
     });
-    // renderPage(scheduleData, 9);
-
 }
 
 function renderPage(scheduleData, showData, dayNum) {
     console.log('renderPage for dayNum', dayNum);
-    // @todo sort?
-    // let dayData = Object.values(scheduleData.days).map( function(day) {
-    //     day.dayLabel = festDays.find(v => v.dayNum == day.dayNum).label;
-    //     return day;
-    // });
 
-    const dayEvents = Object.values(scheduleData.days).find( function(day) {
-        return !!day && day.dayNum == dayNum;
-    }).events.map( function(event) {
-        event['tim'] = event.time.replace(' PM', '');
-        return event;
-    });
-
+    // get events for this day
     let dayTimeEvents = Object.values(scheduleData.days).find( function(day) {
         return !!day && day.dayNum == dayNum;
     }).events
-    // .map( (e) => ( e.byArtist = showData.find((s) => (s.showTitle == e.showTitle)).byArtist ) )
-    .map( (e) => ( {...e, byArtist: showData.find((s) => s.showUrl == e.showUrl).byArtist } ) )
+    // decorate events
+    .map( (e) => ( {...e,
+        byArtist: showData.find((s) => s.showUrl == e.showUrl).byArtist,
+        venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
+     } ) )
+    // sort to match master array
+    .sort((a, b) => venueSort.indexOf(a.venue) - venueSort.indexOf(b.venue))
+    // group by timeSlot (as object keys)
     .reduce((timeSlots, event) => {
-        const timeSlot = (timeSlots[event.time] || {timeSlot: event.time, events: []});
+        const timeSlot = (timeSlots[event.time] || {
+            timeSlot: event.time,
+            timeNum: timeToNum(event.time),
+            events: []
+        });
         timeSlot.events.push(event);
-        // console.log('timeSlot', timeSlot);
         timeSlots[event.time] = timeSlot;
         return timeSlots;
     }, {})
     ;
-    console.log('dayTimeEvents', Object.values(dayTimeEvents));
+
+    let timeSlotList = Object.keys(dayTimeEvents).map((ts) => (timeToNum(ts))).sort();
+
+    // discard timeslot keys and sort
+    dayTimeEvents = Object.values(dayTimeEvents)
+    .sort((a, b) => timeToNum(a.timeSlot) - timeToNum(b.timeSlot));
+
+    // console.log('dayTimeEvents', dayTimeEvents );
+    // log one timeslot to avoid shortening to [Object]
+    // console.log('dayTimeEvents', Object.values(dayTimeEvents)[0] );
+
     const dayNav = festDays.map( function (dayRef) {
         let day = {...dayRef};
         day['active'] = (day.dayNum == dayNum) ? 'active' : '';
@@ -123,10 +139,10 @@ function renderPage(scheduleData, showData, dayNum) {
         dayNav: dayNav,
         dayLabel: dayNum,
         dayMeta: dayMeta,
-        // days: dayData,
-        events: dayEvents,
-        groupedEvents: Object.values(dayTimeEvents),
+        timeSlots: timeSlotList, // for intra-page scrolling/anchors?
+        timesWithEvents: dayTimeEvents,
     };
+    console.log('data: ', data.timeSlots);
     fs.readFile('schedule.mustache', function (err, template) {
         if (err) throw err;
         const content = mustache.render(template.toString(), data);
@@ -202,7 +218,7 @@ function parseSchedule(content) {
         event.showTitle = $(this).find('td.tdshow a').text();
         event.showFavId = $(this).attr('data-show_fav_id');
         event.showUrl = $(this).find('td.tdshow a').attr('href');
-        // parse tags like "AD" from day
+        // parse tags like "ASL" from day
         let dayTag = $(this).find('td.tddate').text().trim();
         const dtrx = /^(\d+\/\d+)\s*(.*)/;
         event.date = dayTag.match(dtrx)[1];
@@ -214,7 +230,7 @@ function parseSchedule(content) {
 }
 
 async function scrapeShows() {
-    // Full list is not available without paging through via "Load More" btn
+    // Complete list is not available without paging through via "Load More" btn
     let nextPageUrl = 'https://minnesotafringe.org/shows/2023';
     // let nextPageUrl = 'https://minnesotafringe.org/shows/2023?&prop_ModuleId=39277&page=6';
     let showData = [];
@@ -251,14 +267,25 @@ function parseShows(cheerioObj) {
     return shows;
 }
 
+
+function scrapeSingleShow() {
+    let url = 'https://minnesotafringe.org/shows/2023/1992-mistakes-were-made-';
+    // tags, reviews?
+}
+
+// UTILITIES
+
 async function sleep(millis) {
     return new Promise(resolve => setTimeout(resolve, millis));
 }
 
-// https://minnesotafringe.org/shows/2023?&prop_ModuleId=39277&page=2
+function timeToNum(timeOfDayStr) {
+    let [h, m, ap] = timeOfDayStr.split(/[: ]/);
+    h = (ap == 'PM') ? 12 + parseInt(h) : parseInt(h);
+    // return ('' + h + m).padStart(4, '0');
+    return (h * 100) + parseInt(m);
+}
 
-
-// main().catch(console.error);
 // buildTest();
 // scrapeSchedule();
 // scrapeShows();

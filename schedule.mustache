@@ -13,13 +13,11 @@
         h1 { font-size: 200%; }
         h2 { font-size: 167%; }
         h3 { font-size: 125%; }
+        .header a { text-decoration: none; color: inherit; }
         .day-head { }
         .time-slot-head {}
         .sticky-icky {
-          position: -webkit-sticky;
-          position: -moz-sticky;
-          position: -o-sticky;
-          position: -ms-sticky;
+          position: -webkit-sticky; position: -moz-sticky; position: -o-sticky; position: -ms-sticky;
           position: sticky;
           top: 66px; /* header height */
           left: 0;
@@ -41,13 +39,14 @@
         }
         .badge { font-size: 66%; }
         .show-title a {text-decoration: none;}
+        .venue.IP { font-style: italic; }
     </style>
   </head>
   <body>
     <div class="container-fluid bg-light">
-      <section class="header py-1">
-              <h1>F<span class="text-muted">ast</span> F<span class="text-muted">ringe</span> S<span class="text-muted">chedule</span></h1>
-      </section>
+        <section class="header py-1">
+            <a href="/" class=""><h1>F<span class="text-muted">ast</span> F<span class="text-muted">ringe</span> S<span class="text-muted">chedule</span></h1></a>
+        </section>
     </div>
     <nav class="navbar sticky-top navbar-light bg-light shadow-sm">
           <ul class="pagination pagination-sm calendar-style">
@@ -72,16 +71,16 @@
                   </div>
                 {{/dayMeta}}
 
-                {{#groupedEvents}}
-                  <div class="row time-slot-head sticky-icky shadow-sm"><div class="col-12"><h3>{{timeSlot}}</h3></div></div>
-                {{#events}}
-                    <div class="row event border-bottom">
-                        <div class="col-12 col-lg-5 text-truncate show-title"><a target="source" href="{{baseDomain}}{{showUrl}}">{{showTitle}}</a></div>
-                        <div class="col-12 col-lg-4 text-truncate text-muted">by {{byArtist}}</div>
-                        <div class="col-12 col-lg-3">{{venue}} <span class="badge badge-info">{{serviceTags}}</span> </div>
-                    </div>
-                {{/events}}
-                {{/groupedEvents}}
+                {{#timesWithEvents}}
+                  <div class="row time-slot-head sticky-icky shadow-sm" id="t{{timeNum}}"><div class="col-12"><h3>{{timeSlot}}</h3></div></div>
+                  {{#events}}
+                      <div class="row event border-bottom">
+                          <div class="col-12 col-lg-5 text-truncate show-title"><a target="source" href="{{baseDomain}}{{showUrl}}">{{showTitle}}</a> </div>
+                          <div class="col-12 col-lg-4 text-truncate"><span class="badge bg-success">{{serviceTags}}</span> <span class="text-muted">by {{byArtist}}</span></div>
+                          <div class="col-12 col-lg-3 venue {{venueTag}}">{{venue}}</div>
+                      </div>
+                  {{/events}}
+                {{/timesWithEvents}}
 
         <p class="small text-muted"><em>Sourced {{scrapeTime}}, rendered {{renderTime}}</em></p>
     </div>
