@@ -41,23 +41,6 @@ const venueSort = venues.map(i => i.venue);
 
 // SCRAPE
 
-function scrapeTest() {
-    console.log("scrapeTest()");
-    let scheduleData = {
-        scrapeTime: + new Date(),
-        days: [],
-    };
-    let parsePromises = [
-        readLocalFile('sample/2022 Schedule 8-06.html', 3, scheduleData),
-        readLocalFile('sample/2022 Schedule 8-05.html', 2, scheduleData),
-        readLocalFile('sample/2022 Schedule 8-04.html', 1, scheduleData),
-    ];
-    Promise.all(parsePromises).then( (values) => {
-        console.log('all done');
-        finalRender(scheduleData);
-    });
-}
-
 function scrapeSchedule() {
     console.log("scrapeSchedule()...");
     let scheduleData = {
@@ -73,43 +56,6 @@ function scrapeSchedule() {
         scheduleData.days = scheduleData.days.filter(d => d);
         fs.writeFileSync('schedule.json', JSON.stringify(scheduleData));
     });
-}
-
-function testParse() {
-    console.log("testParse()");
-    // initOutput('sample/sample-schedule.html');
-    // var outDoc = cheerio.load('', {xmlMode: false});
-    // var events = '';
-    let scheduleData = {};
-    readLocalFile('sample/2022 Schedule 8-04.html', 19978, scheduleData);
-    // readLocalFile('sample/sample-schedule.html', 2, scheduleData);
-    // console.log('OUTPUT');
-    // process.stdout.write(events);
-}
-
-function parseFilePlain(path, i, scheduleData) {
-    return fs.readFile(path, 'utf-8', (err, data) => {
-        if (err) {
-            console.error(err);
-            return;
-        }
-        const events = parseSchedule(data);
-        console.log('i, output rows:', i, events.length);
-        scheduleData.days[i] = {
-            events: events,
-            dayNum: i,
-        };
-    })
-}
-
-async function readLocalFile(path, i, scheduleData) {
-    const data = await fs.promises.readFile(path, 'utf-8');
-    const events = parseSchedule(data);
-    console.log('i, output rows:', i, events.length);
-    scheduleData.days[i] = {
-        events: events,
-        dayNum: i,
-    };
 }
 
 async function readSchedulePage(url, i, scheduleData) {
