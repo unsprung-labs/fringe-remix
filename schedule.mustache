@@ -40,6 +40,8 @@
         .badge { font-size: 66%; }
         .show-title a {text-decoration: none;}
         .venue.IP { font-style: italic; }
+        .footnote { font-size: .75em; padding-top: 2ex; }
+        .footnote a { color: inherit; }
     </style>
   </head>
   <body>
@@ -82,7 +84,7 @@
                   {{/events}}
                 {{/timesWithEvents}}
 
-        <p class="small text-muted"><em>Sourced {{scrapeTime}}, rendered {{renderTime}}</em></p>
+        <p class="footnote text-black-50"><em>Data sourced {{scrapeTime}}, <a href="https://github.com/wallheater/fringe-remix">remixed</a> {{renderTime}}</em></p>
     </div>
   </body>
 </html>
