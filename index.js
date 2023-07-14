@@ -238,6 +238,7 @@ function renderPage(scheduleData, showData, dayNum) {
     let timeSlotList = Object.keys(dayTimeEvents).map((ts) => (timeToNum(ts))).sort();
 
     // discard timeslot keys and sort
+    // (how is there no fluent chainable .values()? :/)
     dayTimeEvents = Object.values(dayTimeEvents)
     .sort((a, b) => timeToNum(a.timeSlot) - timeToNum(b.timeSlot));
 
@@ -291,7 +292,14 @@ function timeToNum(timeOfDayStr) {
 
 // MAIN
 
-// buildTest();
-// scrapeSchedule();
-// scrapeShows();
-render();
+const flags = process.argv.slice(2);
+
+if (flags.includes('-t')) {
+    scrapeSchedule();
+}
+if (flags.includes('-s')) {
+    scrapeShows();
+}
+if (flags.includes('-r')) {
+    render();
+}
