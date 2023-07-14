@@ -69,6 +69,8 @@ function scrapeSchedule() {
     });
     Promise.all(parsePromises).then( (values) => {
         console.log('all done! writing schedule.json...');
+        // filter out null item at days[0]
+        scheduleData.days = scheduleData.days.filter(d => d);
         fs.writeFileSync('schedule.json', JSON.stringify(scheduleData));
     });
 }
@@ -156,10 +158,10 @@ async function scrapeShows() {
     let showData = [];
     try {
         while (nextPageUrl) {
-            console.log('readShowPage', nextPageUrl);
+            console.log('scrapeShows from:', nextPageUrl);
             const response = await axios.get(nextPageUrl);
             let $page = cheerio.load(response.data, {xmlMode: false});
-            showData.concat(parseShows($page));
+            showData = showData.concat(parseShows($page));
             nextPageUrl = $page('a.loadMoreBtn').length ? $page('a.loadMoreBtn').attr('href') : false;
             await sleep(500);
         }
