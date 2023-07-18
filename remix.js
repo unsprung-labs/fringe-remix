@@ -162,6 +162,7 @@ function renderPage(scheduleData, showData, dayNum) {
         return !!day && day.dayNum == dayNum;
     }).events
     // decorate events
+    // @todo alert if show not found?
     .map( (e) => ( {...e,
         byArtist: showData.find((s) => s.showUrl == e.showUrl).byArtist,
         venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
@@ -172,7 +173,7 @@ function renderPage(scheduleData, showData, dayNum) {
     .reduce((timeSlots, event) => {
         const timeSlot = (timeSlots[event.time] || {
             timeSlot: event.time,
-            timeNum: timeToNum(event.time),
+            timeNum: timeLabelToInt(event.time),
             events: []
         });
         timeSlot.events.push(event);
@@ -181,12 +182,12 @@ function renderPage(scheduleData, showData, dayNum) {
     }, {})
     ;
 
-    let timeSlotList = Object.keys(dayTimeEvents).map((ts) => (timeToNum(ts))).sort();
+    let timeSlotList = Object.keys(dayTimeEvents).map((ts) => (timeLabelToInt(ts))).sort();
 
     // discard timeslot keys and sort
     // (how is there no fluent chainable .values()? :/)
     dayTimeEvents = Object.values(dayTimeEvents)
-    .sort((a, b) => timeToNum(a.timeSlot) - timeToNum(b.timeSlot));
+    .sort((a, b) => timeLabelToInt(a.timeSlot) - timeLabelToInt(b.timeSlot));
 
     // console.log('dayTimeEvents', dayTimeEvents );
     // log one timeslot to avoid shortening to [Object]
@@ -202,7 +203,7 @@ function renderPage(scheduleData, showData, dayNum) {
     });
 
     const data = {
-        docTitle: `${festYear} Schedule`,
+        docTitle: `Fringe Quick Schedule - ${dayMeta.dow} ${dayMeta.dateStr}/${festYear}`,
         baseDomain: baseDomain,
         scrapeTime: new Date(scheduleData.scrapeTime).toLocaleString(),
         renderTime: new Date().toLocaleString(),
@@ -212,7 +213,7 @@ function renderPage(scheduleData, showData, dayNum) {
         timeSlots: timeSlotList, // for intra-page scrolling/anchors?
         timesWithEvents: dayTimeEvents,
     };
-    console.log('data: ', data.timeSlots);
+
     fs.readFile('schedule.mustache', function (err, template) {
         if (err) throw err;
         const content = mustache.render(template.toString(), data);
@@ -229,8 +230,8 @@ async function sleep(millis) {
     return new Promise(resolve => setTimeout(resolve, millis));
 }
 
-function timeToNum(timeOfDayStr) {
-    let [h, m, ap] = timeOfDayStr.split(/[: ]/);
+function timeLabelToInt(timeLabel) {
+    let [h, m, ap] = timeLabel.split(/[: ]/);
     h = (ap == 'PM') ? 12 + parseInt(h) : parseInt(h);
     // return ('' + h + m).padStart(4, '0');
     return (h * 100) + parseInt(m);
