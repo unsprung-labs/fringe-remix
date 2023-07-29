@@ -54,7 +54,7 @@ function scrapeSchedule() {
         console.log('all done! writing schedule.json...');
         // filter out null item at days[0]
         scheduleData.days = scheduleData.days.filter(d => d);
-        fs.writeFileSync('schedule.json', JSON.stringify(scheduleData));
+        fs.writeFileSync('schedule.json', JSON.stringify(scheduleData, null, 2));
     });
 }
 
@@ -111,7 +111,7 @@ async function scrapeShows() {
             nextPageUrl = $page('a.loadMoreBtn').length ? $page('a.loadMoreBtn').attr('href') : false;
             await sleep(500);
         }
-        fs.writeFileSync('shows.json', JSON.stringify(showData));
+        fs.writeFileSync('shows.json', JSON.stringify(showData, null, 2));
     } catch (error) {
         console.error(error);
     }
