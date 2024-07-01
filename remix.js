@@ -135,9 +135,13 @@ function parseShows(cheerioObj) {
     return shows;
 }
 
-function scrapeSingleShow() {
+function scrapeShowReviews() {
     let url = 'https://minnesotafringe.org/shows/2023/1992-mistakes-were-made-';
     // tags, reviews?
+
+    // $('.review-container .reviews.row').last().find('.rating-stars').find('.iconIcom-ReviewKitty-Empty').length
+    // $('.review-container .reviews.row').last().find('.rating-stars').find('.iconIcom-ReviewKitty-Full').length
+    // $('.review-container .reviews.row').last().find('.rating-stars').find('.iconIcom-ReviewKitty-Half').length
 }
 
 // RENDER
@@ -224,6 +228,44 @@ function renderPage(scheduleData, showData, dayNum) {
     });
 }
 
+
+//
+
+
+function findShowEvent(showUrl, scheduleData) {
+    // scheduleData.days[0].events.find((e) => e.showTitle == 'The Definition of Loss')
+    let event;
+    scheduleData.days.find((day) => {
+        event = day.events.find((e) => (e.showUrl == showUrl));
+        return event;
+    })
+    return event;
+}
+
+
+function renderCsv() {
+    console.log("renderCsv()");
+    const scheduleDataRaw = fs.readFileSync('schedule.json');
+    let scheduleData = JSON.parse(scheduleDataRaw);
+    const showDataRaw = fs.readFileSync('shows.json');
+    let showData = JSON.parse(showDataRaw);
+    let self = this;
+    showData.map( function(s) {
+        // let firstEvent = this.findShowEvent(s.showUrl, scheduleData);
+        let firstDay = scheduleData.days.find((day) => {
+            return day.events.find((e) => (e.showUrl == s.showUrl));
+            // return event;
+        })
+        if (firstDay !== undefined) {
+            let firstEvent = firstDay.events.find((e) => (e.showUrl == s.showUrl));
+            if (firstEvent !== undefined) {
+                console.log( '"' + s.showTitle + '",' + s.showUrl + ',' + s.byArtist +','+ firstEvent.venue );
+                // console.log( firstEvent );
+            }
+        }
+
+    });
+}
 // UTILITIES
 
 async function sleep(millis) {
@@ -249,4 +291,7 @@ if (flags.includes('-s')) {
 }
 if (flags.includes('-r')) {
     render();
+}
+if (flags.includes('-c')) {
+    renderCsv();
 }
