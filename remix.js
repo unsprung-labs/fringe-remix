@@ -111,7 +111,8 @@ async function scrapeShows() {
             console.log('scrapeShows from:', nextPageUrl);
             const response = await axios.get(nextPageUrl);
             let $page = cheerio.load(response.data, {xmlMode: false});
-            showData = showData.concat(parseShows($page));
+            let pagedShowData = await parseShows($page);
+            showData = showData.concat(pagedShowData);
             nextPageUrl = $page('a.loadMoreBtn').length ? $page('a.loadMoreBtn').attr('href') : false;
             await sleep(500);
         }
@@ -121,7 +122,7 @@ async function scrapeShows() {
     }
 }
 
-function parseShows(cheerioObj) {
+async function parseShows(cheerioObj) {
     // console.log('shows content:', content.length, 'bytes');
     let $ = cheerioObj;
     let showEls = $('div.shows_list .shows_desc');
@@ -133,20 +134,96 @@ function parseShows(cheerioObj) {
         show.showTitle = $(this).find('h6 a').text().trim();
         show.showUrl = $('#' + modalId).find('h4 a').attr('href')
         show.byArtist  = $(this).find('.mb6 b').text().trim();
+
         // showFavId is not available when not logged-in:
         // show.showFavId = $(this).find('a.js-fav-add').data('id');
-        shows.push(show);
     });
-    return shows;
+}
+function decorateShows() {
+    const showDataRaw = fs.readFileSync('shows.json');
+    let showData = JSON.parse(showDataRaw);
+    let scrapePromises = showData.map( function(show) {
+        return scrapeShowPage(show);
+    });
+    Promise.all(scrapePromises).then( (values) => {
+        console.log('show scrapePromises all done!');
+        fs.writeFileSync('shows.json', JSON.stringify(values, null, 2));
+    });
 }
 
-function scrapeShowReviews() {
-    let url = 'https://minnesotafringe.org/shows/2023/1992-mistakes-were-made-';
-    // tags, reviews?
+async function scrapeShowPage(show) {
+    try {
+        const response = await axios.get(baseDomain + show.showUrl);
+        console.log('scrapeShowPage parsing ' + show.showUrl);
+        // console.log('response.data.length: ', response.data.length, 'bytes');
+        let details = parseShowPage(response.data);
+        return {...show, ...details};
+    } catch (error) {
+        console.error(error);
+    }
+}
 
-    // $('.review-container .reviews.row').last().find('.rating-stars').find('.iconIcom-ReviewKitty-Empty').length
-    // $('.review-container .reviews.row').last().find('.rating-stars').find('.iconIcom-ReviewKitty-Full').length
-    // $('.review-container .reviews.row').last().find('.rating-stars').find('.iconIcom-ReviewKitty-Half').length
+function parseShowPage(content) {
+    let $page = cheerio.load(content, {xmlMode: false});
+    let details = {};
+    details.description = $page('.large-4 div:nth-of-type(3)').text().trim();
+    details.createdBy = $page('.row.text-center p').text().trim();
+    details.castCrewCount = $page('#cast-and-crew div.mb2').length;
+    details.videoLink = videoLink($page);
+    return details;
+}
+
+function videoLink($page) {
+    // Iframe src is not populated since Cheerio does not run js.
+    // Find video info in script tag, otherwise need Puppeteer.
+
+    // Some have defective user data:
+    // $('#video iframe').attr('src')
+    // > 'https://www.youtube.com/embed/https://www.youtube.com/watch?v=luZNFJP_E1s'
+    // script:
+    // videoID = "https://www.youtube.com/watch?v=luZNFJP_E1s";
+    // videoID = "https://youtu.be/Ut_03EJ9hws";
+    let videoScript = $page('script')
+        .filter(function() {
+            return $page(this).text().match('videoID') }
+        ).first().text();
+    if (!videoScript) {
+        return undefined;
+    }
+
+    let idRaw = videoScript.match(/"([^"]+)"/)[1];
+    let id = false;
+    if (idRaw.match(/^http.*(youtu|vimeo)/)) {
+        // "bad" user entered link, not ID
+        return idRaw;
+    }
+    else {
+        id = idRaw;
+        // else {
+        //     console.error('bad videoID', videoScript);
+        //     return undefined;
+        // }
+    }
+    if (!id) {
+        console.error('bad videoID', videoScript);
+        return undefined;
+    }
+    let type = videoScript.match(/videoType = "(\w+)"/)[1];
+    if (type == 'YouTube') {
+        return videoScript.match(/youTubeURL = "(.+)"/)[1] + id;
+    } else if (type == 'Vimeo') {
+        return videoScript.match(/vimeoURL = "(.+)"/)[1] + id;
+    }
+}
+
+function showRatingAverage($el) {
+    if ($el.find('.rating-stars').text() == '') {
+        return undefined;
+    }
+    return 0 +
+        $el.find('.rating-stars').find('.iconIcom-ReviewKitty-Full').length +
+        ($el.find('.rating-stars').find('.iconIcom-ReviewKitty-Half').length / 2);
+    // $el.find('.rating-stars').find('.iconIcom-ReviewKitty-Empty').length;
 }
 
 // RENDER
@@ -254,9 +331,8 @@ function renderCsv() {
     let scheduleData = JSON.parse(scheduleDataRaw);
     const showDataRaw = fs.readFileSync('shows.json');
     let showData = JSON.parse(showDataRaw);
-    let self = this;
     showData.map( function(s) {
-        // let firstEvent = this.findShowEvent(s.showUrl, scheduleData);
+        // let firstEvent = findShowEvent(s.showUrl, scheduleData);
         let firstDay = scheduleData.days.find((day) => {
             return day.events.find((e) => (e.showUrl == s.showUrl));
             // return event;
@@ -284,6 +360,13 @@ function timeLabelToInt(timeLabel) {
     return (h * 100) + parseInt(m);
 }
 
+function showUrlFromModal(showElObj) {
+    // data-open="showModal45950"
+    let modalId = showElObj.find('h6 a').attr('data-open');
+    // show.showUrl   = $(this).find('h6 a').attr('href');
+    return cheerio('#' + modalId).find('h4 a').attr('href');
+}
+
 // MAIN
 
 const flags = process.argv.slice(2);
@@ -293,6 +376,9 @@ if (flags.includes('-t')) {
 }
 if (flags.includes('-s')) {
     scrapeShows();
+}
+if (flags.includes('-d')) {
+    decorateShows();
 }
 if (flags.includes('-r')) {
     render();
