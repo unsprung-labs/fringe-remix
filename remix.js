@@ -87,7 +87,9 @@ function parseSchedule(content) {
         event.venue = $(this).find('td.tdvenue a').text().trim();
         event.showTitle = $(this).find('td.tdshow a').text();
         event.showFavId = $(this).attr('data-show_fav_id');
-        event.showUrl = $(this).find('td.tdshow a').attr('href');
+        let modalId = $(this).find('button.showLink').attr('data-open');
+        event.showUrl = $('#' + modalId).find('h4 a').attr('href')
+
         // parse tags like "ASL" from day
         let dayTag = $(this).find('td.tddate').text().trim();
         const dtrx = /^(\d+\/\d+)\s*(.*)/;
@@ -101,7 +103,7 @@ function parseSchedule(content) {
 
 async function scrapeShows() {
     // Complete list is not available without paging through via "Load More" btn
-    let nextPageUrl = 'https://minnesotafringe.org/shows/2023';
+    let nextPageUrl = 'https://minnesotafringe.org/shows/' + festYear;
     // let nextPageUrl = 'https://minnesotafringe.org/shows/2023?&prop_ModuleId=39277&page=6';
     let showData = [];
     try {
@@ -127,8 +129,9 @@ function parseShows(cheerioObj) {
     let shows = [];
     $(showEls).each( function (i, s) {
         let show = {};
+        let modalId = $(this).find('h6 a').attr('data-open');
         show.showTitle = $(this).find('h6 a').text().trim();
-        show.showUrl   = $(this).find('h6 a').attr('href');
+        show.showUrl = $('#' + modalId).find('h4 a').attr('href')
         show.byArtist  = $(this).find('.mb6 b').text().trim();
         // showFavId is not available when not logged-in:
         // show.showFavId = $(this).find('a.js-fav-add').data('id');
