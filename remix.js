@@ -142,14 +142,14 @@ async function parseShowsList(cheerioObj) {
     let shows = [];
     $(showEls).each( function (i, s) {
         let show = {};
-        let modalId = $(this).find('h6 a').attr('data-open');
-        show.showTitle = $(this).find('h6 a').text().trim();
+        let modalId = $(this).find('h6 a').attr('data-open'); // e.g. 'showModal45635'
         show.showUrl = $('#' + modalId).find('h4 a').attr('href')
+        show.showFavId = modalId.match(/\d+$/)[0];
+        show.showTitle = $(this).find('h6 a').text().trim();
         show.byArtist  = $(this).find('.mb6 b').text().trim();
-
-        // showFavId is not available when not logged-in:
-        // show.showFavId = $(this).find('a.js-fav-add').data('id');
+        shows.push(show);
     });
+    return shows;
 }
 
 function decorateShows() {
@@ -180,11 +180,17 @@ function parseShowPageDetails(content) {
     let $page = cheerio.load(content, {xmlMode: false});
     let details = {};
     details.description = $page('.large-4 div:nth-of-type(3)').text().trim();
+    details.venue = $page('.large-4 div:nth-of-type(2)').text().trim();
     details.createdBy = $page('.row.text-center p').text().trim();
     details.castCrewCount = $page('#cast-and-crew div.mb2').length;
     details.videoLink = showVideoLink($page);
     details.ratingCount = $page('.review-container').find('.rating-stars').length;
     details.ratingAverage = showRatingAverage($page('.score-container')); // different from shows list rating?!
+
+    // "FavId" - ID for "favoriting" (heart icon))
+    // weird spot to find this, in newsletter signup mini form
+    // also on showsList page, so, would be set by initial scrapeShows
+    details.showFavId = $page('.footer__newsletter-heading span[data-finder-id]').attr('data-finder-id');
 
     return details;
 }
@@ -265,10 +271,18 @@ function renderPage(scheduleData, showData, dayNum) {
     }).events
     // decorate events
     // @todo alert if show not found?
-    .map( (e) => ( {...e,
-        byArtist: showData.find((s) => s.showUrl == e.showUrl).byArtist,
-        venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
-     } ) )
+    .map( (e) => {
+        let show = showData.find((s) => s.showFavId == e.showFavId);
+        if(!show) {
+            console.error('no show found by showFavId', e);
+        }
+        return {...e,
+            // byArtist: showData.find((s) => s.showUrl == e.showUrl).byArtist,
+            showUrl: show.showUrl,
+            byArtist: show.byArtist,
+            venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
+        };
+    })
     // sort to match master array
     .sort((a, b) => venueSort.indexOf(a.venue) - venueSort.indexOf(b.venue))
     // group by timeSlot (as object keys)
@@ -335,11 +349,11 @@ function renderCsv() {
     showData.map( function(s) {
         // let firstEvent = findShowEvent(s.showUrl, scheduleData);
         let firstDay = scheduleData.days.find((day) => {
-            return day.events.find((e) => (e.showUrl == s.showUrl));
+            return day.events.find((e) => (e.showFavId == s.showFavId));
             // return event;
         })
         if (firstDay !== undefined) {
-            let firstEvent = firstDay.events.find((e) => (e.showUrl == s.showUrl));
+            let firstEvent = firstDay.events.find((e) => (e.showFavId == s.showFavId));
             if (firstEvent !== undefined) {
                 console.log( '"' + s.showTitle + '",' + s.showUrl + ',' + s.byArtist +','+ firstEvent.venue );
                 // console.log( firstEvent );
