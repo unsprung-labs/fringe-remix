@@ -152,7 +152,7 @@ async function parseShowsList(cheerioObj) {
     return shows;
 }
 
-function decorateShows() {
+function decorateShowsDetails() {
     const showDataRaw = fs.readFileSync('shows.json');
     let showData = JSON.parse(showDataRaw);
     let scrapePromises = showData.map( function(show) {
@@ -387,7 +387,7 @@ if (flags.includes('-s')) {
     scrapeShowsList();
 }
 if (flags.includes('-d')) {
-    decorateShows();
+    decorateShowsDetails();
 }
 if (flags.includes('-r')) {
     render();
