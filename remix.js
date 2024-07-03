@@ -152,7 +152,7 @@ async function parseShowsList(cheerioObj) {
     return shows;
 }
 
-function decorateShowsDetails() {
+function scrapeShowDetails() {
     const showDataRaw = fs.readFileSync('shows.json');
     let showData = JSON.parse(showDataRaw);
     let scrapePromises = showData.map( function(show) {
@@ -164,11 +164,46 @@ function decorateShowsDetails() {
     });
 }
 
+function scrapeReviewsPage() {
+    const showDataRaw = fs.readFileSync('shows.json');
+    const showData = JSON.parse(showDataRaw);
+
+    // axios.get(`https://minnesotafringe.org/reviews/${festYear}`)
+    axios.get(`https://minnesotafringe.org/reviews/2023`)
+        .then(function(response){
+            const scores = parseReviewsPage(response.data, showData);
+            const showDataWithScores = decorateShowsWithScores(showData, scores);
+            // fs.writeFileSync('shows.json', JSON.stringify(showDataWithScores, null, 2));
+        });
+
+}
+
+function parseReviewsPage(content) {
+    let $page = cheerio.load(content, {xmlMode: false});
+    let scores = [];
+    const showEls = $page('table.customerreviews tr[count]');
+    $page(showEls).each( function (i, s) {
+        let score = {};
+        score.ratingCount = parseInt($page(this).attr('count'));
+        score.ratingAverage = parseFloat($page(this).attr('score'))
+        score.showUrl = $page(this).find('td:nth-of-type(3) a').attr('href');
+        scores.push(score);
+    })
+    return scores;
+}
+
+function decorateShowsWithScores(showData, scores) {
+    return showData.map((show) => {
+        let score = scores.find((score) => score.showUrl == show.showUrl);
+        return {...show, ...score};
+    })
+    // unset scores for shows with no reviews?
+}
+
 async function scrapeShowPageDetails(show) {
     try {
         const response = await axios.get(baseDomain + show.showUrl);
-        console.log('scrapeShowPage parsing ' + show.showUrl);
-        // console.log('response.data.length: ', response.data.length, 'bytes');
+        console.log('scrapeShowPageDetails parsing ' + show.showUrl);
         let details = parseShowPageDetails(response.data);
         return {...show, ...details};
     } catch (error) {
@@ -184,14 +219,24 @@ function parseShowPageDetails(content) {
     details.createdBy = $page('.row.text-center p').text().trim();
     details.castCrewCount = $page('#cast-and-crew div.mb2').length;
     details.videoLink = showVideoLink($page);
+
+    // redundant with scrapeReviewsPage, and these seem different from shows list rating?!
+    details.ratingAverage = showRatingFromStars($page('.score-container'));
     details.ratingCount = $page('.review-container').find('.rating-stars').length;
-    details.ratingAverage = showRatingAverage($page('.score-container')); // different from shows list rating?!
 
     // "FavId" - ID for "favoriting" (heart icon))
     // weird spot to find this, in newsletter signup mini form
     // also on showsList page, so, would be set by initial scrapeShows
     details.showFavId = $page('.footer__newsletter-heading span[data-finder-id]').attr('data-finder-id');
 
+    return details;
+}
+
+function parseShowPageRatings(content) {
+    let $page = cheerio.load(content, {xmlMode: false});
+    let details = {};
+    details.ratingCount = $page('.review-container').find('.rating-stars').length;
+    details.ratingAverage = showRatingFromStars($page('.score-container')); // different from shows list rating?!
     return details;
 }
 
@@ -238,7 +283,7 @@ function showVideoLink($page) {
     }
 }
 
-function showRatingAverage($el) {
+function showRatingFromStars($el) {
     if ($el.find('.rating-stars').text() == '') {
         return undefined;
     }
@@ -387,7 +432,10 @@ if (flags.includes('-s')) {
     scrapeShowsList();
 }
 if (flags.includes('-d')) {
-    decorateShowsDetails();
+    scrapeShowDetails();
+}
+if (flags.includes('-v')) {
+    scrapeReviewsPage();
 }
 if (flags.includes('-r')) {
     render();
