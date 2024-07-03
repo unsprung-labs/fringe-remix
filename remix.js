@@ -64,7 +64,7 @@ async function readSchedulePage(url, i, scheduleData) {
     try {
         const response = await axios.get(url);
         console.log('readSchedulePage success');
-        const events = parseSchedule(response.data);
+        const events = parseSchedulePage(response.data);
         console.log('i, output rows:', i, events.length);
         scheduleData.days[i] = {
             events: events,
@@ -75,7 +75,7 @@ async function readSchedulePage(url, i, scheduleData) {
     }
 }
 
-function parseSchedule(content) {
+function parseSchedulePage(content) {
     console.log('content:', content.length, 'bytes');
     let $ = cheerio.load(content, {xmlMode: false});
     let inRows = $('table.theScheduleTable tbody tr');
@@ -101,7 +101,7 @@ function parseSchedule(content) {
     return events;
 }
 
-async function scrapeShows() {
+async function scrapeShowsList() {
     // Complete list is not available without paging through via "Load More" btn
     let nextPageUrl = 'https://minnesotafringe.org/shows/' + festYear;
     // let nextPageUrl = 'https://minnesotafringe.org/shows/2023?&prop_ModuleId=39277&page=6';
@@ -111,7 +111,7 @@ async function scrapeShows() {
             console.log('scrapeShows from:', nextPageUrl);
             const response = await axios.get(nextPageUrl);
             let $page = cheerio.load(response.data, {xmlMode: false});
-            let pagedShowData = await parseShows($page);
+            let pagedShowData = await parseShowsList($page);
             showData = showData.concat(pagedShowData);
             nextPageUrl = $page('a.loadMoreBtn').length ? $page('a.loadMoreBtn').attr('href') : false;
             await sleep(500);
@@ -122,7 +122,7 @@ async function scrapeShows() {
     }
 }
 
-async function parseShows(cheerioObj) {
+async function parseShowsList(cheerioObj) {
     // console.log('shows content:', content.length, 'bytes');
     let $ = cheerioObj;
     let showEls = $('div.shows_list .shows_desc');
@@ -139,11 +139,12 @@ async function parseShows(cheerioObj) {
         // show.showFavId = $(this).find('a.js-fav-add').data('id');
     });
 }
+
 function decorateShows() {
     const showDataRaw = fs.readFileSync('shows.json');
     let showData = JSON.parse(showDataRaw);
     let scrapePromises = showData.map( function(show) {
-        return scrapeShowPage(show);
+        return scrapeShowPageDetails(show);
     });
     Promise.all(scrapePromises).then( (values) => {
         console.log('show scrapePromises all done!');
@@ -151,29 +152,32 @@ function decorateShows() {
     });
 }
 
-async function scrapeShowPage(show) {
+async function scrapeShowPageDetails(show) {
     try {
         const response = await axios.get(baseDomain + show.showUrl);
         console.log('scrapeShowPage parsing ' + show.showUrl);
         // console.log('response.data.length: ', response.data.length, 'bytes');
-        let details = parseShowPage(response.data);
+        let details = parseShowPageDetails(response.data);
         return {...show, ...details};
     } catch (error) {
         console.error(error);
     }
 }
 
-function parseShowPage(content) {
+function parseShowPageDetails(content) {
     let $page = cheerio.load(content, {xmlMode: false});
     let details = {};
     details.description = $page('.large-4 div:nth-of-type(3)').text().trim();
     details.createdBy = $page('.row.text-center p').text().trim();
     details.castCrewCount = $page('#cast-and-crew div.mb2').length;
-    details.videoLink = videoLink($page);
+    details.videoLink = showVideoLink($page);
+    details.ratingCount = $page('.review-container').find('.rating-stars').length;
+    details.ratingAverage = showRatingAverage($page('.score-container')); // different from shows list rating?!
+
     return details;
 }
 
-function videoLink($page) {
+function showVideoLink($page) {
     // Iframe src is not populated since Cheerio does not run js.
     // Find video info in script tag, otherwise need Puppeteer.
 
@@ -310,21 +314,6 @@ function renderPage(scheduleData, showData, dayNum) {
     });
 }
 
-
-//
-
-
-function findShowEvent(showUrl, scheduleData) {
-    // scheduleData.days[0].events.find((e) => e.showTitle == 'The Definition of Loss')
-    let event;
-    scheduleData.days.find((day) => {
-        event = day.events.find((e) => (e.showUrl == showUrl));
-        return event;
-    })
-    return event;
-}
-
-
 function renderCsv() {
     console.log("renderCsv()");
     const scheduleDataRaw = fs.readFileSync('schedule.json');
@@ -347,6 +336,7 @@ function renderCsv() {
 
     });
 }
+
 // UTILITIES
 
 async function sleep(millis) {
@@ -360,13 +350,6 @@ function timeLabelToInt(timeLabel) {
     return (h * 100) + parseInt(m);
 }
 
-function showUrlFromModal(showElObj) {
-    // data-open="showModal45950"
-    let modalId = showElObj.find('h6 a').attr('data-open');
-    // show.showUrl   = $(this).find('h6 a').attr('href');
-    return cheerio('#' + modalId).find('h4 a').attr('href');
-}
-
 // MAIN
 
 const flags = process.argv.slice(2);
@@ -375,7 +358,7 @@ if (flags.includes('-t')) {
     scrapeSchedule();
 }
 if (flags.includes('-s')) {
-    scrapeShows();
+    scrapeShowsList();
 }
 if (flags.includes('-d')) {
     decorateShows();
