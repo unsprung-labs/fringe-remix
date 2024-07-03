@@ -12,16 +12,16 @@
     <style>
     </style>
     <script>
-        let daySlugs = ['803','804','805','806','807','808','809','810','811','812','813'];
+        let festDaySlugs = ['801','802','803','804','805','806','807','808','809','810','811'];
         let d = new Date();
-        let slug = '' + (d.getMonth() + 1) + d.getDate().toString().padStart(2, '0');
+        let todaySlug = '' + (d.getMonth() + 1) + d.getDate().toString().padStart(2, '0');
         let base = window.location.origin
             + window.location.pathname.split('/').slice(0,-1).join('/');
-        if (daySlugs.includes(slug)) {
-            window.location.replace(`${base}/schedule-${slug}.html`);
+        if (festDaySlugs.includes(todaySlug)) {
+            window.location.replace(`${base}/schedule-${todaySlug}.html`);
         }
         else {
-            window.location.replace(`${base}/schedule-${daySlugs[0]}.html`);
+            window.location.replace(`${base}/schedule-${festDaySlugs[0]}.html`);
         }
     </script>
   </head>
