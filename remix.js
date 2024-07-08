@@ -128,7 +128,8 @@ async function scrapeShowsList() {
             nextPageUrl = $page('a.loadMoreBtn').length ? $page('a.loadMoreBtn').attr('href') : false;
             await sleep(500);
         }
-        fs.writeFileSync('shows.json', JSON.stringify(showData, null, 2));
+        console.log('Found ' + showData.length + ' total shows');
+        fs.writeFileSync('shows-bare.json', JSON.stringify(showData, null, 2));
     } catch (error) {
         console.error(error);
     }
@@ -153,19 +154,19 @@ async function parseShowsList(cheerioObj) {
 }
 
 function scrapeShowDetails() {
-    const showDataRaw = fs.readFileSync('shows.json');
+    const showDataRaw = fs.readFileSync('shows-bare.json');
     let showData = JSON.parse(showDataRaw).filter(s => !!s);
     let scrapePromises = showData.map( function(show) {
         return scrapeShowPageDetails(show);
     });
     Promise.all(scrapePromises).then( (values) => {
         console.log('show scrapePromises all done!');
-        fs.writeFileSync('shows.json', JSON.stringify(values, null, 2));
+        fs.writeFileSync('shows-details.json', JSON.stringify(values, null, 2));
     });
 }
 
 function scrapeReviewsPage() {
-    const showDataRaw = fs.readFileSync('shows.json');
+    const showDataRaw = fs.readFileSync('shows-details.json');
     const showData = JSON.parse(showDataRaw);
 
     // axios.get(`https://minnesotafringe.org/reviews/${festYear}`)
@@ -173,7 +174,7 @@ function scrapeReviewsPage() {
         .then(function(response){
             const scores = parseReviewsPage(response.data, showData);
             const showDataWithScores = decorateShowsWithScores(showData, scores);
-            // fs.writeFileSync('shows.json', JSON.stringify(showDataWithScores, null, 2));
+            // fs.writeFileSync('shows-details.json', JSON.stringify(showDataWithScores, null, 2));
         });
 
 }
@@ -299,7 +300,7 @@ function render() {
     console.log("render()");
     const scheduleDataRaw = fs.readFileSync('schedule.json');
     let scheduleData = JSON.parse(scheduleDataRaw);
-    const showDataRaw = fs.readFileSync('shows.json');
+    const showDataRaw = fs.readFileSync('shows-details.json');
     let showData = JSON.parse(showDataRaw);
     festDays.forEach( function(day) {
         // console.log('festDay', day);
@@ -390,7 +391,7 @@ function renderCsv() {
     const separator = "\t";
     const scheduleDataRaw = fs.readFileSync('schedule.json');
     let scheduleData = JSON.parse(scheduleDataRaw);
-    const showDataRaw = fs.readFileSync('shows.json');
+    const showDataRaw = fs.readFileSync('shows-details.json');
     let showData = JSON.parse(showDataRaw);
     showData.filter((s) => !s.droppedOut).map( function(s) {
 
