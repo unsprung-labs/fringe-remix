@@ -154,7 +154,7 @@ async function parseShowsList(cheerioObj) {
 
 function scrapeShowDetails() {
     const showDataRaw = fs.readFileSync('shows.json');
-    let showData = JSON.parse(showDataRaw);
+    let showData = JSON.parse(showDataRaw).filter(s => !!s);
     let scrapePromises = showData.map( function(show) {
         return scrapeShowPageDetails(show);
     });
