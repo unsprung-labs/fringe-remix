@@ -202,6 +202,10 @@ function decorateShowsWithScores(showData, scores) {
 }
 
 async function scrapeShowPageDetails(show) {
+    if (!show.showUrl) {
+        console.error('No showUrl', show);
+        return;
+    }
     try {
         const response = await axios.get(baseDomain + show.showUrl);
         console.log('scrapeShowPageDetails parsing ' + show.showUrl);
