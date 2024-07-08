@@ -431,11 +431,11 @@ function timeLabelToInt(timeLabel) {
 
 const flags = process.argv.slice(2);
 
-if (flags.includes('-t')) {
-    scrapeSchedule();
-}
 if (flags.includes('-s')) {
     scrapeShowsList();
+}
+if (flags.includes('-t')) {
+    scrapeSchedule();
 }
 if (flags.includes('-d')) {
     scrapeShowDetails();
@@ -448,4 +448,13 @@ if (flags.includes('-r')) {
 }
 if (flags.includes('-c')) {
     renderCsv();
+}
+if (flags.length == 0) {
+    console.info("remix.js flags, in typical order or operations");
+    console.info("-s   scrape Shows list into shows-bare.json");
+    console.info("-t   scrape schedule Times into schedule.json");
+    console.info("-d   scrape show Details into shows-details.json");
+    console.info("-v   scrape show reViews, update shows-details.json");
+    console.info("-r   Render html files from saved json");
+    console.info("-c   render Csv file");
 }
