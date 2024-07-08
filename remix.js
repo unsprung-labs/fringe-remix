@@ -215,7 +215,7 @@ function parseShowPageDetails(content) {
     let $page = cheerio.load(content, {xmlMode: false});
     let details = {};
     details.description = $page('.large-4 div:nth-of-type(3)').text().trim();
-    details.venue = $page('.large-4 div:nth-of-type(2)').text().trim();
+    details.venue = $page('.large-4 div:nth-of-type(2) a').text().trim();
     details.createdBy = $page('.row.text-center p').text().trim();
     details.castCrewCount = $page('#cast-and-crew div.mb2').length;
     details.videoLink = showVideoLink($page);
