@@ -471,7 +471,7 @@ if (flags.includes('-c')) {
     renderCsv();
 }
 if (flags.length == 0) {
-    console.info("remix.js flags, in typical order or operations");
+    console.info("remix.js flags, in typical order of operations");
     console.info("-s   scrape Shows list into shows-bare.json");
     console.info("-t   scrape schedule Times into schedule.json");
     console.info("-d   scrape show Details into shows-details.json");
