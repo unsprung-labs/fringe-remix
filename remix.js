@@ -387,23 +387,28 @@ function renderPage(scheduleData, showData, dayNum) {
 
 function renderCsv() {
     console.log("renderCsv()");
+    const separator = "\t";
     const scheduleDataRaw = fs.readFileSync('schedule.json');
     let scheduleData = JSON.parse(scheduleDataRaw);
     const showDataRaw = fs.readFileSync('shows.json');
     let showData = JSON.parse(showDataRaw);
-    showData.map( function(s) {
-        // let firstEvent = findShowEvent(s.showUrl, scheduleData);
-        let firstDay = scheduleData.days.find((day) => {
-            return day.events.find((e) => (e.showFavId == s.showFavId));
-            // return event;
+    showData.filter((s) => !s.droppedOut).map( function(s) {
+
+        // all days, with show's event if scheduled or undefined if not
+        let festDaysList = festDays.map((day) => {
+            let scheduleDay = scheduleData.days.find((d) => d.dayNum == day.dayNum);
+            return scheduleDay.events.find((e) => (e.showFavId == s.showFavId));
         })
-        if (firstDay !== undefined) {
-            let firstEvent = firstDay.events.find((e) => (e.showFavId == s.showFavId));
-            if (firstEvent !== undefined) {
-                console.log( '"' + s.showTitle + '",' + s.showUrl + ',' + s.byArtist +','+ firstEvent.venue );
-                // console.log( firstEvent );
+        .map((dayEvent) =>{
+            if (dayEvent) {
+                return dayEvent.time.replace(/ PM$/, '').replace(/:00$/, ''); // short-form time
             }
-        }
+            else {
+                return ''; // empty cell to fill grid
+            }
+        })
+        .join(separator);
+        console.log( '"' + s.showTitle + '"' + separator + baseDomain + s.showUrl + separator + s.byArtist + separator + festDaysList );
 
     });
 }
