@@ -320,7 +320,6 @@ function renderPage(scheduleData, showData, dayNum) {
         return !!day && day.dayNum == dayNum;
     }).events
     // decorate events
-    // @todo alert if show not found?
     .map( (e) => {
         let show = showData.find((s) => s.showFavId == e.showFavId);
         if(!show) {
@@ -391,14 +390,24 @@ function renderPage(scheduleData, showData, dayNum) {
 }
 
 function renderCsv() {
-    console.log("renderCsv()");
+    // console.log("renderCsv()");
     const separator = "\t";
     const scheduleDataRaw = fs.readFileSync('schedule.json');
-    let scheduleData = JSON.parse(scheduleDataRaw);
+    const scheduleData = JSON.parse(scheduleDataRaw);
     const showDataRaw = fs.readFileSync('shows-details.json');
-    let showData = JSON.parse(showDataRaw);
-    showData.filter((s) => !s.droppedOut).map( function(s) {
+    const showData = JSON.parse(showDataRaw);
 
+    const headRow = [
+        'Producer',
+        'Title',
+        'Web Page',
+        'Venue',
+        'Description',
+    ].concat(festDays.map(d => d.dateStr));
+    console.log(headRow.join(separator));
+
+    showData.filter((s) => !s.droppedOut)
+    .map( function(s) {
         // all days, with show's event if scheduled or undefined if not
         let festDaysList = festDays.map((day) => {
             let scheduleDay = scheduleData.days.find((d) => d.dayNum == day.dayNum);
@@ -412,8 +421,16 @@ function renderCsv() {
                 return ''; // empty cell to fill grid
             }
         })
-        .join(separator);
-        console.log( '"' + s.showTitle + '"' + separator + baseDomain + s.showUrl + separator + s.byArtist + separator + festDaysList );
+        // .join(separator);
+
+        let showRow = [
+            s.byArtist.replace(/"/g, '""'), // escape quotes
+            '"' + s.showTitle.replace(/"/g, '""') + '"',
+            `"=HYPERLINK(""${baseDomain}${s.showUrl}"")"`, // formula
+            s.venue,
+            '"' + s.description.replace(/"/g, '""') + '"',
+        ].concat(festDaysList);
+        console.log(showRow.join(separator));
 
     });
 }
