@@ -8,20 +8,10 @@ const mustache = require('mustache');
 const baseDomain = 'https://minnesotafringe.org';
 const festYear = '2024';
 const festLengthDays = 11;
-const festStart = '2024-08-01';
-const festDays = [
-    {dayNum:  1, isoDate: '2024-08-01', dateStr: '08/01', slug: '801', dow: 'Thu', dom:  '1', label: 'Thursday 8/01'},
-    {dayNum:  2, isoDate: '2024-08-02', dateStr: '08/02', slug: '802', dow: 'Fri', dom:  '2', label: 'Friday 8/02'},
-    {dayNum:  3, isoDate: '2024-08-03', dateStr: '08/03', slug: '803', dow: 'Sat', dom:  '3', label: 'Saturday 8/03'},
-    {dayNum:  4, isoDate: '2024-08-04', dateStr: '08/04', slug: '804', dow: 'Sun', dom:  '4', label: 'Sunday 8/04'},
-    {dayNum:  5, isoDate: '2024-08-05', dateStr: '08/05', slug: '805', dow: 'Mon', dom:  '5', label: 'Monday 8/05'},
-    {dayNum:  6, isoDate: '2024-08-06', dateStr: '08/06', slug: '806', dow: 'Tue', dom:  '6', label: 'Tuesday 8/06'},
-    {dayNum:  7, isoDate: '2024-08-07', dateStr: '08/07', slug: '807', dow: 'Wed', dom:  '7', label: 'Wednesday 8/07'},
-    {dayNum:  8, isoDate: '2024-08-08', dateStr: '08/08', slug: '808', dow: 'Thu', dom: '8', label: 'Thursday 8/08'},
-    {dayNum:  9, isoDate: '2024-08-09', dateStr: '08/09', slug: '809', dow: 'Fri', dom: '9', label: 'Friday 8/09'},
-    {dayNum: 10, isoDate: '2024-08-10', dateStr: '08/10', slug: '810', dow: 'Sat', dom: '10', label: 'Saturday 8/10'},
-    {dayNum: 11, isoDate: '2024-08-11', dateStr: '08/11', slug: '811', dow: 'Sun', dom: '11', label: 'Sunday 8/11'},
-];
+const festStartString = '2024-08-01 17:30 CDT';
+const festStart = new Date(festStartString);
+const festDays = buildFestDaysArray(festStart, festLengthDays);
+
 const venues = [
     // {venue: "Augsburg Mainstage"},
     // {venue: "Augsburg Studio"},
@@ -446,6 +436,25 @@ function timeLabelToInt(timeLabel) {
     h = (ap == 'PM') ? 12 + parseInt(h) : parseInt(h);
     // return ('' + h + m).padStart(4, '0');
     return (h * 100) + parseInt(m);
+}
+
+function buildFestDaysArray(festStartDate, festLengthDays) {
+    let festDays = [];
+    let iDay = 0;
+    while(iDay < festLengthDays)  {
+        let iDate = new Date(festStartDate.valueOf() + (iDay * 86400000));
+        festDays.push({
+            dayNum:  iDay + 1, // "primary key"
+            isoDate: iDate.toISOString().substring(0,10), // in schedule urls
+            dateStr: iDate.toLocaleDateString('en-US', {month: 'numeric', day: '2-digit'}), // 8/02
+            slug: iDate.toLocaleDateString('en-US', {month: '2-digit'}) + iDate.toLocaleDateString('en-US', {day: '2-digit'}), // for filename
+            dow: new Intl.DateTimeFormat("en-US", {weekday: 'short'}).format(iDate),
+            dom:  iDate.getDate(), // day of month
+            label: iDate.toLocaleDateString('en-US', {weekday: 'long', month: 'numeric', day: '2-digit'}).replace(',', ''), // for template
+        });
+        iDay++;
+    }
+    return festDays;
 }
 
 // MAIN

@@ -12,9 +12,9 @@
     <style>
     </style>
     <script>
-        let festDaySlugs = ['801','802','803','804','805','806','807','808','809','810','811'];
+        let festDaySlugs = ['0801','0802','0803','0804','0805','0806','0807','08008','0809','0810','0811'];
         let d = new Date();
-        let todaySlug = '' + (d.getMonth() + 1) + d.getDate().toString().padStart(2, '0');
+        let todaySlug = (d.getMonth() + 1).toString().padStart(2, '0') + d.getDate().toString().padStart(2, '0');
         let base = window.location.origin
             + window.location.pathname.split('/').slice(0,-1).join('/');
         if (festDaySlugs.includes(todaySlug)) {
