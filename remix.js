@@ -160,12 +160,11 @@ function scrapeReviewsPage() {
     const showDataRaw = fs.readFileSync('shows-details.json');
     const showData = JSON.parse(showDataRaw);
 
-    // axios.get(`https://minnesotafringe.org/reviews/${festYear}`)
-    axios.get(`https://minnesotafringe.org/reviews/2023`)
+    axios.get(`https://minnesotafringe.org/reviews/${festYear}`)
         .then(function(response){
             const scores = parseReviewsPage(response.data, showData);
             const showDataWithScores = decorateShowsWithScores(showData, scores);
-            // fs.writeFileSync('shows-details.json', JSON.stringify(showDataWithScores, null, 2));
+            fs.writeFileSync('shows-details.json', JSON.stringify(showDataWithScores, null, 2));
         });
 
 }
@@ -177,8 +176,8 @@ function parseReviewsPage(content) {
     $page(showEls).each( function (i, s) {
         let score = {};
         score.ratingCount = parseInt($page(this).attr('count'));
-        score.ratingAverage = parseFloat($page(this).attr('score'))
-        score.showUrl = $page(this).find('td:nth-of-type(3) a').attr('href');
+        score.ratingAverage = parseFloat($page(this).attr('score')); // actual float average, not half-stars
+        score.showUrl = $page(this).find('td:nth-of-type(3) a').attr('href').split('#')[0]; // discard '#reviews'
         scores.push(score);
     })
     return scores;
@@ -187,6 +186,11 @@ function parseReviewsPage(content) {
 function decorateShowsWithScores(showData, scores) {
     return showData.map((show) => {
         let score = scores.find((score) => score.showUrl == show.showUrl);
+        if (!score) {
+            // console.log('No score found for', show);
+            return show;
+        }
+        delete score.showUrl;
         return {...show, ...score};
     })
     // unset scores for shows with no reviews?
