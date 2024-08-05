@@ -314,14 +314,19 @@ function renderPage(scheduleData, showData, dayNum) {
     let dayTimeEvents = Object.values(scheduleData.days).find( function(day) {
         return !!day && day.dayNum == dayNum;
     }).events
-    // decorate events
-    .map( (e) => {
+    // filter out events with no show (e.g. "TEST SHOW")
+    .filter( (e) => {
         let show = showData.find((s) => s.showFavId == e.showFavId);
         if(!show) {
             console.error('no show found by showFavId', e);
+            return false;
         }
+        return true;
+    })
+    // decorate events
+    .map( (e) => {
+        let show = showData.find((s) => s.showFavId == e.showFavId);
         return {...e,
-            // byArtist: showData.find((s) => s.showUrl == e.showUrl).byArtist,
             showUrl: show.showUrl,
             byArtist: show.byArtist,
             venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
