@@ -106,7 +106,9 @@
                   {{#events}}
                       <div class="row event border-bottom">
                           <div class="col-12 col-lg-5 text-truncate show-title"><span class="badge bg-success">{{serviceTags}}</span> <a target="source" href="{{baseDomain}}{{showUrl}}">{{showTitle}}</a> </div>
-                          <div class="col-12 col-lg-4 text-truncate"><span class="text-muted">by {{byArtist}}</span></div>
+                          <div class="col-12 col-lg-4 text-truncate"><span class="text-muted">by {{byArtist}}</span> 
+                            <span class="badge bg-info">{{ratingStats.ratingDisp}}</span> 
+                          </div>
                           <div class="col-12 col-lg-3 venue"><span class="badge bg-info">{{venueTag}}</span> {{venue}}</div>
                       </div>
                   {{/events}}

@@ -358,7 +358,7 @@ function renderPage(scheduleData, showData, dayNum) {
             console.error('no showData found by showFavId (in map), for event: ', e);
             return e;
         }
-        let show = showData.find((s) => s.showFavId == e.showFavId);
+        show.ratingStats.ratingDisp = Math.floor(10 * show.ratingStats.weightedAvgRating) / 10
         return {...e,
             ...show,
             venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
