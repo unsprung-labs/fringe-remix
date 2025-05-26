@@ -3,6 +3,8 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const mustache = require('mustache');
 
+console.log("running...");
+
 // SETUP
 
 const baseDomain = 'https://minnesotafringe.org';
@@ -190,7 +192,7 @@ function decorateShowsWithScores(showData, scores) {
             // console.log('No score found for', show);
             return show;
         }
-        delete score.showUrl;
+        delete score.showUrl; // paranoia, don't want to replace this
         return {...show, ...score};
     })
     // unset scores for shows with no reviews?
@@ -218,7 +220,7 @@ function parseShowPageDetails(content) {
     details.venue = $page('.large-4 div:nth-of-type(2) a').text().trim();
     details.createdBy = $page('.row.text-center p').text().trim();
     details.castCrewCount = $page('#cast-and-crew div.mb2').length;
-    details.videoLink = showVideoLink($page);
+    details.videoLink = videoLinkForShow($page);
 
     // redundant with scrapeReviewsPage, and these seem different from shows list rating?!
     details.ratingAverage = showRatingFromStars($page('.score-container'));
@@ -240,7 +242,7 @@ function parseShowPageRatings(content) {
     return details;
 }
 
-function showVideoLink($page) {
+function videoLinkForShow($page) {
     // Iframe src is not populated since Cheerio does not run js.
     // Find video info in script tag, otherwise need Puppeteer.
 
