@@ -344,15 +344,20 @@ function renderPage(scheduleData, showData, dayNum) {
     }).events
     // filter out events with no show (e.g. "TEST SHOW")
     .filter( (e) => {
-        let show = showData.find((s) => s.showFavId == e.showFavId);
+        let show = showData.find((s) => !!s && s.showFavId == e.showFavId);
         if(!show) {
-            console.error('no show found by showFavId', e);
+            console.error('no showData found by showFavId (in filter), for event: ', e);
             return false;
         }
         return true;
     })
     // decorate events
     .map( (e) => {
+        let show = showData.find((s) => !!s && s.showFavId == e.showFavId);
+        if(!show) {
+            console.error('no showData found by showFavId (in map), for event: ', e);
+            return e;
+        }
         let show = showData.find((s) => s.showFavId == e.showFavId);
         return {...e,
             ...show,
