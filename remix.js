@@ -171,6 +171,7 @@ function scrapeReviewsPage() {
 
 }
 
+// deprecated
 function parseReviewsPage(content) {
     let $page = cheerio.load(content, {xmlMode: false});
     let scores = [];
@@ -221,10 +222,7 @@ function parseShowPageDetails(content) {
     details.createdBy = $page('.row.text-center p').text().trim();
     details.castCrewCount = $page('#cast-and-crew div.mb2').length;
     details.videoLink = videoLinkForShow($page);
-
-    // redundant with scrapeReviewsPage, and these seem different from shows list rating?!
-    details.ratingAverage = showRatingFromStars($page('.score-container'));
-    details.ratingCount = $page('.review-container').find('.rating-stars').length;
+    details.ratingStats = parseShowPageRatings($page);
 
     // "FavId" - ID for "favoriting" (heart icon))
     // weird spot to find this, in newsletter signup mini form
@@ -234,12 +232,40 @@ function parseShowPageDetails(content) {
     return details;
 }
 
-function parseShowPageRatings(content) {
-    let $page = cheerio.load(content, {xmlMode: false});
-    let details = {};
-    details.ratingCount = $page('.review-container').find('.rating-stars').length;
-    details.ratingAverage = showRatingFromStars($page('.score-container')); // different from shows list rating?!
-    return details;
+function parseShowPageRatings($page) {
+    let results = {};
+    results.totalCount = $page('.review-container').find('.rating-stars').length;
+
+    let ratingsList = [];
+    let binCounts = {}
+    let binCountsNorm = {}
+    $page('.review-container .review-user-info').each( function (i, r) {
+        ratingsList.push(showRatingFromStars($page(this)));
+    });
+    // results.ratingsList = ratingsList;
+    results.minRating = Math.min( ...ratingsList );
+    results.maxRating = Math.max( ...ratingsList );
+    results.avgRating = ratingsList.reduce((sum, val) => sum + val) / ratingsList.length;
+
+    // histogram
+    for (const score of ratingsList) {
+        binCounts[score] = binCounts[score] ? binCounts[score] + 1 : 1;
+    }
+    // normalize counts to 1.0
+    const maxBinCount = Math.max(...Object.values(binCounts));
+    for (const bin in binCounts) {
+        binCountsNorm[bin] = binCounts[bin] / maxBinCount;
+    }
+    results.distribution = binCountsNorm;
+
+    // weighted avg where lower ratings count more
+    // e.g 5 => 1, 3 => 9, 0.5 => 30.25
+    // kinda harsh on a few shows
+    const weightedSum = ratingsList.reduce((sum, value, index) => sum + value * (6 - value) ** 2, 0);
+    const weightsSum = ratingsList.reduce((sum, value) => sum + (6 - value) ** 2, 0);
+    results.weightedAvgRating = weightedSum / weightsSum;
+
+    return results;
 }
 
 function videoLinkForShow($page) {
@@ -329,8 +355,7 @@ function renderPage(scheduleData, showData, dayNum) {
     .map( (e) => {
         let show = showData.find((s) => s.showFavId == e.showFavId);
         return {...e,
-            showUrl: show.showUrl,
-            byArtist: show.byArtist,
+            ...show,
             venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
         };
     })
@@ -391,6 +416,7 @@ function renderPage(scheduleData, showData, dayNum) {
     });
 }
 
+// for a spreadsheet
 function renderCsv() {
     // console.log("renderCsv()");
     const separator = "\t";
@@ -482,9 +508,9 @@ if (flags.includes('-t')) {
 if (flags.includes('-d')) {
     scrapeShowDetails();
 }
-if (flags.includes('-v')) {
-    scrapeReviewsPage();
-}
+// if (flags.includes('-v')) {
+//     scrapeReviewsPage();
+// }
 if (flags.includes('-r')) {
     render();
 }
@@ -496,7 +522,7 @@ if (flags.length == 0) {
     console.info("-s   scrape Shows list into shows-bare.json");
     console.info("-t   scrape schedule Times into schedule.json");
     console.info("-d   scrape show Details into shows-details.json");
-    console.info("-v   scrape show reViews, update shows-details.json");
+    // console.info("-v   scrape show reViews, update shows-details.json");
     console.info("-r   Render html files from saved json");
     console.info("-c   render Csv file");
 }
