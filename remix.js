@@ -202,7 +202,7 @@ function decorateShowsWithScores(showData, scores) {
 async function scrapeShowPageDetails(show) {
     if (!show.showUrl) {
         console.error('No showUrl', show);
-        return;
+        return null;
     }
     try {
         const response = await axios.get(baseDomain + show.showUrl);
@@ -210,7 +210,16 @@ async function scrapeShowPageDetails(show) {
         let details = parseShowPageDetails(response.data);
         return {...show, ...details};
     } catch (error) {
-        console.error(error);
+        if (error.response && error.response.status == 404) {
+            // Status code not in 2xx range, and 404 specifically
+            console.error('404: ' + show.showUrl);
+            // console.log(error.response.data);
+            // console.log(error.response.headers);
+        }
+        else {
+            console.error(error);
+        }
+        return null;
     }
 }
 
