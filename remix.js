@@ -232,6 +232,7 @@ function parseShowPageDetails(content) {
     details.castCrewCount = $page('#cast-and-crew div.mb2').length;
     details.videoLink = videoLinkForShow($page);
     details.ratingStats = parseShowPageRatings($page);
+    details.castList = parseShowPageCast($page);
 
     // "FavId" - ID for "favoriting" (heart icon))
     // weird spot to find this, in newsletter signup mini form
@@ -274,6 +275,17 @@ function parseShowPageRatings($page) {
     const weightsSum = ratingsList.reduce((sum, value) => sum + (6 - value) ** 2, 0);
     results.weightedAvgRating = weightedSum / weightsSum;
 
+    return results;
+}
+
+function parseShowPageCast($page) {
+    let results = [];
+    $page('#cast-and-crew > div.mb2').get().map((row) => {
+        results.push({
+            name: $page(row).find('h6').text(),
+            role: $page(row).find('b').text(),
+        });
+    });
     return results;
 }
 
