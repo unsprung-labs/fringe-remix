@@ -379,7 +379,8 @@ function renderPage(scheduleData, showData, dayNum) {
             console.error('no showData found by showFavId (in map), for event: ', e);
             return e;
         }
-        show.ratingStats.ratingDisp = Math.floor(10 * show.ratingStats.weightedAvgRating) / 10
+        show.ratingStats.ratingDisp = Math.floor(10 * show.ratingStats.weightedAvgRating) / 10;
+        show.ratingGraphBins = ratingGraphBinsData(show.ratingStats);
         return {...e,
             ...show,
             venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
@@ -440,6 +441,36 @@ function renderPage(scheduleData, showData, dayNum) {
             // file written successfully
         });
     });
+}
+
+function ratingGraphBinsData(ratingStats) {
+    const maxHeight = 20;
+    const binWidth = 10;
+    const bins = [
+        { score: 0.5, fill: 'rgb(221,0,0)'},
+        { score: 1.0, fill: 'rgb(228,51,0)'},
+        { score: 1.5, fill: 'rgb(236,110,0)'},
+        { score: 2.0, fill: 'rgb(243,164,0)'},
+        { score: 2.5, fill: 'rgb(234,205,0)'},
+        { score: 3.0, fill: 'rgb(208,208,0)'},
+        { score: 3.5, fill: 'rgb(156,196,0)'},
+        { score: 4.0, fill: 'rgb(104,184,0)'},
+        { score: 4.5, fill: 'rgb(52,172,0)'},
+        { score: 5.0, fill: 'rgb(0,160,0)'},
+    ];
+    const result = bins.map((v,i) => {
+        // rect[angle] params; x,y = top left corner
+        let barHeight = maxHeight * (ratingStats.distribution[v.score] ?? 0);
+        let y = (maxHeight - barHeight) / 2; 
+        return {
+            x: i * binWidth,
+            y: y,
+            width: binWidth,
+            height: barHeight,
+            style: `fill:${v.fill};`,
+        };
+    });
+    return result;
 }
 
 // for a spreadsheet
