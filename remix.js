@@ -269,10 +269,11 @@ function parseShowPageRatings($page) {
     results.distribution = binCountsNorm;
 
     // weighted avg where lower ratings count more
-    // e.g 5 => 1, 3 => 9, 0.5 => 30.25
-    // kinda harsh on a few shows
-    const weightedSum = ratingsList.reduce((sum, value, index) => sum + value * (6 - value) ** 2, 0);
-    const weightsSum = ratingsList.reduce((sum, value) => sum + (6 - value) ** 2, 0);
+    // e.g. (weightPow 2)  : 5 => 1, 3 => 9, 0.5 => 30.25 (kinda harsh on a few shows)
+    // e.g. (weightPow 1.5): 5 => 1, 3 => ~5.2, 0.5 => ~12.9
+    const weightPow = 1.5;
+    const weightedSum = ratingsList.reduce((sum, value, index) => sum + value * (6 - value) ** weightPow, 0);
+    const weightsSum = ratingsList.reduce((sum, value) => sum + (6 - value) ** weightPow, 0);
     results.weightedAvgRating = weightedSum / weightsSum;
 
     return results;
