@@ -325,11 +325,14 @@ function videoLinkForShow($page) {
         console.error('bad videoID', videoScript);
         return undefined;
     }
-    let type = videoScript.match(/videoType = "(\w+)"/)[1];
+    // problem? "videoLink": "https://www.youtube.com/embed/TO FOLLOW"
+    let type = videoScript.match(/videoType = "(\w+)"/)?.[1];
     if (type == 'YouTube') {
         return videoScript.match(/youTubeURL = "(.+)"/)[1] + id;
     } else if (type == 'Vimeo') {
         return videoScript.match(/vimeoURL = "(.+)"/)[1] + id;
+    } else {
+        console.error('no video type', videoScript);
     }
 }
 
