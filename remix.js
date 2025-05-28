@@ -433,9 +433,14 @@ function renderPage(scheduleData, showData, dayNum) {
         timesWithEvents: dayTimeEvents,
     };
 
+    let partials = {};
+    fs.readFile('rating_chart.mustache', function (err, template) {
+        if (err) throw err;
+        partials['rating_chart'] = template.toString();
+    });
     fs.readFile('schedule.mustache', function (err, template) {
         if (err) throw err;
-        const content = mustache.render(template.toString(), data);
+        const content = mustache.render(template.toString(), data, partials);
         fs.writeFile('schedule-' + dayMeta.slug + '.html', content, err => {
             if (err) throw err;
             // file written successfully
