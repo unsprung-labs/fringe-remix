@@ -66,7 +66,12 @@
           padding: 4px;
           border-radius: 5px;
         }
+        .show-title {font-size: 18px;}
         .show-title a {text-decoration: none;}
+        .rating-num {
+            font-size: 12px;
+            color: #6c757d;
+        }
         .venue.IP { font-style: italic; }
         .footnote { font-size: .75em; padding-top: 2ex; }
         .footnote a { color: inherit; }
@@ -105,13 +110,14 @@
                   <div class="row time-slot-head sticky-icky shadow-sm" id="t{{timeNum}}"><div class="col-12"><h3>{{timeSlot}}</h3></div></div>
                   {{#events}}
                       <div class="row event border-bottom">
-                          <div class="col-12 col-lg-5 text-truncate show-title"><span class="badge bg-success">{{serviceTags}}</span> <a target="source" href="{{baseDomain}}{{showUrl}}">{{showTitle}}</a> </div>
-                          <div class="col-12 col-lg-4 text-truncate"><span class="text-muted">by {{byArtist}}</span> 
+                          <div class="col-9 col-lg-4 text-truncate show-title"><span class="badge bg-success">{{serviceTags}}</span> <a target="source" href="{{baseDomain}}{{showUrl}}">{{showTitle}}</a> </div>
+                          
                           <div class="col-3 col-lg-2 order-lg-4 test-graph text-end">
                             <span class="rating-num rating-count">({{ratingStats.totalCount}})</span>
                             {{> rating_chart}}
                           </div>
 
+                          <div class="col-12 col-lg-3 text-truncate"><span class="text-muted">by {{byArtist}}</span> 
                             <span class="badge bg-info">{{ratingStats.ratingDisp}}</span> 
                           </div>
                           <div class="col-12 col-lg-3 venue"><span class="badge bg-info">{{venueTag}}</span> {{venue}}</div>
