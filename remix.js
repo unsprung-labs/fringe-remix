@@ -7,6 +7,10 @@ const ratingViz = require('./rating-viz-bar-vert-ctr');
 console.log("running...");
 
 // SETUP
+// @todo? ideas
+// * find global max of review counts and/or bin content
+//   to put show scores in context (IE 1 five-star review vs 20)
+//   (at close of 2024, max count was 67, median ~12)
 
 const baseDomain = 'https://minnesotafringe.org';
 const festYear = '2024';
@@ -14,6 +18,8 @@ const festLengthDays = 11;
 const festStartString = '2024-08-01 17:30 CDT';
 const festStart = new Date(festStartString);
 const festDays = buildFestDaysArray(festStart, festLengthDays);
+var globalRatingTotalCountMax,
+    globalRatingBinCountMax;
 
 const venues = [
     // {venue: "Augsburg Mainstage"},
@@ -252,6 +258,9 @@ function parseShowPageRatings($page) {
     let binCountsNorm = {}
     $page('.review-container .review-user-info').each( function (i, r) {
         ratingsList.push(showRatingFromStars($page(this)));
+        // get reviewer ID to downweight those who only review one show?
+        // '/reviews/2025?member=1557258'
+        // $page(this).find('a').attr('href').match(/member=(\d+)/)[1];
     });
     // results.ratingsList = ratingsList;
     results.minRating = Math.min( ...ratingsList );
@@ -355,6 +364,7 @@ function render() {
     let scheduleData = JSON.parse(scheduleDataRaw);
     const showDataRaw = fs.readFileSync('shows-details.json');
     let showData = JSON.parse(showDataRaw);
+    globalRatingTotalCountMax = showData.filter(s => s).reduce((max, show) => Math.max(show.ratingStats.totalCount, max), 0);
     festDays.forEach( function(day) {
         // console.log('festDay', day);
         renderPage(scheduleData, showData, day.dayNum);
@@ -391,6 +401,8 @@ function renderPage(scheduleData, showData, dayNum) {
             ...show,
             venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
         };
+        // add occurrences so we can show how many more a show has?
+        // scheduleData.days.filter(d => d.events.find(e => e.showFavId == 45755)).map(d => d.dayNum);
     })
     // sort to match master array
     .sort((a, b) => venueSort.indexOf(a.venue) - venueSort.indexOf(b.venue))
@@ -526,6 +538,14 @@ function buildFestDaysArray(festStartDate, festLengthDays) {
         iDay++;
     }
     return festDays;
+}
+
+function fixVideoLink(link) {
+    // https://player.vimeo.com/video/932197541 -> https://vimeo.com/932197541
+    // [0-9]+
+    // https://www.youtube.com/embed/yOqIMSVRo6Y -> https://www.youtube.com/watch?v=yOqIMSVRo6Y
+    // [a-zA-Z0-9\-_]+
+
 }
 
 // MAIN
