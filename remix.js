@@ -247,6 +247,10 @@ function parseShowPageRatings($page) {
     let results = {};
     results.totalCount = $page('.review-container').find('.rating-stars').length;
 
+    if (results.totalCount == 0) {
+        return results;
+    }
+
     let ratingsList = [];
     let binCounts = {}
     let binCountsNorm = {}

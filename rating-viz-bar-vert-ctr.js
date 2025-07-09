@@ -25,6 +25,9 @@ class RatingViz {
         // const popFrac = ratingStats.totalCount > 5 ? 1 : 0.8;
         let popFrac = 1;
         switch (true) {
+            case ratingStats.totalCount == 0:
+                popFrac = 0;
+                break;
             case ratingStats.totalCount == 1:
                 popFrac = 0.2;
                 break;
@@ -52,7 +55,10 @@ class RatingViz {
         ];
         const result = bins.map((v,i) => {
             // rect[angle] params; x,y = top left corner
-            let binFrac = ratingStats.distribution[v.score] ?? 0; // 0-1
+            let binFrac = 0;
+            if (ratingStats.distribution && ratingStats.distribution[v.score]) {
+                binFrac = ratingStats.distribution[v.score] ?? 0; // 0-1
+            }
             binFrac = binFrac * popFrac; // ceiling hgt if not enough reviews
             binFrac = binFrac > 0 ? Math.max(binFrac, 0.1) : 0; // min hgt
             let barHeight = maxHeight * binFrac;
