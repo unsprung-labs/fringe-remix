@@ -9,41 +9,40 @@ console.log("running...");
 // SETUP
 
 const baseDomain = 'https://minnesotafringe.org';
-const festYear = '2024';
+const festYear = '2025';
 const festLengthDays = 11;
-const festStartString = '2024-08-01 17:30 CDT';
+const festStartString = '2025-07-31 17:30 CDT';
 const festStart = new Date(festStartString);
 const festDays = buildFestDaysArray(festStart, festLengthDays);
 
 const venues = [
     // {venue: "Augsburg Mainstage"},
     // {venue: "Augsburg Studio"},
-    // {venue: "Mixed Blood Theatre"},
-    // {venue: "Rarig Center Arena"},
-    // {venue: "Rarig Center Thrust"},
-    // {venue: "Rarig Center Xperimental"},
-    // {venue: "Bryant Lake Bowl", tag: "IP"},
-    // {venue: "Crane Theater", tag: "IP"},
-    // {venue: "Four Seasons Dance Studio", tag: "IP"},
-    // {venue: "The Hook and Ladder Theater and Lounge", tag: "IP"},
-    // {venue: "Maison Bodega", tag: "IP"},
-    // {venue: "Phoenix Theater", tag: "IP"},
-    // {venue: "Strike Theater", tag: "IP"},
     {venue: 'Barbara Barker Center for Dance', area: 'CR'},
     {venue: 'Bryant Lake Bowl', area: 'UP'},
     {venue: 'HUGE Improv Theater', area: 'UP'},
-    {venue: 'Mixed Blood Theatre', area: 'CR'},
+    {venue: 'Mixed Blood', area: 'CR'},
     {venue: 'Open Eye Theatre', area: 'VV'},
-    {venue: 'Phoenix Theater', area: 'UP'},
+    {venue: 'Rarig Kilburn Theatre', alias: 'Rarig Arena', area: 'CR'},
+    {venue: 'Rarig Nolte Xperimental Theatre', alias: 'Rarig X', area: 'CR'},
+    {venue: 'Rarig Stoll Thrust Theatre', alias: 'Rarig Thrust', area: 'CR'},
     {venue: 'The Southern Theater', area: 'CR'},
-    {venue: 'Strike Theater', area: 'NE'},
     {venue: 'Theatre in the Round', area: 'CR'},
     // Independent Producer venues:
     {venue: 'American School of Storytelling', isIP: true, tag: 'IP', area: 'LP'},
-    {venue: 'The Comedy Corner - Underground', isIP: true, tag: 'IP', area: 'CR'},
-    {venue: 'Corner Coffee Uptown', isIP: true, tag: 'IP', area: 'UP'},
-    {venue: 'The Ribs of Humanity at Campbell Plaza', isIP: true, tag: 'IP', area: 'CR'},
-    {venue: 'Squirrel Haus Arts', isIP: true, tag: 'IP', area: 'LF'},
+    {venue: 'Phoenix Lobby', isIP: true, tag: 'IP', area: 'UP'},
+    {venue: 'Phoenix Theater', isIP: true, tag: 'IP', area: 'UP'},
+    {venue: 'Red Eye Theater', isIP: true, tag: 'IP', area: 'CR'},
+    {venue: 'Strike Theater', isIP: true, tag: 'IP', area: 'NE'},
+    // {venue: 'Corner Coffee Uptown', isIP: true, tag: 'IP', area: 'UP'},
+    // {venue: 'Squirrel Haus Arts', isIP: true, tag: 'IP', area: 'LF'},
+    // {venue: 'The Comedy Corner - Underground', isIP: true, tag: 'IP', area: 'CR'},
+    // {venue: 'The Ribs of Humanity at Campbell Plaza', isIP: true, tag: 'IP', area: 'CR'},
+    // {venue: "Bryant Lake Bowl", tag: "IP"},
+    // {venue: "Crane Theater", tag: "IP"},
+    // {venue: "Four Seasons Dance Studio", tag: "IP"},
+    // {venue: "Maison Bodega", tag: "IP"},
+    // {venue: "The Hook and Ladder Theater and Lounge", tag: "IP"},
 ]
 const venueSort = venues.map(i => i.venue);
 
