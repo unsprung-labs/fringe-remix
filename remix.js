@@ -392,7 +392,7 @@ function renderPage(scheduleData, showData, dayNum) {
         return {
             ...e,
             ...show,
-            venueTag: venues.find((v) => v.venue == e.venue).tag ?? "",
+            venueTag: venues.find((v) => v.venue == e.venue)?.tag ?? "",
         };
     })
     // sort to match master array
