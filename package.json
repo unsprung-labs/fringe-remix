@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "cheerio": "latest",
+    "handlebars": "^4.7.8",
     "mustache": "^4.2.0",
     "request-promise": "latest"
   }

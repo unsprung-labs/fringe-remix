@@ -1,7 +1,7 @@
 const axios = require('axios').default;
 const cheerio = require('cheerio');
 const fs = require('fs');
-const mustache = require('mustache');
+const handlebars = require('handlebars');
 const ratingViz = require('./rating-viz-bar-vert-ctr');
 
 console.log("running...");
@@ -442,9 +442,10 @@ function renderPage(scheduleData, showData, dayNum) {
         timesWithEvents: dayTimeEvents,
     };
 
-    fs.readFile('schedule.mustache', function (err, template) {
+    fs.readFile('schedule.mustache', function (err, templateText) {
         if (err) throw err;
-        const content = mustache.render(template.toString(), data);
+        const template = handlebars.compile(templateText.toString());
+        const content = template(data);
         fs.writeFile('schedule-' + dayMeta.slug + '.html', content, err => {
             if (err) throw err;
             // file written successfully
