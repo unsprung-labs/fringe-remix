@@ -442,7 +442,7 @@ function renderPage(scheduleData, showData, dayNum) {
         timesWithEvents: dayTimeEvents,
     };
 
-    fs.readFile('schedule.mustache', function (err, templateText) {
+    fs.readFile('schedule.handlebars', function (err, templateText) {
         if (err) throw err;
         const template = handlebars.compile(templateText.toString());
         const content = template(data);
