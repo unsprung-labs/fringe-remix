@@ -240,9 +240,11 @@ async function scrapeShowPageDetails(show) {
 function parseShowPageDetails(content) {
     let $page = cheerio.load(content, {xmlMode: false});
     let details = {};
-    details.description = $page('.large-4 div:nth-of-type(3)').text().trim();
-    details.venue = $page('.large-4 div:nth-of-type(2) a').text().trim();
     details.createdBy = $page('.row.text-center p').text().trim();
+    details.venue = $page('.large-4 div:nth-of-type(2) a').text().trim();
+    details.description = $page('.large-4 div:nth-of-type(3)').text().trim();
+    details.genreTags = $page('.large-4 div:nth-of-type(4) a').map(function(i,e) { return $page(this).text() }).get();
+
     details.castCrewCount = $page('#cast-and-crew div.mb2').length;
     details.videoLink = videoLinkForShow($page);
     details.ratingStats = parseShowPageRatings($page);
