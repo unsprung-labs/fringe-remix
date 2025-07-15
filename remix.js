@@ -14,7 +14,7 @@ const festLengthDays = 11;
 const festStartString = '2025-07-31 17:30 CDT';
 const festStart = new Date(festStartString);
 const festDays = buildFestDaysArray(festStart, festLengthDays);
-
+const offStageRoles = ['Director', 'Assistant Director', 'Associate Director', 'Creative Director', 'Artistic Director', 'Dramaturg', 'Producer', 'Production Assistant', 'Technical Director', 'Box Office', 'Stage Manager', 'Assistant Stage Manager', 'Makeup Designer', 'Sound Designer', 'Set Builder', 'Props', 'Playwright', 'Writer', 'Author', 'Composer', 'Choreographer', 'Fight Choreographer', 'Fight Captain', 'Intimacy Consultant', 'Intimacy Coordinator', 'Lighting Designer', 'Lighting Design', 'Graphic Designer', 'Logo Design', 'Photographer', 'Videographer', 'Dialect Coach', 'Language & Dialect Coach', 'Additional Voices'];
 const venues = [
     // {venue: "Augsburg Mainstage"},
     // {venue: "Augsburg Studio"},
@@ -372,6 +372,10 @@ function render() {
     let scheduleData = JSON.parse(scheduleDataRaw);
     const showDataRaw = fs.readFileSync('shows-details.json');
     let showData = JSON.parse(showDataRaw);
+    showData = showData.map(function (show) {
+        show.castList = formatCast(show.castList);
+        return show;
+    });
     festDays.forEach( function(day) {
         // console.log('festDay', day);
         renderPage(scheduleData, showData, day.dayNum);
@@ -465,6 +469,22 @@ function renderPage(scheduleData, showData, dayNum) {
             // file written successfully
         });
     });
+}
+
+function formatCast(castList) {
+    return castList
+        .filter(function(person) {
+            // remove people not on stage (@todo or flag, sort last, and display e.g. muted)
+            // break out e.g. "Writer/Director"
+            const roles = person.role.trim().split(/\s*(?:\/|,|&)\s*/);
+            return ! roles.every(role => offStageRoles.includes(role));
+        })
+        .map(function(person) {
+            // remove "(She/Her)" etc
+            person.name = person.name.trim().replace(/\(\w{1,5}\/\w{1,5}\)/, '');
+            return person;
+         })
+    ;
 }
 
 // for a spreadsheet
