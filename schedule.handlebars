@@ -121,10 +121,10 @@
                     <div class="row time-slot-head sticky-icky shadow-sm" id="t{{timeNum}}"><div class="col-12"><h3>{{timeSlot}}</h3></div></div>
                       {{#events}}
                       <div class="NOT-accordion-item">
-                        <div class="row event NOT-accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{timeNum}}" id="heading-{{showFavId}}t{{timeNum}}">
+                        <div class="row event NOT-accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{../timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{../timeNum}}" id="heading-{{showFavId}}t{{../timeNum}}">
                           <div class="col-10 col-lg-4 text-truncate show-title">
                             <span class="badge bg-success">{{serviceTags}}</span>
-                            <a target="source" href="{{baseDomain}}{{showUrl}}">{{showTitle}}</a>
+                            <a target="source" href="{{../../baseDomain}}{{showUrl}}">{{showTitle}}</a>
                           </div>
 
                           <div class="col-2 col-lg-2 order-lg-4 test-graph text-end">
@@ -138,7 +138,7 @@
                             at {{venue}} <span class="badge bg-info">{{venueTag}}</span>
                           </div>
                         </div>
-                        <div id="details-{{showFavId}}t{{timeNum}}" class="accordion-collapse collapse" aria-labelledby="heading-{{showFavId}}t{{timeNum}}" data-bs-parent="#accordion-day">
+                        <div id="details-{{showFavId}}t{{../timeNum}}" class="accordion-collapse collapse show-details" aria-labelledby="heading-{{showFavId}}t{{timeNum}}" data-bs-parent="#accordion-day">
                           <div class="NOT-accordion-body row">
                             <div class="col-10">
                               <p class="description"><em>{{description}}</em></p>
