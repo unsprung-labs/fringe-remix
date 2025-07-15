@@ -387,6 +387,7 @@ function render() {
     let showData = JSON.parse(showDataRaw);
     showData = showData.map(function (show) {
         show.castList = formatCast(show.castList);
+        show.hideCreatedBy = (new RegExp(`.* by\\s+${show.byArtist}\\s*$`)).test(show.createdBy);
         return show;
     });
     globalRatingTotalCountMax = showData.filter(s => s).reduce((max, show) => Math.max(show.ratingStats.totalCount, max), 0);
@@ -500,6 +501,7 @@ function formatCast(castList) {
             person.name = person.name.trim().replace(/\(\w{1,5}\/\w{1,5}\)/, '');
             return person;
          })
+         .filter(person => person.name.length > 0)
     ;
 }
 
