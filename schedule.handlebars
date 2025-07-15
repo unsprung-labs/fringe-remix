@@ -70,7 +70,7 @@
           border-radius: 5px;
         }
         .accordion-header:not(.collapsed) {
-          background-color: #f00;
+          background-color: #d3e2fd;
         }
         .accordion-header.collapsed {
           background-color: #fff;
@@ -121,7 +121,7 @@
                     <div class="row time-slot-head sticky-icky shadow-sm" id="t{{timeNum}}"><div class="col-12"><h3>{{timeSlot}}</h3></div></div>
                       {{#events}}
                       <div class="NOT-accordion-item">
-                        <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{timeNum}}" id="heading-{{showFavId}}t{{timeNum}}">
+                        <div class="row event NOT-accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{timeNum}}" id="heading-{{showFavId}}t{{timeNum}}">
                           <div class="col-10 col-lg-4 text-truncate show-title">
                             <span class="badge bg-success">{{serviceTags}}</span>
                             <a target="source" href="{{baseDomain}}{{showUrl}}">{{showTitle}}</a>
@@ -142,7 +142,16 @@
                           <div class="NOT-accordion-body row">
                             <div class="col-10">
                               <p class="description"><em>{{description}}</em></p>
-                              <p class="cast">{{#castList}}{{name}}, {{/castList}}</p>
+                              <p class="genreTags">
+                                {{#each genreTags}}
+                                  {{.}}{{#unless @last}}, {{/unless}}
+                                {{/each}}
+                              </p>
+                              <p class="cast">
+                                {{#each castList}}
+                                  {{name}}{{#unless @last}}, {{/unless}}
+                                {{/each}}
+                              </p>
                             </div>
                             <div class="col-2">
                               <span class="rating-num rating-count">{{ratingStats.totalCount}} reviews</span>
