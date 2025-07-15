@@ -147,14 +147,14 @@ async function parseShowsList(cheerioObj) {
 }
 
 function scrapeShowDetails() {
-    const showDataRaw = fs.readFileSync('shows-bare.json');
-    let showData = JSON.parse(showDataRaw).filter(s => !!s);
-    let scrapePromises = showData.map( function(show) {
+    const showsBareRaw = fs.readFileSync('shows-bare.json');
+    let showsBare = JSON.parse(showsBareRaw).filter(s => !!s);
+    let scrapePromises = showsBare.map( function(show) {
         return scrapeShowPageDetails(show);
     });
-    Promise.all(scrapePromises).then( (values) => {
+    Promise.all(scrapePromises).then( (scrapedDetails) => {
         console.log('show scrapePromises all done!');
-        fs.writeFileSync('shows-details.json', JSON.stringify(values, null, 2));
+        fs.writeFileSync('shows-details.json', JSON.stringify(scrapedDetails, null, 2));
     });
 }
 
@@ -204,22 +204,36 @@ async function scrapeShowPageDetails(show) {
         console.error('No showUrl', show);
         return null;
     }
-    try {
-        const response = await axios.get(baseDomain + show.showUrl);
-        console.log('scrapeShowPageDetails parsing ' + show.showUrl);
-        let details = parseShowPageDetails(response.data);
-        return {...show, ...details};
-    } catch (error) {
-        if (error.response && error.response.status == 404) {
-            // Status code not in 2xx range, and 404 specifically
-            console.error('404: ' + show.showUrl);
-            // console.log(error.response.data);
-            // console.log(error.response.headers);
+    let tryCount = 0;
+    const maxTries = 3;
+
+    while(true) {
+        try {
+            console.log('scrapeShowPageDetails reading ' + show.showUrl);
+            const response = await axios.get(baseDomain + show.showUrl);
+            let details = parseShowPageDetails(response.data);
+            return {...show, ...details};
+        } catch (error) {
+            if (error.response && [502].includes(error.response.status)) {
+                tryCount++;
+                if (tryCount > maxTries) {
+                    console.error('502 after 3 tries: ' + show.showUrl);
+                    return null;
+                }
+            }
+            else if (error.response && error.response.status == 404) {
+                // Status code not in 2xx range, and 404 specifically
+                console.error('404: ' + show.showUrl);
+                return null;
+                // console.log(error.response.data);
+                // console.log(error.response.headers);
+            }
+            else {
+                console.error(error);
+                return null;
+            }
+            // return null;
         }
-        else {
-            console.error(error);
-        }
-        return null;
     }
 }
 
