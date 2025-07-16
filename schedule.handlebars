@@ -129,17 +129,17 @@
 
                 <div class="NOT-accordion" id="accordion-day">
 
-                  {{#dayMeta}}
+                  {{#each dayMeta}}
                     <div class="row border-top">
                       <div class="col-12">
                         <h2 class="day-head">{{label}}</h2>
                       </div>
                     </div>
-                  {{/dayMeta}}
+                  {{/each}}
 
-                  {{#timesWithEvents}}
+                  {{#each timesWithEvents}}
                     <div class="row time-slot-head sticky-icky shadow-sm" id="t{{timeNum}}"><div class="col-12"><h3>{{timeSlot}}</h3></div></div>
-                      {{#events}}
+                      {{#each events}}
                       <div class="NOT-accordion-item">
                         <div class="row event NOT-accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{../timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{../timeNum}}" id="heading-{{showFavId}}t{{../timeNum}}">
                           <div class="col-10 col-lg-4 text-truncate show-title">
@@ -201,8 +201,8 @@
                           </div>
                         </div>
                       </div>
-                      {{/events}}
-                  {{/timesWithEvents}}
+                      {{/each}}
+                  {{/each}}
                 </div>
 
         <p class="footnote text-black-50"><em>Data sourced {{scrapeTime}}, <a href="https://github.com/unsprung-labs/fringe-remix">remixed</a> {{renderTime}}</em></p>
