@@ -15,6 +15,11 @@
     <title>{{docTitle}}</title>
 
     <style>
+        .container-fluid.px-0 .row {
+          --bs-gutter-x: 0; /* "full bleed" to edges */
+          padding-left:  0.5rem;
+          padding-right: 0.5rem;
+        }
         h1 { font-size: 25px; }
         h2 { font-size: 167%; }
         h3 { font-size: 125%; }
@@ -76,6 +81,15 @@
         .accordion-header.collapsed {
           background-color: #fff;
         }
+        .accordion-button::after {
+          {{!-- The actual caret button --}}
+          position: absolute;
+          right: 0.5rem;
+          bottom: 0.5rem;
+        }
+        .accordion-button:not(.collapsed) {
+          color: inherit;
+        }
         .show-title {
           font-size: 18px;
           font-weight: bold;
@@ -119,7 +133,7 @@
             {{/dayNav}}
           </ul>
     </nav>
-    <div class="container-fluid pt-3">
+    <div class="container-fluid px-0">
         {{! <h1>FFS <span class="text-muted">Faster Fringe Schedule</span></h1> }}
         {{! <div class="dayNav">
           <nav aria-label="...">
@@ -127,12 +141,12 @@
           </nav>
         </div> }}
 
-                <div class="NOT-accordion" id="accordion-day">
+                <div class="accordion accordion-flush" id="accordion-day">
 
                   {{#with dayMeta}}
                     <div class="row border-top">
                       <div class="col-12">
-                        <h2 class="day-head">{{label}}</h2>
+                        <h2 class="day-head pt-3">{{label}}</h2>
                       </div>
                     </div>
                   {{/with}}
@@ -141,7 +155,7 @@
                     <div class="row time-slot-head sticky-icky shadow-sm" id="t{{timeNum}}"><div class="col-12"><h3>{{timeSlot}}</h3></div></div>
                       {{#each events}}
                         <div class="NOT-accordion-item">
-                          <div class="row event NOT-accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{../timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{../timeNum}}" id="heading-{{showFavId}}t{{../timeNum}}">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{../timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{../timeNum}}" id="heading-{{showFavId}}t{{../timeNum}}">
                             <div class="col-10 col-lg-4 text-truncate show-title">
                               <span class="badge bg-success">{{serviceTags}}</span>
                               <span class="title">{{showTitle}}</span>
