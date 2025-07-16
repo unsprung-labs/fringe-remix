@@ -76,11 +76,30 @@
         .accordion-header.collapsed {
           background-color: #fff;
         }
-        .show-title {font-size: 18px;}
+        .show-title {
+          font-size: 18px;
+          font-weight: bold;
+          color: #592e84;
+        }
         .show-title a {text-decoration: none;}
         .rating-num {
             font-size: 12px;
             color: #6c757d;
+        }
+        .show-details p {
+          margin-bottom: .5rem;
+        }
+        .show-details p:first-child {
+          margin-top: .5rem;
+        }
+        p.icon-hang {
+          margin-left: 2.5ex;
+        }
+        p.icon-hang i.bi {
+          margin-left: -2.5ex;
+        }
+        p.description {
+              line-height: 1.2;
         }
         .venue.IP { font-style: italic; }
         .footnote { font-size: .75em; padding-top: 2ex; }
@@ -142,20 +161,26 @@
                         <div id="details-{{showFavId}}t{{../timeNum}}" class="accordion-collapse collapse show-details" aria-labelledby="heading-{{showFavId}}t{{timeNum}}" data-bs-parent="#accordion-day">
                           <div class="NOT-accordion-body row">
                             <div class="col-10">
-                              <p class="description"><em>{{description}}</em></p>
+                              <p class="description icon-hang">
+                                <i class="bi bi-quote"></i>
+                                <em>{{description}}</em>
+                              </p>
                               {{#unless hideCreatedBy}}
-                                <p class="createdBy">{{createdBy}}</p>
+                                <p class="createdBy icon-hang">
+                                  <i class="bi bi-briefcase-fill"></i>
+                                  {{createdBy}}
+                                </p>
                               {{/unless}}
                               {{#if genreTags}}
-                                <p class="genreTags">
-                                  <i class="bi bi-tags"></i>
+                                <p class="genreTags icon-hang">
+                                  <i class="bi bi-tags-fill"></i>
                                   {{#each genreTags}}
                                     {{.}}{{#unless @last}}, {{/unless}}
                                   {{/each}}
                                 </p>
                               {{/if}}
                               {{#if castList}}
-                                <p class="cast">
+                                <p class="cast icon-hang">
                                   <i class="bi bi-person-arms-up"></i>
                                   {{#each castList}}
                                     {{name}}{{#unless @last}}, {{/unless}}
@@ -164,9 +189,13 @@
                               {{/if}}
                             </div>
                             <div class="col-2">
+                              {{#if ratingStats.totalCount}}
                               <span class="rating-num rating-count">{{ratingStats.totalCount}} reviews</span>
                               <span class="badge bg-info">{{ratingStats.ratingDisp}}</span>
-                              <a class="btn btn-primary btn-color-fringe " target="source" href="{{../../baseDomain}}{{showUrl}}#tickets" title="{{showTitle}}"><i class="bi ticket-perforated-fill"></i> Tickets</a>
+                              {{else}}
+                                <span class="rating-num rating-count">No reviews yet</span>
+                              {{/if}}
+                              <a class="btn btn-primary btn-purple " target="source" href="{{../../baseDomain}}{{showUrl}}#tickets" title="{{showTitle}}">Tickets</a>
                             </div>
 
                           </div>
