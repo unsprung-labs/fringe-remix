@@ -7,6 +7,10 @@ const ratingViz = require('./rating-viz-bar-vert-ctr');
 console.log("running...");
 
 // SETUP
+// @todo? ideas
+// * find global max of review counts and/or bin content
+//   to put show scores in context (IE 1 five-star review vs 20)
+//   (at close of 2024, max count was 67, median ~12)
 
 const baseDomain = 'https://minnesotafringe.org';
 const festYear = '2025';
@@ -14,7 +18,11 @@ const festLengthDays = 11;
 const festStartString = '2025-07-31 17:30 CDT';
 const festStart = new Date(festStartString);
 const festDays = buildFestDaysArray(festStart, festLengthDays);
-const offStageRoles = ['Director', 'Assistant Director', 'Associate Director', 'Creative Director', 'Artistic Director', 'Dramaturg', 'Producer', 'Production Assistant', 'Technical Director', 'Box Office', 'Stage Manager', 'Assistant Stage Manager', 'Makeup Designer', 'Sound Designer', 'Set Builder', 'Props', 'Playwright', 'Writer', 'Author', 'Composer', 'Choreographer', 'Fight Choreographer', 'Fight Captain', 'Intimacy Consultant', 'Intimacy Coordinator', 'Lighting Designer', 'Lighting Design', 'Graphic Designer', 'Logo Design', 'Photographer', 'Videographer', 'Dialect Coach', 'Language & Dialect Coach', 'Additional Voices'];
+const offStageRoles = ['Director', 'Assistant Director', 'Associate Director', 'Creative Director', 'Artistic Director', 'Dramaturg', 'Producer', 'Production Assistant', 'Production Support', 'Technical Director', 'Box Office', 'Stage Manager', 'Assistant Stage Manager', 'Makeup Designer', 'Sound Designer', 'Set Builder', 'Props', 'Playwright', 'Writer', 'Author', 'Composer', 'Choreographer', 'Fight Choreographer', 'Fight Captain', 'Intimacy Consultant', 'Intimacy Coordinator', 'Lighting Designer', 'Lighting Design', 'Light Design', 'Board Operator', 'Graphic Designer', 'Logo Design', 'Photographer', 'Videographer', 'Dialect Coach', 'Language & Dialect Coach', 'Additional Voices'];
+
+var globalRatingTotalCountMax,
+    globalRatingBinCountMax;
+
 const venues = [
     // {venue: "Augsburg Mainstage"},
     // {venue: "Augsburg Studio"},
@@ -271,6 +279,9 @@ function parseShowPageRatings($page) {
     let binCountsNorm = {}
     $page('.review-container .review-user-info').each( function (i, r) {
         ratingsList.push(showRatingFromStars($page(this)));
+        // get reviewer ID to downweight those who only review one show?
+        // '/reviews/2025?member=1557258'
+        // $page(this).find('a').attr('href').match(/member=(\d+)/)[1];
     });
     // results.ratingsList = ratingsList;
     results.minRating = Math.min( ...ratingsList );
@@ -376,8 +387,10 @@ function render() {
     let showData = JSON.parse(showDataRaw);
     showData = showData.map(function (show) {
         show.castList = formatCast(show.castList);
+        show.hideCreatedBy = (new RegExp(`.* by\\s+${show.byArtist}\\s*$`)).test(show.createdBy) || show.createdBy.trim().length == 0;
         return show;
     });
+    globalRatingTotalCountMax = showData.filter(s => s).reduce((max, show) => Math.max(show.ratingStats.totalCount, max), 0);
     festDays.forEach( function(day) {
         // console.log('festDay', day);
         renderPage(scheduleData, showData, day.dayNum);
@@ -414,6 +427,8 @@ function renderPage(scheduleData, showData, dayNum) {
             ...show,
             venueTag: venues.find((v) => v.venue == e.venue)?.tag ?? "",
         };
+        // add occurrences so we can show how many more a show has?
+        // scheduleData.days.filter(d => d.events.find(e => e.showFavId == 45755)).map(d => d.dayNum);
     })
     // sort to match master array
     .sort((a, b) => venueSort.indexOf(a.venue) - venueSort.indexOf(b.venue))
@@ -483,9 +498,10 @@ function formatCast(castList) {
         })
         .map(function(person) {
             // remove "(She/Her)" etc
-            person.name = person.name.trim().replace(/\(\w{1,5}\/\w{1,5}\)/, '');
+            person.name = person.name.trim().replace(/\s*\(\w{1,5}\/\w{1,5}\)/, '');
             return person;
          })
+         .filter(person => person.name.length > 0)
     ;
 }
 
@@ -566,6 +582,14 @@ function buildFestDaysArray(festStartDate, festLengthDays) {
         iDay++;
     }
     return festDays;
+}
+
+function fixVideoLink(link) {
+    // https://player.vimeo.com/video/932197541 -> https://vimeo.com/932197541
+    // [0-9]+
+    // https://www.youtube.com/embed/yOqIMSVRo6Y -> https://www.youtube.com/watch?v=yOqIMSVRo6Y
+    // [a-zA-Z0-9\-_]+
+
 }
 
 // MAIN
