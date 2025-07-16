@@ -140,67 +140,67 @@
                   {{#each timesWithEvents}}
                     <div class="row time-slot-head sticky-icky shadow-sm" id="t{{timeNum}}"><div class="col-12"><h3>{{timeSlot}}</h3></div></div>
                       {{#each events}}
-                      <div class="NOT-accordion-item">
-                        <div class="row event NOT-accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{../timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{../timeNum}}" id="heading-{{showFavId}}t{{../timeNum}}">
-                          <div class="col-10 col-lg-4 text-truncate show-title">
-                            <span class="badge bg-success">{{serviceTags}}</span>
-                            <span class="title">{{showTitle}}</span>
-                          </div>
-
-                          <div class="col-2 col-lg-2 order-lg-4 test-graph text-end">
-                            {{{ratingGraphContent}}}
-                          </div>
-
-                          <div class="col-12 col-lg-3 text-truncate">
-                            <span class="text-muted">by {{byArtist}}</span>
-                          </div>
-                          <div class="col-12 col-lg-3 venue">
-                            at {{venue}} <span class="badge bg-info">{{venueTag}}</span>
-                          </div>
-                        </div>
-                        <div id="details-{{showFavId}}t{{../timeNum}}" class="accordion-collapse collapse show-details" aria-labelledby="heading-{{showFavId}}t{{timeNum}}" data-bs-parent="#accordion-day">
-                          <div class="NOT-accordion-body row">
-                            <div class="col-10">
-                              <p class="description icon-hang">
-                                <i class="bi bi-quote"></i>
-                                <em>{{description}}</em>
-                              </p>
-                              {{#unless hideCreatedBy}}
-                                <p class="createdBy icon-hang">
-                                  <i class="bi bi-briefcase-fill"></i>
-                                  {{createdBy}}
-                                </p>
-                              {{/unless}}
-                              {{#if genreTags}}
-                                <p class="genreTags icon-hang">
-                                  <i class="bi bi-tags-fill"></i>
-                                  {{#each genreTags}}
-                                    {{.}}{{#unless @last}}, {{/unless}}
-                                  {{/each}}
-                                </p>
-                              {{/if}}
-                              {{#if castList}}
-                                <p class="cast icon-hang">
-                                  <i class="bi bi-person-arms-up"></i>
-                                  {{#each castList}}
-                                    {{name}}{{#unless @last}}, {{/unless}}
-                                  {{/each}}
-                                </p>
-                              {{/if}}
-                            </div>
-                            <div class="col-2">
-                              {{#if ratingStats.totalCount}}
-                              <span class="rating-num rating-count">{{ratingStats.totalCount}} reviews</span>
-                              <span class="badge bg-info">{{ratingStats.ratingDisp}}</span>
-                              {{else}}
-                                <span class="rating-num rating-count">No reviews yet</span>
-                              {{/if}}
-                              <a class="btn btn-primary btn-purple " target="source" href="{{../../baseDomain}}{{showUrl}}#tickets" title="{{showTitle}}">Tickets</a>
+                        <div class="NOT-accordion-item">
+                          <div class="row event NOT-accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{../timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{../timeNum}}" id="heading-{{showFavId}}t{{../timeNum}}">
+                            <div class="col-10 col-lg-4 text-truncate show-title">
+                              <span class="badge bg-success">{{serviceTags}}</span>
+                              <span class="title">{{showTitle}}</span>
                             </div>
 
+                            <div class="col-2 col-lg-2 order-lg-4 test-graph text-end">
+                              {{{ratingGraphContent}}}
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted">by {{byArtist}}</span>
+                            </div>
+                            <div class="col-12 col-lg-3 venue">
+                              at {{venue}} <span class="badge bg-info">{{venueTag}}</span>
+                            </div>
+                          </div>
+                          <div id="details-{{showFavId}}t{{../timeNum}}" class="accordion-collapse collapse show-details" aria-labelledby="heading-{{showFavId}}t{{timeNum}}" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-10">
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>{{description}}</em>
+                                </p>
+                                {{#unless hideCreatedBy}}
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-briefcase-fill"></i>
+                                    {{createdBy}}
+                                  </p>
+                                {{/unless}}
+                                {{#if genreTags}}
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags-fill"></i>
+                                    {{#each genreTags}}
+                                      {{.}}{{#unless @last}}, {{/unless}}
+                                    {{/each}}
+                                  </p>
+                                {{/if}}
+                                {{#if castList}}
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                    {{#each castList}}
+                                      {{name}}{{#unless @last}}, {{/unless}}
+                                    {{/each}}
+                                  </p>
+                                {{/if}}
+                              </div>
+                              <div class="col-2">
+                                {{#if ratingStats.totalCount}}
+                                <span class="rating-num rating-count">{{ratingStats.totalCount}} reviews</span>
+                                <span class="badge bg-info">{{ratingStats.ratingDisp}}</span>
+                                {{else}}
+                                  <span class="rating-num rating-count">No reviews yet</span>
+                                {{/if}}
+                                <a class="btn btn-primary btn-purple " target="source" href="{{../../baseDomain}}{{showUrl}}#tickets" title="{{showTitle}}">Tickets</a>
+                              </div>
+
+                            </div>
                           </div>
                         </div>
-                      </div>
                       {{/each}}
                   {{/each}}
                 </div>
