@@ -129,13 +129,13 @@
 
                 <div class="NOT-accordion" id="accordion-day">
 
-                  {{#each dayMeta}}
+                  {{#with dayMeta}}
                     <div class="row border-top">
                       <div class="col-12">
                         <h2 class="day-head">{{label}}</h2>
                       </div>
                     </div>
-                  {{/each}}
+                  {{/with}}
 
                   {{#each timesWithEvents}}
                     <div class="row time-slot-head sticky-icky shadow-sm" id="t{{timeNum}}"><div class="col-12"><h3>{{timeSlot}}</h3></div></div>
