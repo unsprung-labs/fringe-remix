@@ -134,12 +134,6 @@
           </ul>
     </nav>
     <div class="container-fluid px-0">
-        {{! <h1>FFS <span class="text-muted">Faster Fringe Schedule</span></h1> }}
-        {{! <div class="dayNav">
-          <nav aria-label="...">
-
-          </nav>
-        </div> }}
 
                 <div class="accordion accordion-flush" id="accordion-day">
 
@@ -192,13 +186,13 @@
                                 </p>
                                 {{#unless hideCreatedBy}}
                                   <p class="createdBy icon-hang">
-                                    <i class="bi bi-briefcase-fill"></i>
+                                    <i class="bi bi-book"></i>
                                     {{createdBy}}
                                   </p>
                                 {{/unless}}
                                 {{#if genreTags}}
                                   <p class="genreTags icon-hang">
-                                    <i class="bi bi-tags-fill"></i>
+                                    <i class="bi bi-tags"></i>
                                     {{#each genreTags}}
                                       {{.}}{{#unless @last}}, {{/unless}}
                                     {{/each}}
