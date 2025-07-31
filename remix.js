@@ -411,11 +411,7 @@ function render() {
     let scheduleData = JSON.parse(scheduleDataRaw);
     const showDataRaw = fs.readFileSync('shows-details.json');
     let showData = JSON.parse(showDataRaw);
-    showData = showData.map(function (show) {
-        show.castList = formatCast(show.castList);
-        show.hideCreatedBy = (new RegExp(`.* by\\s+${show.byArtist}\\s*$`)).test(show.createdBy) || show.createdBy.trim().length == 0;
-        return show;
-    });
+    showData = showData.map(formatShow);
     globalRatingTotalCountMax = showData.filter(s => s).reduce((max, show) => Math.max(show.ratingStats.totalCount, max), 0);
     festDays.forEach( function(day) {
         // console.log('festDay', day);
@@ -523,6 +519,12 @@ function renderPage(scheduleData, showData, dayNum) {
             // file written successfully
         });
     });
+}
+
+function formatShow(show, index) {
+    show.castList = formatCast(show.castList);
+    show.hideCreatedBy = (new RegExp(`.* by\\s+${show.byArtist}\\s*$`)).test(show.createdBy) || show.createdBy.trim().length == 0;
+    return show;
 }
 
 function formatCast(castList) {
