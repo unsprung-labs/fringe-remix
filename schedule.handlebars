@@ -34,9 +34,14 @@
           font-size: 26px;
           color: #592e84;
         }
-        img.fringe {
-          /* fringe dark purple: #592e84 */
+        .brand-purple {
+          color: #592e84;
+        }
+        .brand-purple-svg {
           /* as filter for black svg h/t https://codepen.io/sosuke/pen/Pjoqqp */
+          filter: invert(18%) sepia(56%) saturate(1876%) hue-rotate(247deg) brightness(97%) contrast(93%);
+        }
+        img.fringe {
           filter: invert(18%) sepia(56%) saturate(1876%) hue-rotate(247deg) brightness(97%) contrast(93%);
           margin-top: 1px;
           margin-left: 3px;
@@ -47,7 +52,7 @@
         .sticky-icky {
           position: -webkit-sticky; position: -moz-sticky; position: -o-sticky; position: -ms-sticky;
           position: sticky;
-          top: 66px; /* navbar height */
+          top: 65px; /* navbar height - gap on some devices? */
           left: 0;
           right: 0;
           display: block;
@@ -66,7 +71,7 @@
         .pagination-sm .page-link { padding: 0.2rem 0.35rem; }
         .wkdy { font-size: 10px; }
         .row.event {
-          padding: 4px 0px;
+          padding: 0.5rem 0;
           line-height: 1.25;
         }
         .badge {
@@ -82,20 +87,30 @@
           background-color: #fff;
         }
         .accordion-button::after {
-          {{!-- The actual caret button --}}
+          /* The actual caret button */
           position: absolute;
           right: 0.5rem;
-          bottom: 0.5rem;
+          top: 0.5rem;
         }
         .accordion-button:not(.collapsed) {
           color: inherit;
         }
-        .show-title {
+        .show-title-col {
           font-size: 18px;
+        }
+        .show-title-col .title {
           font-weight: bold;
           color: #592e84;
         }
-        .show-title a {text-decoration: none;}
+
+        .header-tag-icon {
+          margin-right: 0.1rem;
+        }
+        .score-viz svg {
+          width: 100%;
+          /* Height auto is important here to maintain aspect ratio with viewBox */
+          height: auto;
+        }
         .rating-num {
             font-size: 12px;
             color: #6c757d;
@@ -109,8 +124,13 @@
         p.icon-hang {
           margin-left: 2.5ex;
         }
-        p.icon-hang i.bi {
+        p.icon-hang i.bi:first-child {
           margin-left: -2.5ex;
+        }
+        .bi-chat-left-dots {
+          /* tweak v-align */
+          position: relative;
+          top: 2px;
         }
         p.description {
               line-height: 1.2;
@@ -123,7 +143,7 @@
   <body>
     <div class="container-fluid bg-light">
         <section class="header">
-            <a href="/" class="brand"><img src="./images/minnesota-simple.svg" alt="MN" height="23" class="d-inline-block align-text-top fringe"><span class="fringe">Fringe</span> Quick Schedule</a>
+            <a href="/" class="brand"><img src="./images/minnesota-simple.svg" alt="MN" height="23" class="d-inline-block align-text-top brand-purple-svg fringe"><span class="fringe brand-purple">Fringe</span> Quick Schedule</a>
         </section>
     </div>
     <nav class="navbar sticky-top navbar-light bg-light shadow-sm">
@@ -150,36 +170,38 @@
                       {{#each events}}
                         <div class="NOT-accordion-item">
                           <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-{{showFavId}}t{{../timeNum}}" aria-expanded="false" aria-controls="details-{{showFavId}}t{{../timeNum}}" id="heading-{{showFavId}}t{{../timeNum}}">
-                            <div class="col-10 col-lg-4 text-truncate show-title">
-                              <span class="title">{{showTitle}}</span>
-                            </div>
-
-                            <div class="col-2 col-lg-2 order-lg-4 test-graph text-end">
-                              {{{ratingGraphContent}}}
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">{{showTitle}}</span>
+                              </div>
                             </div>
 
                             <div class="col-12 col-lg-3 text-truncate">
-                              <span class="text-muted">by {{byArtist}}</span>
-                            </div>
-                            <div class="col-12 col-lg-3 venue">
-                            {{#if eventTags}}
-                                {{#each eventTags}}
+                              {{#if eventTags.[0]}}
+                                {{#with eventTags.[0]}}
                                   <i class="header-tag-icon text-muted bi {{iconClass}} {{category}}"></i>
-                                {{/each}}
+                                {{/with}}
                               {{/if}}
-                              at {{venue}} <span class="badge bg-info">{{venueTag}}</span>
+                              <span class="text-muted"><span class="at-by">by</span> {{byArtist}}</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              {{#if eventTags.[1]}}
+                                {{#with eventTags.[1]}}
+                                  <i class="header-tag-icon text-muted bi {{iconClass}} {{category}}"></i>
+                                {{/with}}
+                              {{/if}}
+                              <span class="at-by">at</span> {{venue}} <span class="badge bg-info">{{venueTag}}</span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              {{{ratingGraphContent}}}
                             </div>
                           </div>
+
                           <div id="details-{{showFavId}}t{{../timeNum}}" class="accordion-collapse collapse show-details" aria-labelledby="heading-{{showFavId}}t{{timeNum}}" data-bs-parent="#accordion-day">
                             <div class="NOT-accordion-body row">
                               <div class="col-10">
-                                {{#if eventTags}}
-                                  <p class="text-muted">
-                                    {{#each eventTags}}
-                                      <i class="bi {{iconClass}}"></i> {{label}}{{#unless @last}}, {{/unless}}
-                                    {{/each}}
-                                  </p>
-                                {{/if}}
+
                                 <p class="description icon-hang">
                                   <i class="bi bi-quote"></i>
                                   <em>{{description}}</em>
@@ -206,15 +228,24 @@
                                     {{/each}}
                                   </p>
                                 {{/if}}
+                                {{#if eventTags}}
+                                    {{#each eventTags}}
+                                  <p class="text-muted icon-hang">
+                                      <i class="bi {{iconClass}}"></i> {{label}} <span class="text-sm">(this performance)</span>
+                                  </p>
+                                    {{/each}}
+                                {{/if}}
                               </div>
-                              <div class="col-2">
+                              <div class="col-2 align-content-end p-2">
                                 {{#if ratingStats.totalCount}}
                                 <span class="rating-num rating-count">{{ratingStats.totalCount}} reviews</span>
                                 <span class="badge bg-info">{{ratingStats.ratingDisp}}</span>
                                 {{else}}
-                                  <span class="rating-num rating-count">No reviews yet</span>
+                                  {{!-- <span class="rating-num rating-count">No reviews yet</span> --}}
                                 {{/if}}
-                                <a class="btn btn-primary btn-purple " target="source" href="{{../../baseDomain}}{{showUrl}}#tickets" title="{{showTitle}}">Tickets</a>
+                                <div class="d-grid gap-2">
+                                <a class="btn btn-sm btn-secondary btn-purple " target="source" href="{{../../baseDomain}}{{showUrl}}#tickets" title="{{showTitle}}">Tickets etc</a>
+                                </div>
                               </div>
 
                             </div>
