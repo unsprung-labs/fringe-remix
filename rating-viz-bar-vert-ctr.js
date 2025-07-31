@@ -9,9 +9,9 @@ class RatingViz {
 
     constructor() {
         this.template = /*html*/ `
-            <svg width="100" height="20">
-                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:0.5px;"/>
-                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:0.5px;"/>
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
                 {{#bins}}
                     <rect x="{{x}}" y="{{y}}" width="{{width}}" height="{{height}}" style="{{style}}"/>
                 {{/bins}}
