@@ -19,6 +19,32 @@ const festStartString = '2025-07-31 17:30 CDT';
 const festStart = new Date(festStartString);
 const festDays = buildFestDaysArray(festStart, festLengthDays);
 const offStageRoles = ['Director', 'Assistant Director', 'Associate Director', 'Creative Director', 'Artistic Director', 'Dramaturg', 'Producer', 'Production Assistant', 'Production Support', 'Technical Director', 'Box Office', 'Stage Manager', 'Assistant Stage Manager', 'Makeup Designer', 'Sound Designer', 'Set Builder', 'Props', 'Playwright', 'Writer', 'Author', 'Composer', 'Choreographer', 'Fight Choreographer', 'Fight Captain', 'Intimacy Consultant', 'Intimacy Coordinator', 'Lighting Designer', 'Lighting Design', 'Light Design', 'Board Operator', 'Graphic Designer', 'Logo Design', 'Photographer', 'Videographer', 'Dialect Coach', 'Language & Dialect Coach', 'Additional Voices'];
+const tagDetails = [
+    {
+        tag: "BFF",
+        iconClass: "bi-gift promo",
+        label: "Bring a Friend to Fringe",
+        category: "promo",
+    },
+    {
+        tag: "AD",
+        iconClass: "bi-headset",
+        label: "Audio Description",
+        category: "access",
+    },
+    {
+        tag: "ASL",
+        iconClass: "bi-hand-index-thumb",
+        label: "ASL Interpreter",
+        category: "access",
+    },
+    {
+        tag: "OC",
+        iconClass: "bi-chat-left-dots",
+        label: "Open Captions",
+        category: "access",
+    },
+];
 
 var globalRatingTotalCountMax,
     globalRatingBinCountMax;
@@ -415,6 +441,17 @@ function renderPage(scheduleData, showData, dayNum) {
     })
     // decorate events
     .map( (e) => {
+        // parse and decorate serviceTags list
+        e.eventTags = [];
+        if(e.serviceTags.match(/(BFF|OC|ASL|AD)/g)) {
+            let eventTags = e.serviceTags.match(/(BFF|OC|ASL|AD)/g);
+            tagDetails.forEach((td) => {
+                if (eventTags.includes(td.tag)) {
+                    e.eventTags.push(td);
+                }
+            });
+        }
+
         let show = showData.find((s) => !!s && s.showFavId == e.showFavId);
         if(!show) {
             console.error('no showData found by showFavId (in map), for event: ', e);
