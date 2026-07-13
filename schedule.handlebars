@@ -135,6 +135,9 @@
         p.description {
               line-height: 1.2;
         }
+        .table tr:last-child td {
+            border: none;
+        }
         .venue.IP { font-style: italic; }
         .footnote { font-size: .75em; padding-top: 2ex; }
         .footnote a { color: inherit; }
@@ -200,7 +203,7 @@
 
                           <div id="details-{{showFavId}}t{{../timeNum}}" class="accordion-collapse collapse show-details" aria-labelledby="heading-{{showFavId}}t{{timeNum}}" data-bs-parent="#accordion-day">
                             <div class="NOT-accordion-body row">
-                              <div class="col-10">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
 
                                 <p class="description icon-hang">
                                   <i class="bi bi-quote"></i>
@@ -228,23 +231,31 @@
                                     {{/each}}
                                   </p>
                                 {{/if}}
-                                {{#if eventTags}}
-                                    {{#each eventTags}}
-                                  <p class="text-muted icon-hang">
-                                      <i class="bi {{iconClass}}"></i> {{label}} <span class="text-sm">(this performance)</span>
-                                  </p>
-                                    {{/each}}
-                                {{/if}}
                               </div>
-                              <div class="col-2 align-content-end p-2">
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
                                 {{#if ratingStats.totalCount}}
-                                <span class="rating-num rating-count">{{ratingStats.totalCount}} reviews</span>
-                                <span class="badge bg-info">{{ratingStats.ratingDisp}}</span>
+                                  <div class="card mb-2">
+                                    <table class="table table-sm mb-0">
+                                      <tr><td><a class="" target="source" href="{{../../baseDomain}}{{showUrl}}#reviews">Reviews</a></td><td>{{ratingStats.totalCount}}</td></tr>
+                                      <tr><td>Average</td><td>{{ratingStats.avgDisp}}</td></tr>
+                                      <tr><td>Mean&trade;</td><td>{{ratingStats.weightedDisp}}</td></tr>
+                                    </table>
+                                  </div>
                                 {{else}}
                                   {{!-- <span class="rating-num rating-count">No reviews yet</span> --}}
                                 {{/if}}
+                                {{#if eventTags}}
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                    {{#each eventTags}}
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi {{iconClass}}"></i> {{label}}
+                                      </p>
+                                    {{/each}}
+                                  </div>
+                                {{/if}}
                                 <div class="d-grid gap-2">
-                                <a class="btn btn-sm btn-secondary btn-purple " target="source" href="{{../../baseDomain}}{{showUrl}}#tickets" title="{{showTitle}}">Tickets etc</a>
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="{{../../baseDomain}}{{showUrl}}#tickets" title="{{showTitle}}">Tickets etc</a>
                                 </div>
                               </div>
 
