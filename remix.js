@@ -560,7 +560,11 @@ function renderCsv() {
         'Title',
         'Web Page',
         'Venue',
+        'Solo?',
+        'Cast Crew Count',
+        'Video',
         'Description',
+        'Caption',
     ].concat(festDays.map(d => d.dateStr));
     console.log(headRow.join(separator));
 
@@ -581,12 +585,19 @@ function renderCsv() {
         })
         // .join(separator);
 
+        let title = s.showTitle.replace(/"/g, '""');
+        let artist = s.byArtist.replace(/"/g, '""'); // escape quotes
+
         let showRow = [
-            s.byArtist.replace(/"/g, '""'), // escape quotes
-            '"' + s.showTitle.replace(/"/g, '""') + '"',
+            artist,
+            '"' + title + '"',
             `"=HYPERLINK(""${baseDomain}${s.showUrl}"")"`, // formula
             s.venue,
+            s.genreTags.includes('Solo Show') ? 'Solo' : '',
+            s.castCrewCount,
+            fixVideoLink(s.videoLink),
             '"' + s.description.replace(/"/g, '""') + '"',
+            `"""${title}"" presented by ${artist} at ${s.venue} as part of the ${festYear} Minnesota Fringe Festival."`,
         ].concat(festDaysList);
         console.log(showRow.join(separator));
 
@@ -630,7 +641,24 @@ function fixVideoLink(link) {
     // [0-9]+
     // https://www.youtube.com/embed/yOqIMSVRo6Y -> https://www.youtube.com/watch?v=yOqIMSVRo6Y
     // [a-zA-Z0-9\-_]+
+    // https://www.youtube.com/watch?v=DCGsoNvkooM?si=iHHnaGcG4LYojWPU
 
+    if (!link) {
+        return "";
+    }
+    const rxVimeo = /player\.vimeo\.com\/video\/(\d+)\/?/i;
+    const rxYTEmbed = /www\.youtube\.com\/embed\/(\w+)\/?/i;
+    const rxYTParam = /www\.youtube\.com\/watch\?v=(\w+)\??.*/i;
+    if (link.match(rxYTParam)) {
+        return "https://www.youtube.com/watch?v=" + link.match(rxYTParam)[1];
+    }
+    if (link.match(rxYTEmbed)) {
+        return "https://www.youtube.com/watch?v=" + link.match(rxYTEmbed)[1];
+    }
+    if (link.match(rxVimeo)) {
+        return "https://vimeo.com/" + link.match(rxVimeo)[1];
+    }
+    return link;
 }
 
 // MAIN
