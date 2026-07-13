@@ -4,8 +4,6 @@ const fs = require('fs');
 const handlebars = require('handlebars');
 const ratingViz = require('./rating-viz-bar-vert-ctr');
 
-console.log("running...");
-
 // SETUP
 // @todo? ideas
 // * find global max of review counts and/or bin content
@@ -18,6 +16,11 @@ const festLengthDays = 11;
 const festStartString = '2026-08-06 17:30 CDT';
 const festStart = new Date(festStartString);
 const festDays = buildFestDaysArray(festStart, festLengthDays);
+const reqHeaders = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+};
 const offStageRoles = ['Director', 'Assistant Director', 'Associate Director', 'Creative Director', 'Artistic Director', 'Dramaturg', 'Producer', 'Production Assistant', 'Production Support', 'Technical Director', 'Box Office', 'Stage Manager', 'Assistant Stage Manager', 'Makeup Designer', 'Sound Designer', 'Set Builder', 'Props', 'Playwright', 'Writer', 'Author', 'Composer', 'Choreographer', 'Fight Choreographer', 'Fight Captain', 'Intimacy Consultant', 'Intimacy Coordinator', 'Lighting Designer', 'Lighting Design', 'Light Design', 'Board Operator', 'Graphic Designer', 'Logo Design', 'Photographer', 'Videographer', 'Dialect Coach', 'Language & Dialect Coach', 'Additional Voices', 'Child Wrangler'];
 const tagDetails = [
     {
@@ -102,7 +105,7 @@ function scrapeSchedule() {
 
 async function readSchedulePage(url, i, scheduleData) {
     try {
-        const response = await axios.get(url);
+        const response = await axios.get(url, {headers: reqHeaders});
         console.log('readSchedulePage success');
         const events = parseSchedulePage(response.data);
         console.log('i, output rows:', i, events.length);
@@ -149,7 +152,7 @@ async function scrapeShowsList() {
     try {
         while (nextPageUrl) {
             console.log('scrapeShows from:', nextPageUrl);
-            const response = await axios.get(nextPageUrl);
+            const response = await axios.get(nextPageUrl, {headers: reqHeaders});
             let $page = cheerio.load(response.data, {xmlMode: false});
             let pagedShowData = await parseShowsList($page);
             showData = showData.concat(pagedShowData);
@@ -197,7 +200,7 @@ function scrapeReviewsPage() {
     const showDataRaw = fs.readFileSync('htdocs/show-details.json');
     const showData = JSON.parse(showDataRaw);
 
-    axios.get(`https://minnesotafringe.org/reviews/${festYear}`)
+    axios.get(`https://minnesotafringe.org/reviews/${festYear}`, {headers: reqHeaders})
         .then(function(response){
             const scores = parseReviewsPage(response.data, showData);
             const showDataWithScores = decorateShowsWithScores(showData, scores);
@@ -245,7 +248,7 @@ async function scrapeShowPageDetails(show) {
     while(true) {
         try {
             console.log('scrapeShowPageDetails reading ' + show.showUrl);
-            const response = await axios.get(baseDomain + show.showUrl);
+            const response = await axios.get(baseDomain + show.showUrl, {headers: reqHeaders});
             let details = parseShowPageDetails(response.data);
             return {...show, ...details};
         } catch (error) {
