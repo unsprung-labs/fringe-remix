@@ -96,7 +96,7 @@ function scrapeSchedule() {
         console.log('all done! writing schedule.json...');
         // filter out null item at days[0]
         scheduleData.days = scheduleData.days.filter(d => d);
-        fs.writeFileSync('schedule.json', JSON.stringify(scheduleData, null, 2));
+        fs.writeFileSync('htdocs/schedule.json', JSON.stringify(scheduleData, null, 2));
     });
 }
 
@@ -157,7 +157,7 @@ async function scrapeShowsList() {
             await sleep(500);
         }
         console.log('Found ' + showData.length + ' total shows');
-        fs.writeFileSync('shows.json', JSON.stringify(showData, null, 2));
+        fs.writeFileSync('htdocs/shows.json', JSON.stringify(showData, null, 2));
     } catch (error) {
         console.error(error);
     }
@@ -182,26 +182,26 @@ async function parseShowsList(cheerioObj) {
 }
 
 function scrapeShowDetails() {
-    const showsBareRaw = fs.readFileSync('shows.json');
+    const showsBareRaw = fs.readFileSync('htdocs/shows.json');
     let showsBare = JSON.parse(showsBareRaw).filter(s => !!s);
     let scrapePromises = showsBare.map( function(show) {
         return scrapeShowPageDetails(show);
     });
     Promise.all(scrapePromises).then( (scrapedDetails) => {
         console.log('show scrapePromises all done!');
-        fs.writeFileSync('show-details.json', JSON.stringify(scrapedDetails, null, 2));
+        fs.writeFileSync('htdocs/show-details.json', JSON.stringify(scrapedDetails, null, 2));
     });
 }
 
 function scrapeReviewsPage() {
-    const showDataRaw = fs.readFileSync('show-details.json');
+    const showDataRaw = fs.readFileSync('htdocs/show-details.json');
     const showData = JSON.parse(showDataRaw);
 
     axios.get(`https://minnesotafringe.org/reviews/${festYear}`)
         .then(function(response){
             const scores = parseReviewsPage(response.data, showData);
             const showDataWithScores = decorateShowsWithScores(showData, scores);
-            fs.writeFileSync('show-details.json', JSON.stringify(showDataWithScores, null, 2));
+            fs.writeFileSync('htdocs/show-details.json', JSON.stringify(showDataWithScores, null, 2));
         });
 
 }
@@ -408,9 +408,9 @@ function showRatingFromStars($el) {
 
 function render() {
     console.log("render()");
-    const scheduleDataRaw = fs.readFileSync('schedule.json');
+    const scheduleDataRaw = fs.readFileSync('htdocs/schedule.json');
     let scheduleData = JSON.parse(scheduleDataRaw);
-    const showDataRaw = fs.readFileSync('show-details.json');
+    const showDataRaw = fs.readFileSync('htdocs/show-details.json');
     let showData = JSON.parse(showDataRaw);
     showData = showData.map(formatShow);
     globalRatingTotalCountMax = showData.filter(s => s).reduce((max, show) => Math.max(show.ratingStats.totalCount, max), 0);
@@ -516,7 +516,7 @@ function renderPage(scheduleData, showData, dayNum) {
         if (err) throw err;
         const template = handlebars.compile(templateText.toString());
         const content = template(data);
-        fs.writeFile('schedule-' + dayMeta.slug + '.html', content, err => {
+        fs.writeFile('htdocs/schedule-' + dayMeta.slug + '.html', content, err => {
             if (err) throw err;
             // file written successfully
         });
@@ -550,9 +550,9 @@ function formatCast(castList) {
 function renderCsv() {
     // console.log("renderCsv()");
     const separator = "\t";
-    const scheduleDataRaw = fs.readFileSync('schedule.json');
+    const scheduleDataRaw = fs.readFileSync('htdocs/schedule.json');
     const scheduleData = JSON.parse(scheduleDataRaw);
-    const showDataRaw = fs.readFileSync('show-details.json');
+    const showDataRaw = fs.readFileSync('htdocs/show-details.json');
     const showData = JSON.parse(showDataRaw);
 
     const headRow = [
