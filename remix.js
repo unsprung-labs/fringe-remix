@@ -157,7 +157,7 @@ async function scrapeShowsList() {
             await sleep(500);
         }
         console.log('Found ' + showData.length + ' total shows');
-        fs.writeFileSync('shows-bare.json', JSON.stringify(showData, null, 2));
+        fs.writeFileSync('shows.json', JSON.stringify(showData, null, 2));
     } catch (error) {
         console.error(error);
     }
@@ -182,26 +182,26 @@ async function parseShowsList(cheerioObj) {
 }
 
 function scrapeShowDetails() {
-    const showsBareRaw = fs.readFileSync('shows-bare.json');
+    const showsBareRaw = fs.readFileSync('shows.json');
     let showsBare = JSON.parse(showsBareRaw).filter(s => !!s);
     let scrapePromises = showsBare.map( function(show) {
         return scrapeShowPageDetails(show);
     });
     Promise.all(scrapePromises).then( (scrapedDetails) => {
         console.log('show scrapePromises all done!');
-        fs.writeFileSync('shows-details.json', JSON.stringify(scrapedDetails, null, 2));
+        fs.writeFileSync('show-details.json', JSON.stringify(scrapedDetails, null, 2));
     });
 }
 
 function scrapeReviewsPage() {
-    const showDataRaw = fs.readFileSync('shows-details.json');
+    const showDataRaw = fs.readFileSync('show-details.json');
     const showData = JSON.parse(showDataRaw);
 
     axios.get(`https://minnesotafringe.org/reviews/${festYear}`)
         .then(function(response){
             const scores = parseReviewsPage(response.data, showData);
             const showDataWithScores = decorateShowsWithScores(showData, scores);
-            fs.writeFileSync('shows-details.json', JSON.stringify(showDataWithScores, null, 2));
+            fs.writeFileSync('show-details.json', JSON.stringify(showDataWithScores, null, 2));
         });
 
 }
@@ -410,7 +410,7 @@ function render() {
     console.log("render()");
     const scheduleDataRaw = fs.readFileSync('schedule.json');
     let scheduleData = JSON.parse(scheduleDataRaw);
-    const showDataRaw = fs.readFileSync('shows-details.json');
+    const showDataRaw = fs.readFileSync('show-details.json');
     let showData = JSON.parse(showDataRaw);
     showData = showData.map(formatShow);
     globalRatingTotalCountMax = showData.filter(s => s).reduce((max, show) => Math.max(show.ratingStats.totalCount, max), 0);
@@ -551,7 +551,7 @@ function renderCsv() {
     const separator = "\t";
     const scheduleDataRaw = fs.readFileSync('schedule.json');
     const scheduleData = JSON.parse(scheduleDataRaw);
-    const showDataRaw = fs.readFileSync('shows-details.json');
+    const showDataRaw = fs.readFileSync('show-details.json');
     const showData = JSON.parse(showDataRaw);
 
     const headRow = [
@@ -656,10 +656,10 @@ if (flags.includes('-c')) {
 }
 if (flags.length == 0) {
     console.info("remix.js flags, in typical order of operations");
-    console.info("-s   scrape Shows list into shows-bare.json");
+    console.info("-s   scrape Shows list into shows.json")
     console.info("-t   scrape schedule Times into schedule.json");
-    console.info("-d   scrape show Details into shows-details.json");
-    // console.info("-v   scrape show reViews, update shows-details.json");
+    console.info("-d   scrape show Details into show-details.json");
+    // console.info("-v   scrape show reViews, update show-details.json");
     console.info("-r   Render html files from saved json");
     console.info("-c   render Csv file");
 }
