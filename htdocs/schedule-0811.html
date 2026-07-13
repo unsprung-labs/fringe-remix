@@ -1,0 +1,2952 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Fringe Quick Schedule - Tue 8/11/2026</title>
+
+    <style>
+        .container-fluid.px-0 .row {
+          --bs-gutter-x: 0; /* "full bleed" to edges */
+          padding-left:  0.5rem;
+          padding-right: 0.5rem;
+        }
+        h1 { font-size: 25px; }
+        h2 { font-size: 167%; }
+        h3 { font-size: 125%; }
+        .header { margin-bottom: -4px; }
+        .header a {
+          font-size: 25px;
+          text-decoration: none;
+          color: inherit;
+        }
+        .header a span.fringe {
+          font-weight: bold;
+          font-size: 26px;
+          color: #592e84;
+        }
+        .brand-purple {
+          color: #592e84;
+        }
+        .brand-purple-svg {
+          /* as filter for black svg h/t https://codepen.io/sosuke/pen/Pjoqqp */
+          filter: invert(18%) sepia(56%) saturate(1876%) hue-rotate(247deg) brightness(97%) contrast(93%);
+        }
+        img.fringe {
+          filter: invert(18%) sepia(56%) saturate(1876%) hue-rotate(247deg) brightness(97%) contrast(93%);
+          margin-top: 1px;
+          margin-left: 3px;
+        }
+        .navbar { height: 66px; }
+        .day-head { font-weight: bold; }
+        .time-slot-head {}
+        .sticky-icky {
+          position: -webkit-sticky; position: -moz-sticky; position: -o-sticky; position: -ms-sticky;
+          position: sticky;
+          top: 65px; /* navbar height - gap on some devices? */
+          left: 0;
+          right: 0;
+          display: block;
+          z-index: 1;
+          background: #333;
+          color: #fff;
+          padding: 8px 0px 1px;
+        }
+        .calendar-style.pagination { margin-bottom: 0; margin-left: 12px; }
+        .calendar-style.pagination-sm .page-link {
+            font-size: 16px;
+            line-height: normal;
+            padding-bottom: 8px;
+        }
+        .calendar-style li { text-align: center; min-width: 3.75ex;}
+        .pagination-sm .page-link { padding: 0.2rem 0.35rem; }
+        .wkdy { font-size: 10px; }
+        .row.event {
+          padding: 0.5rem 0;
+          line-height: 1.25;
+        }
+        .badge {
+          font-size: 59%;
+          font-weight: normal;
+          padding: 4px;
+          border-radius: 5px;
+        }
+        .accordion-header:not(.collapsed) {
+          background-color: #d3e2fd;
+        }
+        .accordion-header.collapsed {
+          background-color: #fff;
+        }
+        .accordion-button::after {
+          /* The actual caret button */
+          position: absolute;
+          right: 0.5rem;
+          top: 0.5rem;
+        }
+        .accordion-button:not(.collapsed) {
+          color: inherit;
+        }
+        .show-title-col {
+          font-size: 18px;
+        }
+        .show-title-col .title {
+          font-weight: bold;
+          color: #592e84;
+        }
+
+        .header-tag-icon {
+          margin-right: 0.1rem;
+        }
+        .score-viz svg {
+          width: 100%;
+          /* Height auto is important here to maintain aspect ratio with viewBox */
+          height: auto;
+        }
+        .rating-num {
+            font-size: 12px;
+            color: #6c757d;
+        }
+        .show-details p {
+          margin-bottom: .5rem;
+        }
+        .show-details p:first-child {
+          margin-top: .5rem;
+        }
+        p.icon-hang {
+          margin-left: 2.5ex;
+        }
+        p.icon-hang i.bi:first-child {
+          margin-left: -2.5ex;
+        }
+        .bi-chat-left-dots {
+          /* tweak v-align */
+          position: relative;
+          top: 2px;
+        }
+        p.description {
+              line-height: 1.2;
+        }
+        .table tr:last-child td {
+            border: none;
+        }
+        .venue.IP { font-style: italic; }
+        .footnote { font-size: .75em; padding-top: 2ex; }
+        .footnote a { color: inherit; }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid bg-light">
+        <section class="header">
+            <a href="/" class="brand"><img src="./images/minnesota-simple.svg" alt="MN" height="23" class="d-inline-block align-text-top brand-purple-svg fringe"><span class="fringe brand-purple">Fringe</span> Quick Schedule</a>
+        </section>
+    </div>
+    <nav class="navbar sticky-top navbar-light bg-light shadow-sm">
+          <ul class="pagination pagination-sm calendar-style">
+              <li class="page-item "><a class="page-link" href="schedule-0806.html"><span class="wkdy">Thu</span><br/>6</a></li>
+              <li class="page-item "><a class="page-link" href="schedule-0807.html"><span class="wkdy">Fri</span><br/>7</a></li>
+              <li class="page-item "><a class="page-link" href="schedule-0808.html"><span class="wkdy">Sat</span><br/>8</a></li>
+              <li class="page-item "><a class="page-link" href="schedule-0809.html"><span class="wkdy">Sun</span><br/>9</a></li>
+              <li class="page-item "><a class="page-link" href="schedule-0810.html"><span class="wkdy">Mon</span><br/>10</a></li>
+              <li class="page-item active"><a class="page-link" href="schedule-0811.html"><span class="wkdy">Tue</span><br/>11</a></li>
+              <li class="page-item "><a class="page-link" href="schedule-0812.html"><span class="wkdy">Wed</span><br/>12</a></li>
+              <li class="page-item "><a class="page-link" href="schedule-0813.html"><span class="wkdy">Thu</span><br/>13</a></li>
+              <li class="page-item "><a class="page-link" href="schedule-0814.html"><span class="wkdy">Fri</span><br/>14</a></li>
+              <li class="page-item "><a class="page-link" href="schedule-0815.html"><span class="wkdy">Sat</span><br/>15</a></li>
+              <li class="page-item "><a class="page-link" href="schedule-0816.html"><span class="wkdy">Sun</span><br/>16</a></li>
+          </ul>
+    </nav>
+    <div class="container-fluid px-0">
+
+                <div class="accordion accordion-flush" id="accordion-day">
+
+                    <div class="row border-top">
+                      <div class="col-12">
+                        <h2 class="day-head pt-3">Tuesday 8/11</h2>
+                      </div>
+                    </div>
+
+                    <div class="row time-slot-head sticky-icky shadow-sm" id="t1730"><div class="col-12"><h3>5:30 PM</h3></div></div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55190t1730" aria-expanded="false" aria-controls="details-55190t1730" id="heading-55190t1730">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Socks &amp; Shoes &amp; Coats</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> rick rhobajt widen</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Barbara Barker Center for Dance <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55190t1730" class="accordion-collapse collapse show-details" aria-labelledby="heading-55190t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>New parents navigate pregnancy &amp; pediatricians &amp; preschool &amp; poop. Somewhere in the realm of classic musicals like &quot;The Fantasticks&quot; or &quot;I Do! I Do!&quot; 
+Featuring 8 new songs &amp; captioned violin baby-talk.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Written by r. d. rhobajt
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Musical Theater, 
+                                      Original Music, 
+                                      Kid friendly
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Maya  Pantanowitz, 
+                                      Kiran Arquin, 
+                                      Jim  Plattes, 
+                                      Martha Fisher
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/socks-shoes-coats#tickets" title="Socks &amp; Shoes &amp; Coats">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55243t1730" aria-expanded="false" aria-controls="details-55243t1730" id="heading-55243t1730">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Sisters on Stage: An elder millennial’s exploration of Shakespeare’s sisters</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Deanne McDonald / The Traveling Players</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Mixed Blood <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55243t1730" class="accordion-collapse collapse show-details" aria-labelledby="heading-55243t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>One woman performs scenes from Shakespeare’s comedies and tragedies exploring his deep understanding of the closest, longest and most frustrating relationship of your life: your relationship with your siblings.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Deanne McDonald
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Solo Show, 
+                                      Shakespearian elements
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Deanne McDonald
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/sisters-on-stage-an-elder-millennial-s-exploration-of-shakespeare-s-sisters#tickets" title="Sisters on Stage: An elder millennial’s exploration of Shakespeare’s sisters">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55449t1730" aria-expanded="false" aria-controls="details-55449t1730" id="heading-55449t1730">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">A Magician</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Levani</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Open Eye Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55449t1730" class="accordion-collapse collapse show-details" aria-labelledby="heading-55449t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A Magician is the life memoir storytelling magic show of Las Vegas entertainer Jordan Rooks. This storytelling magical wonder is a combination of storytelling, clowning, and magic.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Jordan Rooks
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Drama, 
+                                      Magic, 
+                                      Solo Show, 
+                                      Storytelling, 
+                                      Audience participation
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Jordan Rooks
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/a-magician#tickets" title="A Magician">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55293t1730" aria-expanded="false" aria-controls="details-55293t1730" id="heading-55293t1730">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">The One About the Rabbit in the Snow</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> C.J. Heehaw</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Kilburn Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55293t1730" class="accordion-collapse collapse show-details" aria-labelledby="heading-55293t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A new absurdest comedy by the people that brought you Breakfast in Bed and Another Cold One. Two characters find themselves lost on a journey. Delving into questions that rule our everyday decisions.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by cooper sheehan
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/the-one-about-the-rabbit-in-the-snow#tickets" title="The One About the Rabbit in the Snow">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55327t1730" aria-expanded="false" aria-controls="details-55327t1730" id="heading-55327t1730">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">The Queerest Midwest Bake-off: A Murder Mystery</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Lady Z Productions</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Nolte Xperimental Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55327t1730" class="accordion-collapse collapse show-details" aria-labelledby="heading-55327t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>After a deadly stage collapse at a flamboyant bake-off, the show’s image-obsessed host is the prime suspect. Detectives navigate wildly contradictory accounts as paranoia and performance spiral into mystery.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Written by Daniel Rangel
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      LGBTQIA+ Content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Daniel Rangel, 
+                                      Maureen Bourgeois, 
+                                      Gracen Yang, 
+                                      Andy Whitman, 
+                                      Sayer Keeley, 
+                                      Maycee Klein, 
+                                      Eva Bourgeois
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/the-queerest-midwest-bake-off-a-murder-mystery#tickets" title="The Queerest Midwest Bake-off: A Murder Mystery">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55337t1730" aria-expanded="false" aria-controls="details-55337t1730" id="heading-55337t1730">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">the statue of liberty is nora in a doll&#x27;s house by henrik ibsen</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> SUPERMOON</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Stoll Thrust Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55337t1730" class="accordion-collapse collapse show-details" aria-labelledby="heading-55337t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>The title describes exactly what happens (obviously other things happen too).</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Supermoon
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Musical Theater, 
+                                      Physical Theater
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/the-statue-of-liberty-is-nora-in-a-doll-s-house-by-henrik-ibsen#tickets" title="the statue of liberty is nora in a doll&#x27;s house by henrik ibsen">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55239t1730" aria-expanded="false" aria-controls="details-55239t1730" id="heading-55239t1730">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Scab for Hire</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Budding Heads</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> The Southern Theater <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55239t1730" class="accordion-collapse collapse show-details" aria-labelledby="heading-55239t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A man unwittingly crosses a picket-line, befriends an opossum, and is forced to choose between his job and his friend. The aftermath of his actions are discussed nearly a century later by two podcasters.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Written by Wesley Tilford
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Clowning, 
+                                      Comedy, 
+                                      Drama, 
+                                      Historical content, 
+                                      Political content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Wesley Tilford, 
+                                      Mia Martinez
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/scab-for-hire#tickets" title="Scab for Hire">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55227t1730" aria-expanded="false" aria-controls="details-55227t1730" id="heading-55227t1730">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Quadrilogy: A Sabathani Benefit Game Show Extravaganza!</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> The House in the Woods</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Theatre in the Round <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55227t1730" class="accordion-collapse collapse show-details" aria-labelledby="heading-55227t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A game show in three rounds with audience participation. Answer questions, build Lego, have fun, win prizes! A different theme every night. Artist proceeds go to benefit the Sabathani Community Center.</em>
+                                </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Audience participation
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Dylan  Ward, 
+                                      Kort Lindblad, 
+                                      Echo Henn
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/quadrilogy-a-sabathani-benefit-game-show-extravaganza-#tickets" title="Quadrilogy: A Sabathani Benefit Game Show Extravaganza!">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                    <div class="row time-slot-head sticky-icky shadow-sm" id="t1900"><div class="col-12"><h3>7:00 PM</h3></div></div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55237t1900" aria-expanded="false" aria-controls="details-55237t1900" id="heading-55237t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">M</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> The World Crime League</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Barbara Barker Center for Dance <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55237t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55237t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A serial killer terrorizes Berlin while police come up empty. As fear grips the city, the criminal underworld launches its own manhunt to catch the murderer in this adaptation of the Fritz Lang noir classic.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Directed by Emma Kessler
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Drama, 
+                                      Mystery
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Nina  Broberg, 
+                                      Soap Curtis, 
+                                      Mike Dee, 
+                                      Mahmoud Hakima, 
+                                      Alyssa Rae, 
+                                      Andrew Rosdail, 
+                                      John Slaight, 
+                                      Timothy Snyder, 
+                                      Mason Tyer
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/m#tickets" title="M">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55245t1900" aria-expanded="false" aria-controls="details-55245t1900" id="heading-55245t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Bury The Leads</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Special When Lit</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Mixed Blood <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55245t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55245t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Meet Clyde &amp; Faye, two character actors navigating an industry of auditions, rejections, bit parts and false starts. Sometimes funny, sometimes melancholy, it&#x27;s improv so grounded, it seems scripted.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Sam Landman &amp; Nissa Nordland
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Improv, 
+                                      Audience participation
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Nissa  Nordland, 
+                                      Sam  Landman, 
+                                      Kayla  Dvorak Feld
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/bury-the-leads#tickets" title="Bury The Leads">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55274t1900" aria-expanded="false" aria-controls="details-55274t1900" id="heading-55274t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Too Much of a Good Thing</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> RAR Entertainment</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Open Eye Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55274t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55274t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>From barely qualifying for The Itty Bitty Titty Committee to being president of The Big Booby Brigade, join Rachel as she enlists her talking breasts to help her decide: Can you have too much of a good thing?</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Rachel Redleaf
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Musical Theater, 
+                                      Solo Show
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Rachel Redleaf
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/too-much-of-a-good-thing#tickets" title="Too Much of a Good Thing">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55189t1900" aria-expanded="false" aria-controls="details-55189t1900" id="heading-55189t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">That Was Shakespeare: A Revue</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> The Redmond Players</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Kilburn Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55189t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55189t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Connie thinks Shakespeare belongs in the past. Her uncle Ford knows better. A whirlwind tour through comedy, tragedy, and romance reveals the Bard&#x27;s words may be closer to home than she thinks.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Lauren Go &amp; Jake Mattinson
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Puppetry, 
+                                      Kid friendly, 
+                                      Shakespearian elements
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Carlos Barrera, 
+                                      Emelyn Berg, 
+                                      Jason Davis, 
+                                      Lauren Go, 
+                                      Erica Guthan, 
+                                      Tina Huang, 
+                                      Jake Mattinson, 
+                                      Varika Pinnam, 
+                                      Rizo Rakhmanov, 
+                                      Arul Santhanam, 
+                                      Monica Taylor
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/that-was-shakespeare-a-revue-#tickets" title="That Was Shakespeare: A Revue">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55400t1900" aria-expanded="false" aria-controls="details-55400t1900" id="heading-55400t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Guy For Now</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Old Dog Theatre Company</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Nolte Xperimental Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55400t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55400t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Guy For Now is a comedy for all ages! Join us on a journey of self-discovery as our everyman encounters a cast of *unique* characters who teach him about life, love, and the art of letting go.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Written by Nicholas Pecora
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Benjamin Thacker, 
+                                      Erika Soukup, 
+                                      Gavin Webb, 
+                                      Andi Davey, 
+                                      Joel Dammeier, 
+                                      Michael Quadrozzi, 
+                                      Alexandria Rumsey, 
+                                      Erin Pecha
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/guy-for-now#tickets" title="Guy For Now">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55350t1900" aria-expanded="false" aria-controls="details-55350t1900" id="heading-55350t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Magical Athlete: Stadium Showdown</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Sugar Throw Theatre</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Stoll Thrust Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55350t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55350t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A chaotic board game comes to life! Pick your champion, cheer from the stands, and watch the madness unfold. Every show is different—and one lucky audience member wins a copy of the game!</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Company Members
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Clowning, 
+                                      Comedy, 
+                                      Improv, 
+                                      Magic, 
+                                      Musical Theater, 
+                                      Mystery, 
+                                      Original Music, 
+                                      Physical Theater, 
+                                      Audience participation, 
+                                      Kid friendly
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Gabriella  Rosen, 
+                                      Ethan  Carson, 
+                                      Gino  Sturm, 
+                                      Ryley  Mullins, 
+                                      Sam  Sides, 
+                                      Tollef  Currell
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/magical-athlete-stadium-showdown#tickets" title="Magical Athlete: Stadium Showdown">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55149t1900" aria-expanded="false" aria-controls="details-55149t1900" id="heading-55149t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">So Bright, the Night</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-chat-left-dots access"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Hey Rube!</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> The Southern Theater <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55149t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55149t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>So Bright the Night is a hard-boiled historical drama about the Mexican Repatriation of the 1930&#x27;s. A woman boards a train in hopes to rescue her husband from deportation or worse. History is repeating itself.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Marcus Anthony
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Drama, 
+                                      Historical content, 
+                                      Political content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Jeyman Rodriguez, 
+                                      Shad Cooper, 
+                                      Diego Symouksavanh, 
+                                      Claudia Garcia, 
+                                      Nina Aguilera, 
+                                      Matthew Saxe
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-chat-left-dots"></i> Open Captions
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/so-bright-the-night#tickets" title="So Bright, the Night">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55148t1900" aria-expanded="false" aria-controls="details-55148t1900" id="heading-55148t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Cyrano</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Small Waves</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Theatre in the Round <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55148t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55148t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A queer heroic comedy, in a new &quot;old&quot; adaptation of Edmond Rostand&#x27;s &quot;Cyrano de Bergerac.&quot; We&#x27;ve added sapphic flavor while retaining the period language and emphasizing the poetry of the original play.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Directed by Katie Christ
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Literary adaptation, 
+                                      LGBTQIA+ Content, 
+                                      Religious content, 
+                                      Shakespearian elements
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Madison Lang, 
+                                      Katie Grace Hennen, 
+                                      Patrick McAndrew, 
+                                      Abagail Aune, 
+                                      G Zachariah White, 
+                                      Irie Unity, 
+                                      Alycia Lehn, 
+                                      Braden Joseph, 
+                                      Jessie Bennett, 
+                                      Meera Safford, 
+                                      Mitch Vosejpka, 
+                                      Zach Holmquist, 
+                                      Katie Christ, 
+                                      Della Christ, 
+                                      Maya Vagle
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/cyrano#tickets" title="Cyrano">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55191t1900" aria-expanded="false" aria-controls="details-55191t1900" id="heading-55191t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">More Better Stories</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> American School of Storytelling</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> American School of Storytelling <span class="badge bg-info">IP</span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55191t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55191t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Storytellers Jon Carlson, Vianna Isbister, Bernadine Joselyn, Hank Roubicek - tell three times, and Erin Ferdinand, Kory May, Christopher Nelson, Laura Packer, Anne Wiborg do &quot;one off&#x27;s&quot; with stories for adults</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by the American School of Storytelling
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Solo Show, 
+                                      Storytelling, 
+                                      LGBTQIA+ Content, 
+                                      Political content, 
+                                      Religious content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Christopher Nelson, 
+                                      Hank Roubicek, 
+                                      Erin  Ferdinand, 
+                                      Vianna Isbister, 
+                                      Jon Carlson, 
+                                      Annie Wiborg, 
+                                      Kory May, 
+                                      Bernadine  Joselyn, 
+                                      Laura Packer, 
+                                      Christine Mounts, 
+                                      Loren Niemi
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/more-better-stories#tickets" title="More Better Stories">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55352t1900" aria-expanded="false" aria-controls="details-55352t1900" id="heading-55352t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">In The Moonlight</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Moonlight Muses LLC</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Center for Performing Arts <span class="badge bg-info">IP</span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55352t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55352t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>An original 80s musical murder mystery following Scarlet, Matthew, and Bella. After a shocking crime, you become the live jury, cast your interactive vote, and directly decide who goes to prison each night!</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Ian Bell
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Horror, 
+                                      Musical Theater, 
+                                      Original Music, 
+                                      Storytelling, 
+                                      Audience participation, 
+                                      LGBTQIA+ Content
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/in-the-moonlight#tickets" title="In The Moonlight">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55193t1900" aria-expanded="false" aria-controls="details-55193t1900" id="heading-55193t1900">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">The Quiet Piggy</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Dawn Bentley</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Strike Theater <span class="badge bg-info">IP</span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55193t1900" class="accordion-collapse collapse show-details" aria-labelledby="heading-55193t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Minnesota Fringe Executive Director and theatre virgin Dawn Bentley makes her first (and only?) fringe show. A personal, political, and playful storytelling experience fantasizing about how IT finally happens.</em>
+                                </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Clowning, 
+                                      Comedy, 
+                                      Drama, 
+                                      Improv, 
+                                      Physical Theater, 
+                                      Puppetry, 
+                                      Solo Show, 
+                                      Storytelling, 
+                                      Audience participation, 
+                                      Political content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Rita Boersma, 
+                                      Lucas Fanning, 
+                                      Jen Scott
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/the-quiet-piggy#tickets" title="The Quiet Piggy">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                    <div class="row time-slot-head sticky-icky shadow-sm" id="t2030"><div class="col-12"><h3>8:30 PM</h3></div></div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55158t2030" aria-expanded="false" aria-controls="details-55158t2030" id="heading-55158t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Pistachio&#x27;s Playhouse</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Samuel Karie</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Barbara Barker Center for Dance <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55158t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55158t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>When the host of the children’s show Pistachio’s Playhouse experiences a sudden tragedy, she has to try and keep the Playhouse from closing while maintaining her sanity in front of an impressionable audience.</em>
+                                </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Clowning, 
+                                      Comedy, 
+                                      Drama, 
+                                      Puppetry, 
+                                      LGBTQIA+ Content
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/pistachio-s-playhouse#tickets" title="Pistachio&#x27;s Playhouse">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55240t2030" aria-expanded="false" aria-controls="details-55240t2030" id="heading-55240t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Space Company</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> dancing arms</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Mixed Blood <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55240t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55240t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>An immersive corporate satire about a company that considers itself to be a family. &quot;Mom&quot;, a middle manager at Space Company, welcomes the audience, now cast as new hires (&quot;Babygirls&quot;), on their first day.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Written by Emma Irene Olson
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Clowning, 
+                                      Comedy, 
+                                      Improv, 
+                                      Original Music, 
+                                      Solo Show, 
+                                      Audience participation, 
+                                      LGBTQIA+ Content, 
+                                      Political content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Emma Irene Olson, 
+                                      Maura Mannle, 
+                                      Jacquelyn Landgraf
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/space-company#tickets" title="Space Company">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55336t2030" aria-expanded="false" aria-controls="details-55336t2030" id="heading-55336t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">DOOZY</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> DOLLY WHO?</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Open Eye Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55336t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55336t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A good friend never forgets. Too bad, Dolly did. But no worries, it&#x27;s her day off! No agenda, no script, no work...and all the time in the world for a little sweet, sweet revenge.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Destiny Davison
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Improv, 
+                                      Original Music, 
+                                      Physical Theater, 
+                                      Puppetry, 
+                                      Kid friendly
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Destiny  Davison, 
+                                      Britt Johnson, 
+                                      Cody  Madison, 
+                                      Deanna Pistono
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/doozy#tickets" title="DOOZY">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55247t2030" aria-expanded="false" aria-controls="details-55247t2030" id="heading-55247t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Chum!</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Theatre Engine</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Kilburn Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55247t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55247t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>“Chum!” is a musical parody of “Jaws” that invites audience members to bring a chum to be chum by telling the familiar tale of New England beach mastication in musical and interactive format.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Alexis Bacon &amp; Alison Dobbins
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Musical Theater, 
+                                      Audience participation
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Justine Carroll, 
+                                      Kaitlin McInerney, 
+                                      Jake McInerney, 
+                                      Jordan Oxborough, 
+                                      Peter Blackham, 
+                                      Alexis Bacon
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/chum-#tickets" title="Chum!">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55077t2030" aria-expanded="false" aria-controls="details-55077t2030" id="heading-55077t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">DON&#x27;T BE SCARED</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Band Practice</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Nolte Xperimental Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55077t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55077t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Two zombified post-war corporate professionals attempt to run a workshop with the audience on how to face your fears. Outside, the darkness is creeping in threatening to end the show and maybe their friendship.</em>
+                                </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Clowning, 
+                                      Comedy, 
+                                      Improv, 
+                                      Physical Theater, 
+                                      Audience participation, 
+                                      LGBTQIA+ Content, 
+                                      Political content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Ash  Willison, 
+                                      Lena Katzer, 
+                                      Lisa Ullrich
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/don-t-be-scared#tickets" title="DON&#x27;T BE SCARED">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55330t2030" aria-expanded="false" aria-controls="details-55330t2030" id="heading-55330t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">I Will Become The Silver Surfer. I Will Protect You.</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Jake Mierva</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Stoll Thrust Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55330t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55330t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Galactus has chosen Earth as his next target. But don&#x27;t worry. I will stop him. I will save you all. I will become The Silver Surfer.</em>
+                                </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Solo Show, 
+                                      Audience participation
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Jake Mierva, 
+                                      Eric Wigham
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/i-will-become-the-silver-surfer-i-will-protect-you-#tickets" title="I Will Become The Silver Surfer. I Will Protect You.">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55397t2030" aria-expanded="false" aria-controls="details-55397t2030" id="heading-55397t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Small Minded</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-headset access"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Tyler West</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> The Southern Theater <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55397t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55397t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Is being a dwarf clown REALLY half the size, but double the fun? Or is Tyler West just Small Minded? Either way, this show features juggling, magic, Shakespeare, story-telling, and some Ha-Ha&#x27;s! from the heart.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Tyler West and Cleo DeOrio
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Clowning, 
+                                      Comedy, 
+                                      Magic, 
+                                      Physical Theater, 
+                                      Solo Show, 
+                                      Storytelling, 
+                                      Audience participation, 
+                                      Shakespearian elements
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-headset"></i> Audio Described
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/small-minded#tickets" title="Small Minded">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55242t2030" aria-expanded="false" aria-controls="details-55242t2030" id="heading-55242t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Not Bad for a Punk Band</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Deft Pictures</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Theatre in the Round <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55242t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55242t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A local musician&#x27;s overambition cost him the band and a shot at happiness. Years later, at his drummer&#x27;s wedding, he has a chance to make things right with his former bassist, who has secrets of her own.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Directed by J. Scott Sibley
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Original Music
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Jack Swagger, 
+                                      Gael Palen, 
+                                      Lily Cornwell, 
+                                      Coco, 
+                                      Ophelia Hoffer-Gray, 
+                                      Abigail Blue, 
+                                      Dylan Ward, 
+                                      Kate Sibley
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/not-bad-for-a-punk-band#tickets" title="Not Bad for a Punk Band">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55273t2030" aria-expanded="false" aria-controls="details-55273t2030" id="heading-55273t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Apologies for the Late Reply</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Ben San Del Presents</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> American School of Storytelling <span class="badge bg-info">IP</span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55273t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55273t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Stand-up comedy about salvaging sanity in our age of crazy. Presented by four-time Minnesota Fringe encore winning producer and Acme Comedy Co.&#x27;s Funniest Person in the Twin Cities title holder Ben San Del.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Ben San Del
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Solo Show
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Ben San Del, 
+                                      Zoe Benston, 
+                                      Ari  Hoptman, 
+                                      Gabe Heller, 
+                                      Leslie Ball
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/apologies-for-the-late-reply#tickets" title="Apologies for the Late Reply">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55287t2030" aria-expanded="false" aria-controls="details-55287t2030" id="heading-55287t2030">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">1985: Relative Chaos!</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Jason Schommer</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Strike Theater <span class="badge bg-info">IP</span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55287t2030" class="accordion-collapse collapse show-details" aria-labelledby="heading-55287t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Dive headfirst into the wild chaos of growing up, growing older, and finding your place in the herd. Uproarious, poignant, nostalgic, and bursting with heart. The Schommer family puts the fun in dysFUNctional!</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Jason Schommer with JC Lippold
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Storytelling
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Jason Schommer, 
+                                      JC Lippold, 
+                                      Rebecca Jo Malmstrom
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/1985-relative-chaos#tickets" title="1985: Relative Chaos!">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                    <div class="row time-slot-head sticky-icky shadow-sm" id="t2200"><div class="col-12"><h3>10:00 PM</h3></div></div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55326t2200" aria-expanded="false" aria-controls="details-55326t2200" id="heading-55326t2200">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Minnesota is the Shire, or Fair &amp; Back Again</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> Seán McArdle / Hero Props</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Barbara Barker Center for Dance <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55326t2200" class="accordion-collapse collapse show-details" aria-labelledby="heading-55326t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A storytelling show about my love for MN + Tolkien’s Legendarium; exploring his concepts of Estel &amp; Eucatastrophe, similarities btw Minnesota &amp; the Shire, &amp; how we kinda just lived through the Scouring of it….</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Seán McArdle
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Solo Show, 
+                                      Storytelling, 
+                                      Historical content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Seán McArdle, 
+                                      Rachel Flynn, 
+                                      Motz (Rhymes with Boats), 
+                                      Scott Gilbert, 
+                                      Kira Pontiff
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/minnesota-is-the-shire-or-fair-back-again#tickets" title="Minnesota is the Shire, or Fair &amp; Back Again">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55228t2200" aria-expanded="false" aria-controls="details-55228t2200" id="heading-55228t2200">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">I&#x27;m Afraid, I Have To Leave</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Joking Apart Theater</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Mixed Blood <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55228t2200" class="accordion-collapse collapse show-details" aria-labelledby="heading-55228t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Time to leave, but your hosts have other plans. Sinister agenda? Hostage situation? Or just another visit with your folks? Minnesota Goodbye meets The Twilight Zone. Grab a snickerdoodle, it might be your last!</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Written by Edwin Strout
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Horror
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Kira Pontiff, 
+                                      Edwin Strout, 
+                                      Kathleen Winters
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/i-m-afraid-i-have-to-leave#tickets" title="I&#x27;m Afraid, I Have To Leave">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55134t2200" aria-expanded="false" aria-controls="details-55134t2200" id="heading-55134t2200">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Who We Are: Stories from the Surge</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Three Second Memory</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Open Eye Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55134t2200" class="accordion-collapse collapse show-details" aria-labelledby="heading-55134t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>True stories from folks who experienced, confronted, and did their best to get themselves and their neighbors through Operation Metro Surge; documentary theater with more than 3 dozen characters. Love to MN!</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Bruce D. Manning
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Storytelling, 
+                                      Historical content, 
+                                      Political content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Bruce Manning, 
+                                      David Hellstrom, 
+                                      Beth Hawkins, 
+                                      Nancy Stone, 
+                                      Sean Gorman Orozco, 
+                                      Allison Broeren, 
+                                      Laura Migliorino, 
+                                      Rahma Abdi, 
+                                      AJ Awed, 
+                                      m boulette, 
+                                      Martha Juliana Cubillos, 
+                                      Victor Garcia Benitez, 
+                                      Farah Habad, 
+                                      Shamso Iman, 
+                                      Kathryn Klibanoff, 
+                                      Dee Kong, 
+                                      Ben Marcy, 
+                                      Linnette Werner
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/who-we-are-stories-from-the-surge#tickets" title="Who We Are: Stories from the Surge">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55255t2200" aria-expanded="false" aria-controls="details-55255t2200" id="heading-55255t2200">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Fly Tape</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> milk rat orchestra</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Kilburn Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55255t2200" class="accordion-collapse collapse show-details" aria-labelledby="heading-55255t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Three siblings gather in the wake of their mother&#x27;s death—now orphans—to prepare her hoard for an estate sale. 
+Trashy revelations, bizarre tapes left by their journalist father, and an unhinged auction follow.</em>
+                                </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Puppetry, 
+                                      Audience participation, 
+                                      LGBTQIA+ Content, 
+                                      Political content, 
+                                      Religious content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Jeanie B. Nickel, 
+                                      Zoë Rose Jennings, 
+                                      Joseph Dinh, 
+                                      Kaalid
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/fly-tape#tickets" title="Fly Tape">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55192t2200" aria-expanded="false" aria-controls="details-55192t2200" id="heading-55192t2200">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">How to Escape Hell</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> PhysicalLies</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Nolte Xperimental Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55192t2200" class="accordion-collapse collapse show-details" aria-labelledby="heading-55192t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>This dramedy, with resurrection myth roots, explores the hells we create by trying to conform to gendered expectations in romantic relationships. It features Dramaturgy-on-Demand, a unique immersive experience.</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Sarah Hensley and Mark Peterson
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Drama, 
+                                      Physical Theater, 
+                                      Audience participation, 
+                                      LGBTQIA+ Content, 
+                                      Religious content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Mark Peterson, 
+                                      Sarah Hensley, 
+                                      Holly  Ness, 
+                                      Dora Starr Poulos
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/how-to-escape-hell#tickets" title="How to Escape Hell">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55159t2200" aria-expanded="false" aria-controls="details-55159t2200" id="heading-55159t2200">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Turn On, Tune In, Drop Dead</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                              <span class="text-muted"><span class="at-by">by</span> John Ervin</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Rarig Stoll Thrust Theatre <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55159t2200" class="accordion-collapse collapse show-details" aria-labelledby="heading-55159t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>A televised debate between two incarcerated serial killers, moderated by a true-crime TV reporter, leads to revelations about their pathologies.</em>
+                                </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Historical content, 
+                                      Political content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      John Ervin, 
+                                      Monique Swanson, 
+                                      Christopher DeVann, 
+                                      John Clarkin
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/turn-on-tune-in-drop-dead#tickets" title="Turn On, Tune In, Drop Dead">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55076t2200" aria-expanded="false" aria-controls="details-55076t2200" id="heading-55076t2200">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">Buckeroohaiku&#x27;s Reverse Armando</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Button Productions</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                                  <i class="header-tag-icon text-muted bi bi-headset access"></i>
+                              <span class="at-by">at</span> The Southern Theater <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55076t2200" class="accordion-collapse collapse show-details" aria-labelledby="heading-55076t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>True stories. Masterful improvisation. Kate Button spills the stories, while the Twin Cities top improvisors weave them into comedy gold! Brace yourself for an evening of raw, unfiltered hilarity!</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Created by Ryan Klima and Kate Button
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Comedy, 
+                                      Improv, 
+                                      Storytelling, 
+                                      LGBTQIA+ Content, 
+                                      Political content
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Ryan  Klima, 
+                                      Bailey  Hess, 
+                                      Philip  Simondet, 
+                                      Matt Axelson, 
+                                      Bret Meyer, 
+                                      Deana Pistono, 
+                                      Neco Pacheco, 
+                                      Jackson Misusaki, 
+                                      Megan  Wolff, 
+                                      Meredith  Howell, 
+                                      Karyn Wilson, 
+                                      Ike Okafor, 
+                                      Adam Mellerup, 
+                                      Mike  Fotis, 
+                                      Rita  Boersma, 
+                                      James Rone, 
+                                      Jake Scott, 
+                                      Ari Newman, 
+                                      Katie  Knepler, 
+                                      Cody Madison, 
+                                      Mary Ruebel, 
+                                      Cicely  Laing, 
+                                      Jerry Grant, 
+                                      Michelle  Carr, 
+                                      Catie Doucette, 
+                                      Kristen Maples, 
+                                      David Baer, 
+                                      Heather Rietz, 
+                                      Jen Scott, 
+                                      Butch Roy, 
+                                      Kate Button
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-headset"></i> Audio Described
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/buckeroohaiku-s-reverse-armando-#tickets" title="Buckeroohaiku&#x27;s Reverse Armando">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="NOT-accordion-item">
+                          <div class="row event accordion-button collapsed accordion-header border-top" data-bs-toggle="collapse" data-bs-target="#details-55346t2200" aria-expanded="false" aria-controls="details-55346t2200" id="heading-55346t2200">
+                            <div class="col-12 col-lg-4 show-title-col">
+                              <div class="show-title-wrapper text-truncate me-4">
+                                <span class="title">ANNA</span>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3 text-truncate">
+                                  <i class="header-tag-icon text-muted bi bi-gift promo promo"></i>
+                              <span class="text-muted"><span class="at-by">by</span> Mosaic Productions</span>
+                            </div>
+
+                            <div class="col-10 col-lg-3 venue">
+                              <span class="at-by">at</span> Theatre in the Round <span class="badge bg-info"></span>
+                            </div>
+                            <div class="col-2 col-lg-2 order-lg-4 score-viz svg-container text-end">
+                              
+            <svg viewBox="0 0 100 20">
+                <rect id="BG" x="0" y="0" width="100" height="20" style="fill:rgb(255, 255, 255);stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                <path id="CenterLine" d="M0,10L100,10" stroke-dasharray="1" style="fill:none;stroke:rgb(170, 170, 170);stroke-width:1px;"/>
+                    <rect x="0" y="10" width="10" height="0" style="fill:rgb(221,0,0);"/>
+                    <rect x="10" y="10" width="10" height="0" style="fill:rgb(228,51,0);"/>
+                    <rect x="20" y="10" width="10" height="0" style="fill:rgb(236,110,0);"/>
+                    <rect x="30" y="10" width="10" height="0" style="fill:rgb(243,164,0);"/>
+                    <rect x="40" y="10" width="10" height="0" style="fill:rgb(234,205,0);"/>
+                    <rect x="50" y="10" width="10" height="0" style="fill:rgb(208,208,0);"/>
+                    <rect x="60" y="10" width="10" height="0" style="fill:rgb(156,196,0);"/>
+                    <rect x="70" y="10" width="10" height="0" style="fill:rgb(104,184,0);"/>
+                    <rect x="80" y="10" width="10" height="0" style="fill:rgb(52,172,0);"/>
+                    <rect x="90" y="10" width="10" height="0" style="fill:rgb(0,160,0);"/>
+            </svg>
+        
+                            </div>
+                          </div>
+
+                          <div id="details-55346t2200" class="accordion-collapse collapse show-details" aria-labelledby="heading-55346t" data-bs-parent="#accordion-day">
+                            <div class="NOT-accordion-body row">
+                              <div class="col-12 col-sm-8 col-md-8 pe-sm-3 pe-md-4">
+
+                                <p class="description icon-hang">
+                                  <i class="bi bi-quote"></i>
+                                  <em>Based on the 1922 Pulitzer Prize winning play “Anna Christie” by Eugene O’Neill, it&#x27;s been 15 years since Kris has seen her daughter Anna, and suddenly she’s here, at a bar in a small town you&#x27;ve never heard of</em>
+                                </p>
+                                  <p class="createdBy icon-hang">
+                                    <i class="bi bi-book"></i>
+                                    Written by Shawna Evans
+                                  </p>
+                                  <p class="genreTags icon-hang">
+                                    <i class="bi bi-tags"></i>
+                                      Drama, 
+                                      Spoken Word, 
+                                      Storytelling, 
+                                      Literary adaptation
+                                  </p>
+                                  <p class="cast icon-hang">
+                                    <i class="bi bi-person-arms-up"></i>
+                                      Caitlin Sparks, 
+                                      Laura Hoover, 
+                                      Taylor Evans, 
+                                      Jared Reise
+                                  </p>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-4 p-2">
+                                  <div class="card mb-2 ps-2">
+                                    <h6 class="card-subtitle my-2 text-muted">Today:</h6>
+                                      <p class="text-muted icon-hang">
+                                          <i class="bi bi-gift promo"></i> Bring a Friend
+                                      </p>
+                                  </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-sm btn-secondary btn-purple " target="source" href="https://minnesotafringe.org/shows/2026/anna#tickets" title="ANNA">Tickets etc</a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                </div>
+
+        <p class="footnote text-black-50"><em>Data sourced 7/8/2026, 10:49:45 AM, <a href="https://github.com/unsprung-labs/fringe-remix">remixed</a> 7/8/2026, 11:06:31 AM</em></p>
+    </div>
+  </body>
+</html>

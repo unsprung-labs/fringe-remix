@@ -1,0 +1,4356 @@
+{
+  "scrapeTime": 1783525785753,
+  "days": [
+    {
+      "events": [
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "A Bench at the Edge",
+          "showFavId": "55254",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Castrati: A Tale of Two",
+          "showFavId": "55160",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Cyrano",
+          "showFavId": "55148",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Guy For Now",
+          "showFavId": "55400",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "I Hate Running",
+          "showFavId": "55170",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Small Minded",
+          "showFavId": "55397",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "So You Want to Date a Bisexual?",
+          "showFavId": "55331",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "The Precious Scars",
+          "showFavId": "55322",
+          "date": "08/06",
+          "serviceTags": "ASL   BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "When I Was Afraid",
+          "showFavId": "55328",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Dark Gotham Knight's Dream",
+          "showFavId": "55378",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Chum!",
+          "showFavId": "55247",
+          "date": "08/06",
+          "serviceTags": "ASL   BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "DON'T BE SCARED",
+          "showFavId": "55077",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "HELL ON WHEELS: The Winter Strike of 1934",
+          "showFavId": "55272",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Center for Performing Arts",
+          "showTitle": "In The Moonlight",
+          "showFavId": "55352",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "It's-a-Me, a Musical! ",
+          "showFavId": "55144",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Small Epiphanies",
+          "showFavId": "55083",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Space Company",
+          "showFavId": "55240",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Stage Presents",
+          "showFavId": "55199",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Stories From the Trauma Dump",
+          "showFavId": "55088",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Apologies for the Late Reply",
+          "showFavId": "55273",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Fly Tape",
+          "showFavId": "55255",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "I'm Afraid, I Have To Leave",
+          "showFavId": "55228",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "KISMET",
+          "showFavId": "55294",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Silent Movie!",
+          "showFavId": "55057",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "So Bright, the Night",
+          "showFavId": "55149",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Sound and Noise and Bodies",
+          "showFavId": "55249",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Lousiest Werewolves: Mania in the Moonlight",
+          "showFavId": "55145",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Watership Down",
+          "showFavId": "55198",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Who We Are: Stories from the Surge",
+          "showFavId": "55134",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "I Will Become The Silver Surfer. I Will Protect You.",
+          "showFavId": "55330",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Just One Life",
+          "showFavId": "55150",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "LATIN PAPI",
+          "showFavId": "55314",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Maxxeapolis Goes to Hell",
+          "showFavId": "55241",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Quadrilogy: A Sabathani Benefit Game Show Extravaganza!",
+          "showFavId": "55227",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Socks & Shoes & Coats",
+          "showFavId": "55190",
+          "date": "08/06",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Tapeze - a la seconde",
+          "showFavId": "55259",
+          "date": "08/06",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Much of a Good Thing",
+          "showFavId": "55274",
+          "date": "08/06",
+          "serviceTags": ""
+        }
+      ],
+      "dayNum": 1
+    },
+    {
+      "events": [
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Bangs!",
+          "showFavId": "55238",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Brakkesyke",
+          "showFavId": "55349",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Leave Room for Jesus",
+          "showFavId": "55188",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Machinal",
+          "showFavId": "55161",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Soap Prov: Show of 10,000 Secrets",
+          "showFavId": "55292",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Living",
+          "showFavId": "55062",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Turn On, Tune In, Drop Dead",
+          "showFavId": "55159",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "When I Was Afraid",
+          "showFavId": "55328",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Who Am I, Again?",
+          "showFavId": "55115",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Castrati: A Tale of Two",
+          "showFavId": "55160",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Ember",
+          "showFavId": "55258",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "FAST Death of a Salesman",
+          "showFavId": "55319",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Glengarry Glen Elvis",
+          "showFavId": "55060",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Happy Valley Regional's Boot-Scootin' Booty-Poppin' Cuntry Ho-Down",
+          "showFavId": "55348",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Improvised Love Is Blind--Minnesota Fringe Edition",
+          "showFavId": "55250",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Center for Performing Arts",
+          "showTitle": "In The Moonlight",
+          "showFavId": "55352",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Is That Why?",
+          "showFavId": "55244",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Bryant Lake Bowl",
+          "showTitle": "ROAD TRIP!",
+          "showFavId": "55398",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Lousiest Werewolves: Mania in the Moonlight",
+          "showFavId": "55145",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Therapist Zero",
+          "showFavId": "55151",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Fat To Run",
+          "showFavId": "55347",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Wake the Improv",
+          "showFavId": "55137",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "After the End",
+          "showFavId": "55152",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "ANNA",
+          "showFavId": "55346",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Buckeroohaiku's Reverse Armando ",
+          "showFavId": "55076",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Dropping My Cover Stories",
+          "showFavId": "55196",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Fighting Unicorns",
+          "showFavId": "55084",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Maniac",
+          "showFavId": "55325",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "M",
+          "showFavId": "55237",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Ready Player, Too",
+          "showFavId": "55290",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "the statue of liberty is nora in a doll's house by henrik ibsen",
+          "showFavId": "55337",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Witness Loudly ",
+          "showFavId": "55129",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "A Magician",
+          "showFavId": "55449",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "An Earth Goddess (Preah Mae Thorani)",
+          "showFavId": "55066",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Bay Creek",
+          "showFavId": "55234",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Good Vibrations",
+          "showFavId": "55288",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Magical Athlete: Stadium Showdown",
+          "showFavId": "55350",
+          "date": "08/07",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Sisters on Stage: An elder millennial’s exploration of Shakespeare’s sisters",
+          "showFavId": "55243",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Local Music Scene",
+          "showFavId": "55079",
+          "date": "08/07",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "The One About the Rabbit in the Snow",
+          "showFavId": "55293",
+          "date": "08/07",
+          "serviceTags": ""
+        }
+      ],
+      "dayNum": 2
+    },
+    {
+      "events": [
+        {
+          "time": "1:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "A Bench at the Edge",
+          "showFavId": "55254",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Cyrano",
+          "showFavId": "55148",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Fly Tape",
+          "showFavId": "55255",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "How to Escape Hell",
+          "showFavId": "55192",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Center for Performing Arts",
+          "showTitle": "In The Moonlight",
+          "showFavId": "55352",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "It's-a-Me, a Musical! ",
+          "showFavId": "55144",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Socks & Shoes & Coats",
+          "showFavId": "55190",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Tapeze - a la seconde",
+          "showFavId": "55259",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Being Eternal",
+          "showFavId": "55289",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Lousiest Werewolves: Mania in the Moonlight",
+          "showFavId": "55145",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "HELL ON WHEELS: The Winter Strike of 1934",
+          "showFavId": "55272",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Just One Life",
+          "showFavId": "55150",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Scab for Hire",
+          "showFavId": "55239",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Sound and Noise and Bodies",
+          "showFavId": "55249",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "So You Want to Date a Bisexual?",
+          "showFavId": "55331",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Tech",
+          "showFavId": "55291",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "The Choose Your Own Adventures of Turtle Boy",
+          "showFavId": "55399",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Label Maker",
+          "showFavId": "55130",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "The Precious Scars",
+          "showFavId": "55322",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Shape of Home",
+          "showFavId": "55340",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "A Revolution Highly Favorable",
+          "showFavId": "55147",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Castrati: A Tale of Two",
+          "showFavId": "55160",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Ember",
+          "showFavId": "55258",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Fighting Unicorns",
+          "showFavId": "55084",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Good Vibrations",
+          "showFavId": "55288",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Maniac",
+          "showFavId": "55325",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Sisters on Stage: An elder millennial’s exploration of Shakespeare’s sisters",
+          "showFavId": "55243",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Small Minded",
+          "showFavId": "55397",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Living",
+          "showFavId": "55062",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Turn On, Tune In, Drop Dead",
+          "showFavId": "55159",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Real Piece of Work",
+          "showFavId": "55297",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "A Woman's Place is in the House",
+          "showFavId": "55216",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Bury The Leads",
+          "showFavId": "55245",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Empty Nest",
+          "showFavId": "55071",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Improvised Love Is Blind--Minnesota Fringe Edition",
+          "showFavId": "55250",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "KISMET",
+          "showFavId": "55294",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Noise",
+          "showFavId": "55253",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "The Resonance of Roots",
+          "showFavId": "55410",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Who We Are: Stories from the Surge",
+          "showFavId": "55134",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "1985: Relative Chaos! ",
+          "showFavId": "55287",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "After the End",
+          "showFavId": "55152",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Apologies for the Late Reply",
+          "showFavId": "55273",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "DOOZY",
+          "showFavId": "55336",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Center for Performing Arts",
+          "showTitle": "In The Moonlight",
+          "showFavId": "55352",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Machinal",
+          "showFavId": "55161",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Minnesota is the Shire, or Fair & Back Again",
+          "showFavId": "55326",
+          "date": "08/08",
+          "serviceTags": "ASL   BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Not Bad for a Punk Band",
+          "showFavId": "55242",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Bryant Lake Bowl",
+          "showTitle": "ROAD TRIP!",
+          "showFavId": "55398",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Stories From the Trauma Dump",
+          "showFavId": "55088",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Local Music Scene",
+          "showFavId": "55079",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "The One About the Rabbit in the Snow",
+          "showFavId": "55293",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "the statue of liberty is nora in a doll's house by henrik ibsen",
+          "showFavId": "55337",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "A Confluence of Magical Arseholes",
+          "showFavId": "55275",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Ambiguous",
+          "showFavId": "55351",
+          "date": "08/08",
+          "serviceTags": "ASL"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "BE NOT AFRAID",
+          "showFavId": "55320",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Braingystics: Seize the Mind!",
+          "showFavId": "55329",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Flirting Like an Amercian",
+          "showFavId": "55131",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Glengarry Glen Elvis",
+          "showFavId": "55060",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Happy Valley Regional's Boot-Scootin' Booty-Poppin' Cuntry Ho-Down",
+          "showFavId": "55348",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Is That Why?",
+          "showFavId": "55244",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Muskie",
+          "showFavId": "55232",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "The Quiet Piggy",
+          "showFavId": "55193",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "When I Was Afraid",
+          "showFavId": "55328",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Casa Bde-Maka-Ska",
+          "showFavId": "55338",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Foshay! You Know The Tower - Now Hear The Story",
+          "showFavId": "55116",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Leave Room for Jesus",
+          "showFavId": "55188",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "So Bright, the Night",
+          "showFavId": "55149",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "That Was Shakespeare: A Revue ",
+          "showFavId": "55189",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Lousiest Werewolves: Mania in the Moonlight",
+          "showFavId": "55145",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
+          "showFavId": "55327",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Fat To Run",
+          "showFavId": "55347",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Wake the Improv",
+          "showFavId": "55137",
+          "date": "08/08",
+          "serviceTags": "BFF"
+        }
+      ],
+      "dayNum": 3
+    },
+    {
+      "events": [
+        {
+          "time": "1:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "ANNA",
+          "showFavId": "55346",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "A Woman's Place is in the House",
+          "showFavId": "55216",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Bay Creek",
+          "showFavId": "55234",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "DOOZY",
+          "showFavId": "55336",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Empty Nest",
+          "showFavId": "55071",
+          "date": "08/09",
+          "serviceTags": "AD"
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Guy For Now",
+          "showFavId": "55400",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Maxxeapolis Goes to Hell",
+          "showFavId": "55241",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "The Resonance of Roots",
+          "showFavId": "55410",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "When I Was Afraid",
+          "showFavId": "55328",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "A Magician",
+          "showFavId": "55449",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Brakkesyke",
+          "showFavId": "55349",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Castrati: A Tale of Two",
+          "showFavId": "55160",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Dropping My Cover Stories",
+          "showFavId": "55196",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "FAST Death of a Salesman",
+          "showFavId": "55319",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Center for Performing Arts",
+          "showTitle": "In The Moonlight",
+          "showFavId": "55352",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "KISMET",
+          "showFavId": "55294",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Stage Presents",
+          "showFavId": "55199",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Lousiest Werewolves: Mania in the Moonlight",
+          "showFavId": "55145",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Who Am I, Again?",
+          "showFavId": "55115",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Witness Loudly ",
+          "showFavId": "55129",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Foshay! You Know The Tower - Now Hear The Story",
+          "showFavId": "55116",
+          "date": "08/09",
+          "serviceTags": "OC"
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "I Hate Running",
+          "showFavId": "55170",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Improvised Love Is Blind--Minnesota Fringe Edition",
+          "showFavId": "55250",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Is That Why?",
+          "showFavId": "55244",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "LATIN PAPI",
+          "showFavId": "55314",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Not Bad for a Punk Band",
+          "showFavId": "55242",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Ready Player, Too",
+          "showFavId": "55290",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Bryant Lake Bowl",
+          "showTitle": "ROAD TRIP!",
+          "showFavId": "55398",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Silent Movie!",
+          "showFavId": "55057",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Space Company",
+          "showFavId": "55240",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Stories From the Trauma Dump",
+          "showFavId": "55088",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Therapist Zero",
+          "showFavId": "55151",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "1985: Relative Chaos! ",
+          "showFavId": "55287",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Dark Gotham Knight's Dream",
+          "showFavId": "55378",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Buckeroohaiku's Reverse Armando ",
+          "showFavId": "55076",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Chum!",
+          "showFavId": "55247",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "DON'T BE SCARED",
+          "showFavId": "55077",
+          "date": "08/09",
+          "serviceTags": "AD"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "I'm Afraid, I Have To Leave",
+          "showFavId": "55228",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "I Will Become The Silver Surfer. I Will Protect You.",
+          "showFavId": "55330",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Minnesota is the Shire, or Fair & Back Again",
+          "showFavId": "55326",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Small Epiphanies",
+          "showFavId": "55083",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "A Confluence of Magical Arseholes",
+          "showFavId": "55275",
+          "date": "08/09",
+          "serviceTags": "OC  BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Ambiguous",
+          "showFavId": "55351",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "A Revolution Highly Favorable",
+          "showFavId": "55147",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "BE NOT AFRAID",
+          "showFavId": "55320",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Braingystics: Seize the Mind!",
+          "showFavId": "55329",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Flirting Like an Amercian",
+          "showFavId": "55131",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Center for Performing Arts",
+          "showTitle": "In The Moonlight",
+          "showFavId": "55352",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Muskie",
+          "showFavId": "55232",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Quadrilogy: A Sabathani Benefit Game Show Extravaganza!",
+          "showFavId": "55227",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Bryant Lake Bowl",
+          "showTitle": "ROAD TRIP!",
+          "showFavId": "55398",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
+          "showFavId": "55327",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "An Earth Goddess (Preah Mae Thorani)",
+          "showFavId": "55066",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Casa Bde-Maka-Ska",
+          "showFavId": "55338",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "How to Escape Hell",
+          "showFavId": "55192",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Magical Athlete: Stadium Showdown",
+          "showFavId": "55350",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Noise",
+          "showFavId": "55253",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "That Was Shakespeare: A Revue ",
+          "showFavId": "55189",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "The Choose Your Own Adventures of Turtle Boy",
+          "showFavId": "55399",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Much of a Good Thing",
+          "showFavId": "55274",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Real Piece of Work",
+          "showFavId": "55297",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Bangs!",
+          "showFavId": "55238",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Bury The Leads",
+          "showFavId": "55245",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "M",
+          "showFavId": "55237",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Scab for Hire",
+          "showFavId": "55239",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Soap Prov: Show of 10,000 Secrets",
+          "showFavId": "55292",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Being Eternal",
+          "showFavId": "55289",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Watership Down",
+          "showFavId": "55198",
+          "date": "08/09",
+          "serviceTags": "BFF"
+        }
+      ],
+      "dayNum": 4
+    },
+    {
+      "events": [
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Ambiguous",
+          "showFavId": "55351",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Braingystics: Seize the Mind!",
+          "showFavId": "55329",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Dropping My Cover Stories",
+          "showFavId": "55196",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Glengarry Glen Elvis",
+          "showFavId": "55060",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "It's-a-Me, a Musical! ",
+          "showFavId": "55144",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Muskie",
+          "showFavId": "55232",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Therapist Zero",
+          "showFavId": "55151",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Shape of Home",
+          "showFavId": "55340",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "An Earth Goddess (Preah Mae Thorani)",
+          "showFavId": "55066",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Apologies for the Late Reply",
+          "showFavId": "55273",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "A Revolution Highly Favorable",
+          "showFavId": "55147",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "A Woman's Place is in the House",
+          "showFavId": "55216",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Bay Creek",
+          "showFavId": "55234",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Brakkesyke",
+          "showFavId": "55349",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Empty Nest",
+          "showFavId": "55071",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "KISMET",
+          "showFavId": "55294",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Maxxeapolis Goes to Hell",
+          "showFavId": "55241",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Being Eternal",
+          "showFavId": "55289",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "A Magician",
+          "showFavId": "55449",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Castrati: A Tale of Two",
+          "showFavId": "55160",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Foshay! You Know The Tower - Now Hear The Story",
+          "showFavId": "55116",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Good Vibrations",
+          "showFavId": "55288",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "I Hate Running",
+          "showFavId": "55170",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Stage Presents",
+          "showFavId": "55199",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Tech",
+          "showFavId": "55291",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Local Music Scene",
+          "showFavId": "55079",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Who Am I, Again?",
+          "showFavId": "55115",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Dark Gotham Knight's Dream",
+          "showFavId": "55378",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "After the End",
+          "showFavId": "55152",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Ember",
+          "showFavId": "55258",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "FAST Death of a Salesman",
+          "showFavId": "55319",
+          "date": "08/10",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Happy Valley Regional's Boot-Scootin' Booty-Poppin' Cuntry Ho-Down",
+          "showFavId": "55348",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Machinal",
+          "showFavId": "55161",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Silent Movie!",
+          "showFavId": "55057",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Living",
+          "showFavId": "55062",
+          "date": "08/10",
+          "serviceTags": "BFF"
+        }
+      ],
+      "dayNum": 5
+    },
+    {
+      "events": [
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "A Magician",
+          "showFavId": "55449",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Quadrilogy: A Sabathani Benefit Game Show Extravaganza!",
+          "showFavId": "55227",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Scab for Hire",
+          "showFavId": "55239",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Sisters on Stage: An elder millennial’s exploration of Shakespeare’s sisters",
+          "showFavId": "55243",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Socks & Shoes & Coats",
+          "showFavId": "55190",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "The One About the Rabbit in the Snow",
+          "showFavId": "55293",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
+          "showFavId": "55327",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "the statue of liberty is nora in a doll's house by henrik ibsen",
+          "showFavId": "55337",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Bury The Leads",
+          "showFavId": "55245",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Cyrano",
+          "showFavId": "55148",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Guy For Now",
+          "showFavId": "55400",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Center for Performing Arts",
+          "showTitle": "In The Moonlight",
+          "showFavId": "55352",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Magical Athlete: Stadium Showdown",
+          "showFavId": "55350",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "M",
+          "showFavId": "55237",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "So Bright, the Night",
+          "showFavId": "55149",
+          "date": "08/11",
+          "serviceTags": "OC"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "That Was Shakespeare: A Revue ",
+          "showFavId": "55189",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "The Quiet Piggy",
+          "showFavId": "55193",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Much of a Good Thing",
+          "showFavId": "55274",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "1985: Relative Chaos! ",
+          "showFavId": "55287",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Apologies for the Late Reply",
+          "showFavId": "55273",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Chum!",
+          "showFavId": "55247",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "DON'T BE SCARED",
+          "showFavId": "55077",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "DOOZY",
+          "showFavId": "55336",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "I Will Become The Silver Surfer. I Will Protect You.",
+          "showFavId": "55330",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Not Bad for a Punk Band",
+          "showFavId": "55242",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Pistachio's Playhouse",
+          "showFavId": "55158",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Small Minded",
+          "showFavId": "55397",
+          "date": "08/11",
+          "serviceTags": "AD"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Space Company",
+          "showFavId": "55240",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "ANNA",
+          "showFavId": "55346",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Buckeroohaiku's Reverse Armando ",
+          "showFavId": "55076",
+          "date": "08/11",
+          "serviceTags": "AD    BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Fly Tape",
+          "showFavId": "55255",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "How to Escape Hell",
+          "showFavId": "55192",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "I'm Afraid, I Have To Leave",
+          "showFavId": "55228",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Minnesota is the Shire, or Fair & Back Again",
+          "showFavId": "55326",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Turn On, Tune In, Drop Dead",
+          "showFavId": "55159",
+          "date": "08/11",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Who We Are: Stories from the Surge",
+          "showFavId": "55134",
+          "date": "08/11",
+          "serviceTags": "BFF"
+        }
+      ],
+      "dayNum": 6
+    },
+    {
+      "events": [
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "A Confluence of Magical Arseholes",
+          "showFavId": "55275",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "BE NOT AFRAID",
+          "showFavId": "55320",
+          "date": "08/12",
+          "serviceTags": "OC"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Flirting Like an Amercian",
+          "showFavId": "55131",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Maniac",
+          "showFavId": "55325",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Not Bad for a Punk Band",
+          "showFavId": "55242",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Pistachio's Playhouse",
+          "showFavId": "55158",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Ready Player, Too",
+          "showFavId": "55290",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "The Choose Your Own Adventures of Turtle Boy",
+          "showFavId": "55399",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "A Magician",
+          "showFavId": "55449",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Real Piece of Work",
+          "showFavId": "55297",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Center for Performing Arts",
+          "showTitle": "In The Moonlight",
+          "showFavId": "55352",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Just One Life",
+          "showFavId": "55150",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Leave Room for Jesus",
+          "showFavId": "55188",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Tapeze - a la seconde",
+          "showFavId": "55259",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "The Precious Scars",
+          "showFavId": "55322",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "The Quiet Piggy",
+          "showFavId": "55193",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Shape of Home",
+          "showFavId": "55340",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Who Am I, Again?",
+          "showFavId": "55115",
+          "date": "08/12",
+          "serviceTags": "ASL"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "A Revolution Highly Favorable",
+          "showFavId": "55147",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Brakkesyke",
+          "showFavId": "55349",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Ember",
+          "showFavId": "55258",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "FAST Death of a Salesman",
+          "showFavId": "55319",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "LATIN PAPI",
+          "showFavId": "55314",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Machinal",
+          "showFavId": "55161",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Minnesota is the Shire, or Fair & Back Again",
+          "showFavId": "55326",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Sisters on Stage: An elder millennial’s exploration of Shakespeare’s sisters",
+          "showFavId": "55243",
+          "date": "08/12",
+          "serviceTags": "ASL"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Small Epiphanies",
+          "showFavId": "55083",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "A Woman's Place is in the House",
+          "showFavId": "55216",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "DOOZY",
+          "showFavId": "55336",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Empty Nest",
+          "showFavId": "55071",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "HELL ON WHEELS: The Winter Strike of 1934",
+          "showFavId": "55272",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "KISMET",
+          "showFavId": "55294",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Sound and Noise and Bodies",
+          "showFavId": "55249",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Space Company",
+          "showFavId": "55240",
+          "date": "08/12",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Stage Presents",
+          "showFavId": "55199",
+          "date": "08/12",
+          "serviceTags": "BFF"
+        }
+      ],
+      "dayNum": 7
+    },
+    {
+      "events": [
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "After the End",
+          "showFavId": "55152",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Foshay! You Know The Tower - Now Hear The Story",
+          "showFavId": "55116",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Good Vibrations",
+          "showFavId": "55288",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Just One Life",
+          "showFavId": "55150",
+          "date": "08/13",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "LATIN PAPI",
+          "showFavId": "55314",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "M",
+          "showFavId": "55237",
+          "date": "08/13",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Tapeze - a la seconde",
+          "showFavId": "55259",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Being Eternal",
+          "showFavId": "55289",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "1985: Relative Chaos! ",
+          "showFavId": "55287",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "ANNA",
+          "showFavId": "55346",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Dropping My Cover Stories",
+          "showFavId": "55196",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "How to Escape Hell",
+          "showFavId": "55192",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Is That Why?",
+          "showFavId": "55244",
+          "date": "08/13",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Pistachio's Playhouse",
+          "showFavId": "55158",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Scab for Hire",
+          "showFavId": "55239",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "So You Want to Date a Bisexual?",
+          "showFavId": "55331",
+          "date": "08/13",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "The Choose Your Own Adventures of Turtle Boy",
+          "showFavId": "55399",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Watership Down",
+          "showFavId": "55198",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "When I Was Afraid",
+          "showFavId": "55328",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Dark Gotham Knight's Dream",
+          "showFavId": "55378",
+          "date": "08/13",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Bay Creek",
+          "showFavId": "55234",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Guy For Now",
+          "showFavId": "55400",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Bryant Lake Bowl",
+          "showTitle": "ROAD TRIP!",
+          "showFavId": "55398",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Living",
+          "showFavId": "55062",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Label Maker",
+          "showFavId": "55130",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "The One About the Rabbit in the Snow",
+          "showFavId": "55293",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Therapist Zero",
+          "showFavId": "55151",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Turn On, Tune In, Drop Dead",
+          "showFavId": "55159",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Wake the Improv",
+          "showFavId": "55137",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Witness Loudly ",
+          "showFavId": "55129",
+          "date": "08/13",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Brakkesyke",
+          "showFavId": "55349",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Chum!",
+          "showFavId": "55247",
+          "date": "08/13",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "DON'T BE SCARED",
+          "showFavId": "55077",
+          "date": "08/13",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Noise",
+          "showFavId": "55253",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Small Epiphanies",
+          "showFavId": "55083",
+          "date": "08/13",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "The Resonance of Roots",
+          "showFavId": "55410",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "the statue of liberty is nora in a doll's house by henrik ibsen",
+          "showFavId": "55337",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Who Am I, Again?",
+          "showFavId": "55115",
+          "date": "08/13",
+          "serviceTags": ""
+        }
+      ],
+      "dayNum": 8
+    },
+    {
+      "events": [
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "An Earth Goddess (Preah Mae Thorani)",
+          "showFavId": "55066",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Casa Bde-Maka-Ska",
+          "showFavId": "55338",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Happy Valley Regional's Boot-Scootin' Booty-Poppin' Cuntry Ho-Down",
+          "showFavId": "55348",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Maxxeapolis Goes to Hell",
+          "showFavId": "55241",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Silent Movie!",
+          "showFavId": "55057",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Stories From the Trauma Dump",
+          "showFavId": "55088",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "That Was Shakespeare: A Revue ",
+          "showFavId": "55189",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Much of a Good Thing",
+          "showFavId": "55274",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Watership Down",
+          "showFavId": "55198",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Apologies for the Late Reply",
+          "showFavId": "55273",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Fly Tape",
+          "showFavId": "55255",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "I'm Afraid, I Have To Leave",
+          "showFavId": "55228",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "I Will Become The Silver Surfer. I Will Protect You.",
+          "showFavId": "55330",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "LATIN PAPI",
+          "showFavId": "55314",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Noise",
+          "showFavId": "55253",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Ready Player, Too",
+          "showFavId": "55290",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Bryant Lake Bowl",
+          "showTitle": "ROAD TRIP!",
+          "showFavId": "55398",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Small Minded",
+          "showFavId": "55397",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Sound and Noise and Bodies",
+          "showFavId": "55249",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Tech",
+          "showFavId": "55291",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Label Maker",
+          "showFavId": "55130",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "A Bench at the Edge",
+          "showFavId": "55254",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Bangs!",
+          "showFavId": "55238",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Fighting Unicorns",
+          "showFavId": "55084",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Improvised Love Is Blind--Minnesota Fringe Edition",
+          "showFavId": "55250",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "It's-a-Me, a Musical! ",
+          "showFavId": "55144",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Quadrilogy: A Sabathani Benefit Game Show Extravaganza!",
+          "showFavId": "55227",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Soap Prov: Show of 10,000 Secrets",
+          "showFavId": "55292",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Socks & Shoes & Coats",
+          "showFavId": "55190",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "The Resonance of Roots",
+          "showFavId": "55410",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Fat To Run",
+          "showFavId": "55347",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Ambiguous",
+          "showFavId": "55351",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "BE NOT AFRAID",
+          "showFavId": "55320",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Braingystics: Seize the Mind!",
+          "showFavId": "55329",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Cyrano",
+          "showFavId": "55148",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Flirting Like an Amercian",
+          "showFavId": "55131",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Maniac",
+          "showFavId": "55325",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Muskie",
+          "showFavId": "55232",
+          "date": "08/14",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "The Precious Scars",
+          "showFavId": "55322",
+          "date": "08/14",
+          "serviceTags": "BFF"
+        }
+      ],
+      "dayNum": 9
+    },
+    {
+      "events": [
+        {
+          "time": "1:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Real Piece of Work",
+          "showFavId": "55297",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Buckeroohaiku's Reverse Armando ",
+          "showFavId": "55076",
+          "date": "08/15",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Bury The Leads",
+          "showFavId": "55245",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Dropping My Cover Stories",
+          "showFavId": "55196",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "I Will Become The Silver Surfer. I Will Protect You.",
+          "showFavId": "55330",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Minnesota is the Shire, or Fair & Back Again",
+          "showFavId": "55326",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "So You Want to Date a Bisexual?",
+          "showFavId": "55331",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Local Music Scene",
+          "showFavId": "55079",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "A Revolution Highly Favorable",
+          "showFavId": "55147",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Braingystics: Seize the Mind!",
+          "showFavId": "55329",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Chum!",
+          "showFavId": "55247",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Glengarry Glen Elvis",
+          "showFavId": "55060",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Happy Valley Regional's Boot-Scootin' Booty-Poppin' Cuntry Ho-Down",
+          "showFavId": "55348",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Is That Why?",
+          "showFavId": "55244",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "It's-a-Me, a Musical! ",
+          "showFavId": "55144",
+          "date": "08/15",
+          "serviceTags": "AD"
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "M",
+          "showFavId": "55237",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Therapist Zero",
+          "showFavId": "55151",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Wake the Improv",
+          "showFavId": "55137",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "1985: Relative Chaos! ",
+          "showFavId": "55287",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Dark Gotham Knight's Dream",
+          "showFavId": "55378",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Ambiguous",
+          "showFavId": "55351",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "An Earth Goddess (Preah Mae Thorani)",
+          "showFavId": "55066",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Apologies for the Late Reply",
+          "showFavId": "55273",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "DON'T BE SCARED",
+          "showFavId": "55077",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Flirting Like an Amercian",
+          "showFavId": "55131",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "The Choose Your Own Adventures of Turtle Boy",
+          "showFavId": "55399",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Label Maker",
+          "showFavId": "55130",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Much of a Good Thing",
+          "showFavId": "55274",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Watership Down",
+          "showFavId": "55198",
+          "date": "08/15",
+          "serviceTags": "AD"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "ANNA",
+          "showFavId": "55346",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Bay Creek",
+          "showFavId": "55234",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Ember",
+          "showFavId": "55258",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "How to Escape Hell",
+          "showFavId": "55192",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Magical Athlete: Stadium Showdown",
+          "showFavId": "55350",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "So Bright, the Night",
+          "showFavId": "55149",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Space Company",
+          "showFavId": "55240",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Stories From the Trauma Dump",
+          "showFavId": "55088",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "The Quiet Piggy",
+          "showFavId": "55193",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Fat To Run",
+          "showFavId": "55347",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Bangs!",
+          "showFavId": "55238",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Casa Bde-Maka-Ska",
+          "showFavId": "55338",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Fighting Unicorns",
+          "showFavId": "55084",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Leave Room for Jesus",
+          "showFavId": "55188",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Sisters on Stage: An elder millennial’s exploration of Shakespeare’s sisters",
+          "showFavId": "55243",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Soap Prov: Show of 10,000 Secrets",
+          "showFavId": "55292",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "The Resonance of Roots",
+          "showFavId": "55410",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Turn On, Tune In, Drop Dead",
+          "showFavId": "55159",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Who We Are: Stories from the Surge",
+          "showFavId": "55134",
+          "date": "08/15",
+          "serviceTags": "OC"
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Witness Loudly ",
+          "showFavId": "55129",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "A Woman's Place is in the House",
+          "showFavId": "55216",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Cyrano",
+          "showFavId": "55148",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "HELL ON WHEELS: The Winter Strike of 1934",
+          "showFavId": "55272",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Maxxeapolis Goes to Hell",
+          "showFavId": "55241",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Scab for Hire",
+          "showFavId": "55239",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Tech",
+          "showFavId": "55291",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Being Eternal",
+          "showFavId": "55289",
+          "date": "08/15",
+          "serviceTags": "OC"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "The Precious Scars",
+          "showFavId": "55322",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
+          "showFavId": "55327",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "A Bench at the Edge",
+          "showFavId": "55254",
+          "date": "08/15",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "A Confluence of Magical Arseholes",
+          "showFavId": "55275",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "I Hate Running",
+          "showFavId": "55170",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Not Bad for a Punk Band",
+          "showFavId": "55242",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Pistachio's Playhouse",
+          "showFavId": "55158",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Ready Player, Too",
+          "showFavId": "55290",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Small Minded",
+          "showFavId": "55397",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Shape of Home",
+          "showFavId": "55340",
+          "date": "08/15",
+          "serviceTags": ""
+        }
+      ],
+      "dayNum": 10
+    },
+    {
+      "events": [
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Bangs!",
+          "showFavId": "55238",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Glengarry Glen Elvis",
+          "showFavId": "55060",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "I'm Afraid, I Have To Leave",
+          "showFavId": "55228",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "Is That Why?",
+          "showFavId": "55244",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Leave Room for Jesus",
+          "showFavId": "55188",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Magical Athlete: Stadium Showdown",
+          "showFavId": "55350",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Soap Prov: Show of 10,000 Secrets",
+          "showFavId": "55292",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "So Bright, the Night",
+          "showFavId": "55149",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "The Label Maker",
+          "showFavId": "55130",
+          "date": "08/16",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Too Fat To Run",
+          "showFavId": "55347",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "A Confluence of Magical Arseholes",
+          "showFavId": "55275",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "BE NOT AFRAID",
+          "showFavId": "55320",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Phoenix Theater",
+          "showTitle": "Fighting Unicorns",
+          "showFavId": "55084",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Guy For Now",
+          "showFavId": "55400",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Muskie",
+          "showFavId": "55232",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Pistachio's Playhouse",
+          "showFavId": "55158",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Quadrilogy: A Sabathani Benefit Game Show Extravaganza!",
+          "showFavId": "55227",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Small Epiphanies",
+          "showFavId": "55083",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "That Was Shakespeare: A Revue ",
+          "showFavId": "55189",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "2:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "The Quiet Piggy",
+          "showFavId": "55193",
+          "date": "08/16",
+          "serviceTags": "BFF"
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "After the End",
+          "showFavId": "55152",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Casa Bde-Maka-Ska",
+          "showFavId": "55338",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Machinal",
+          "showFavId": "55161",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "American School of Storytelling",
+          "showTitle": "More Better Stories",
+          "showFavId": "55191",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Noise",
+          "showFavId": "55253",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Tech",
+          "showFavId": "55291",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "The One About the Rabbit in the Snow",
+          "showFavId": "55293",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
+          "showFavId": "55327",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "the statue of liberty is nora in a doll's house by henrik ibsen",
+          "showFavId": "55337",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "Who We Are: Stories from the Surge",
+          "showFavId": "55134",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "DOOZY",
+          "showFavId": "55336",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "FAST Death of a Salesman",
+          "showFavId": "55319",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Fly Tape",
+          "showFavId": "55255",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "HELL ON WHEELS: The Winter Strike of 1934",
+          "showFavId": "55272",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Sound and Noise and Bodies",
+          "showFavId": "55249",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Stage Presents",
+          "showFavId": "55199",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Local Music Scene",
+          "showFavId": "55079",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Wake the Improv",
+          "showFavId": "55137",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Witness Loudly ",
+          "showFavId": "55129",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "A Bench at the Edge",
+          "showFavId": "55254",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Buckeroohaiku's Reverse Armando ",
+          "showFavId": "55076",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Foshay! You Know The Tower - Now Hear The Story",
+          "showFavId": "55116",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "Good Vibrations",
+          "showFavId": "55288",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "I Hate Running",
+          "showFavId": "55170",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Strike Theater",
+          "showTitle": "Improvised Love Is Blind--Minnesota Fringe Edition",
+          "showFavId": "55250",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Maniac",
+          "showFavId": "55325",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Silent Movie!",
+          "showFavId": "55057",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "The Importance of Living",
+          "showFavId": "55062",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Theatre in the Round",
+          "showTitle": "A Real Piece of Work",
+          "showFavId": "55297",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "Bury The Leads",
+          "showFavId": "55245",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "Empty Nest",
+          "showFavId": "55071",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Just One Life",
+          "showFavId": "55150",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Barbara Barker Center for Dance",
+          "showTitle": "Socks & Shoes & Coats",
+          "showFavId": "55190",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Open Eye Theatre",
+          "showTitle": "So You Want to Date a Bisexual?",
+          "showFavId": "55331",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "Tapeze - a la seconde",
+          "showFavId": "55259",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "The Shape of Home",
+          "showFavId": "55340",
+          "date": "08/16",
+          "serviceTags": ""
+        }
+      ],
+      "dayNum": 11
+    }
+  ]
+}
