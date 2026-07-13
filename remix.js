@@ -454,7 +454,8 @@ function renderPage(scheduleData, showData, dayNum) {
             console.error('no showData found by showFavId (in map), for event: ', e);
             return e;
         }
-        show.ratingStats.ratingDisp = Math.floor(10 * show.ratingStats.weightedAvgRating) / 10;
+        show.ratingStats.avgDisp = Math.floor(100 * show.ratingStats.avgRating) / 100;
+        show.ratingStats.weightedDisp = Math.floor(100 * show.ratingStats.weightedAvgRating) / 100;
         show.ratingGraphContent = ratingViz.render(show.ratingStats);
         return {
             ...e,
