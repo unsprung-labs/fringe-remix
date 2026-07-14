@@ -1247,12 +1247,16 @@
       "Puppetry",
       "Kid friendly"
     ],
-    "castCrewCount": 4,
+    "castCrewCount": 5,
     "videoLink": "https://www.youtube.com/embed/_Em6pCUjGpA",
     "ratingStats": {
       "totalCount": 0
     },
     "castList": [
+      {
+        "name": "Erik Ostrom",
+        "role": "Erik"
+      },
       {
         "name": "Destiny  Davison",
         "role": "DOLLY WHO?"
@@ -1311,14 +1315,18 @@
       "Musical Theater",
       "Storytelling"
     ],
-    "castCrewCount": 6,
+    "castCrewCount": 7,
     "ratingStats": {
       "totalCount": 0
     },
     "castList": [
       {
+        "name": "Brettina Davis",
+        "role": "Performer -Guest Artist on 8/7!"
+      },
+      {
         "name": "Duck Washington",
-        "role": "Performer - Guest Artist!"
+        "role": "Performer - Guest Artist on the 12th!"
       },
       {
         "name": "Faith Fuller",
@@ -1334,7 +1342,7 @@
       },
       {
         "name": "Kayla Hambek",
-        "role": "Performer - Guest Artist!"
+        "role": "Performer - Guest Artist at the 8th! "
       },
       {
         "name": "Michael Chapman",
@@ -1382,7 +1390,8 @@
     "venue": "Rarig Stoll Thrust Theatre",
     "description": "Dr. Duke Didier is putting on a production of Death of a Salesman, in order to prove to his nephew that the play is still relevant in 2026. Too bad his nephew, Braedyn, couldn't give a shit.",
     "genreTags": [
-      "Comedy"
+      "Comedy",
+      "Audience participation"
     ],
     "castCrewCount": 13,
     "ratingStats": {
@@ -1466,7 +1475,7 @@
     "castList": [
       {
         "name": "Jason  Kruger",
-        "role": "Director"
+        "role": "Director, Snake/World Builder"
       },
       {
         "name": "Phantom Chorus Theatre ",
@@ -1482,19 +1491,15 @@
       },
       {
         "name": "Sarah  Broude",
-        "role": "Octopus Librarian/World Builder"
+        "role": "Octopus Librarian/World Builder, Producer"
       },
       {
-        "name": "Marc  Berg",
-        "role": "Puppet Creator, Wizard Owl/World Builder"
+        "name": "James  J. Ruth",
+        "role": "Wizard Owl/World Builder"
       },
       {
         "name": "Mickaylee  Shaughnessy",
         "role": "Cleaning Mouse/World Builder"
-      },
-      {
-        "name": "James  J. Ruth",
-        "role": "Snake/World Builder"
       },
       {
         "name": "Amy  Walus",
@@ -1511,6 +1516,10 @@
       {
         "name": "James  Fairbairn",
         "role": "World Builder"
+      },
+      {
+        "name": "Marc  Berg",
+        "role": "Puppet Creator"
       },
       {
         "name": "Thalia  Kostman",
@@ -1654,7 +1663,7 @@
       },
       {
         "name": " Elisheva  Scheuer",
-        "role": "[ACTOR] - Leota Fox (Hutchinson) Foshay & Inspector 1"
+        "role": "[ACTOR] - Leota Fox (Hutchinson) Foshay & Inspector 2"
       },
       {
         "name": "Michael  Chapman",
@@ -1662,7 +1671,7 @@
       },
       {
         "name": "Jessica  Peters",
-        "role": "[ACTOR] - Reporter 1 (Mary), Genevieve Clark, Inspector 2 & Prison Guard"
+        "role": "[ACTOR] - Reporter 1 (Mary), Genevieve Clark, Inspector 1 & Prison Guard"
       },
       {
         "name": "Samm Nordstrom",
@@ -2241,7 +2250,7 @@
       "Sci-fi",
       "Kid friendly"
     ],
-    "castCrewCount": 2,
+    "castCrewCount": 16,
     "ratingStats": {
       "totalCount": 0
     },
@@ -2253,6 +2262,62 @@
       {
         "name": "Christian LaBissoniere",
         "role": "Luigi"
+      },
+      {
+        "name": "Jenny Reierson-Naumann",
+        "role": "Daisy"
+      },
+      {
+        "name": "James Ehlenz",
+        "role": "Bowser/Music Director "
+      },
+      {
+        "name": "Jenn Rathsack",
+        "role": "Cammie/Choreographer"
+      },
+      {
+        "name": "Rynn Deegan",
+        "role": "Wario"
+      },
+      {
+        "name": "John Naumann",
+        "role": "Waluigi"
+      },
+      {
+        "name": "Amber Lou Ringgenberg",
+        "role": "Shy Gal #1 "
+      },
+      {
+        "name": "Krissy Rootes",
+        "role": "Shy Gal #2"
+      },
+      {
+        "name": "Bryn Tanner",
+        "role": "Aster/Writer/Producer "
+      },
+      {
+        "name": "Lindsey Bushnell",
+        "role": "Director"
+      },
+      {
+        "name": "Kevin Lindee",
+        "role": "Stage Manager"
+      },
+      {
+        "name": "Carlee Wehrman",
+        "role": "Costume Designer"
+      },
+      {
+        "name": "Carter Roeske",
+        "role": "Associate Producer "
+      },
+      {
+        "name": "Zach Miller",
+        "role": "Composer"
+      },
+      {
+        "name": "Trevor Woggon",
+        "role": "Composer/Music Director"
       }
     ]
   },
@@ -3843,22 +3908,30 @@
       "Improv",
       "Original Music"
     ],
-    "castCrewCount": 8,
+    "castCrewCount": 9,
     "ratingStats": {
       "totalCount": 0
     },
     "castList": [
       {
-        "name": "Philip Simondet",
-        "role": "Improviser, producer, show creator"
+        "name": "Eric Heiberg",
+        "role": "Producer, Director"
+      },
+      {
+        "name": "Holly Brooks",
+        "role": "Producer, Improviser"
       },
       {
         "name": "Sarah Arnold-Simondet",
-        "role": "Improviser, producer"
+        "role": "Producer, Improviser"
       },
       {
-        "name": "Eric Heiberg",
-        "role": "Improviser, producer, director"
+        "name": "Philip Simondet",
+        "role": "Producer, Improviser"
+      },
+      {
+        "name": "Karyn Alissa",
+        "role": "Improviser"
       },
       {
         "name": "Jill Bernard",
@@ -3869,15 +3942,11 @@
         "role": "Improviser"
       },
       {
-        "name": "Karyn Alissa",
+        "name": "Adam Mellerup",
         "role": "Improviser"
       },
       {
         "name": "Linc Owens",
-        "role": "Improviser"
-      },
-      {
-        "name": "Adam Mellerup",
         "role": "Improviser"
       }
     ]
@@ -3902,16 +3971,16 @@
     },
     "castList": [
       {
-        "name": "Charles Osugo (Afropolar)",
-        "role": "Werewolf"
+        "name": "Rob Ward",
+        "role": "Alpha/Director"
       },
       {
         "name": "Mike Mayket",
-        "role": "Werewolf"
+        "role": "Beta"
       },
       {
-        "name": "Rob Ward",
-        "role": "Director/Werewolf"
+        "name": "Charles Osugo (Afropolar)",
+        "role": "Delta"
       }
     ]
   },
@@ -3945,7 +4014,7 @@
       "Storytelling",
       "LGBTQIA+ Content"
     ],
-    "castCrewCount": 3,
+    "castCrewCount": 4,
     "videoLink": "https://www.youtube.com/embed/nJsJZjdusow",
     "ratingStats": {
       "totalCount": 0
@@ -3958,6 +4027,10 @@
       {
         "name": "James Knight-Zappa",
         "role": "Harvey Milk"
+      },
+      {
+        "name": "Debbie Schneider",
+        "role": "Producer/Director"
       },
       {
         "name": "Derik  Iverson",
@@ -4434,7 +4507,7 @@
       "Historical content",
       "Political content"
     ],
-    "castCrewCount": 18,
+    "castCrewCount": 20,
     "ratingStats": {
       "totalCount": 0
     },
@@ -4488,11 +4561,11 @@
         "role": "Performer"
       },
       {
-        "name": "Farah Habad",
+        "name": "Shamso Iman",
         "role": "Performer"
       },
       {
-        "name": "Shamso Iman",
+        "name": "Freddy Jara",
         "role": "Performer"
       },
       {
@@ -4504,7 +4577,15 @@
         "role": "Performer"
       },
       {
+        "name": "Syliva Manning",
+        "role": "Performer"
+      },
+      {
         "name": "Ben Marcy",
+        "role": "Performer"
+      },
+      {
+        "name": "Silvia Pontaza",
         "role": "Performer"
       },
       {
@@ -4529,7 +4610,7 @@
       "Historical content",
       "Political content"
     ],
-    "castCrewCount": 1,
+    "castCrewCount": 6,
     "videoLink": "https://www.youtube.com/shorts/J1h-6qeRl6M",
     "ratingStats": {
       "totalCount": 0
@@ -4538,6 +4619,26 @@
       {
         "name": "Kyle B. Dekker",
         "role": "Writer/Performer"
+      },
+      {
+        "name": "Derek Lee Miller",
+        "role": "Voice Actor"
+      },
+      {
+        "name": "Allison  Vincent",
+        "role": "Voice Actor"
+      },
+      {
+        "name": "Jennifer D'Lynn",
+        "role": "Voice Actor"
+      },
+      {
+        "name": "Quincy Anderson",
+        "role": "Voice Actor"
+      },
+      {
+        "name": "Jei Herald-Zamora",
+        "role": "Voice Actor"
       }
     ]
   }

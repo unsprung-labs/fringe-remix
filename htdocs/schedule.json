@@ -1,5 +1,5 @@
 {
-  "scrapeTime": 1783525785753,
+  "scrapeTime": 1784002064833,
   "days": [
     {
       "events": [
@@ -2330,7 +2330,7 @@
           "showTitle": "Space Company",
           "showFavId": "55240",
           "date": "08/11",
-          "serviceTags": ""
+          "serviceTags": "BFF"
         },
         {
           "time": "10:00 PM",
@@ -2687,7 +2687,7 @@
           "showTitle": "Space Company",
           "showFavId": "55240",
           "date": "08/12",
-          "serviceTags": ""
+          "serviceTags": "BFF"
         },
         {
           "time": "10:00 PM",
