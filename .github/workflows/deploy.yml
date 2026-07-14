@@ -1,0 +1,28 @@
+name: Deploy to DreamHost
+
+on:
+  push:
+    branches:
+      - main  # Trigger this workflow whenever you push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Setup the SSH key from your GitHub secrets
+    - name: Configure SSH
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        name: id_ed25519
+        known_hosts: unnecessary
+
+    # 2. Add DreamHost to known_hosts to prevent interactive prompts
+    - name: Add Known Hosts
+      run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+    # 3. Log into DreamHost and run git pull
+    - name: Trigger Remote Git Pull
+      run: |
+        ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /home/alexwohlhueter/unsprung.com/fringe && git pull origin main"
