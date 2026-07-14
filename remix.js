@@ -146,6 +146,7 @@ function parseSchedulePage(content) {
 
 async function scrapeShowsList() {
     // Complete list is not available without paging through via "Load More" btn
+    // Actually now there's no button, you just scroll to the bottom
     let nextPageUrl = 'https://minnesotafringe.org/shows/' + festYear;
     // let nextPageUrl = 'https://minnesotafringe.org/shows/2023?&prop_ModuleId=39277&page=6';
     let showData = [];
@@ -184,16 +185,19 @@ async function parseShowsList(cheerioObj) {
     return shows;
 }
 
-function scrapeShowDetails() {
+
+async function scrapeShowDetails() {
     const showsBareRaw = fs.readFileSync('htdocs/shows.json');
     let showsBare = JSON.parse(showsBareRaw).filter(s => !!s);
-    let scrapePromises = showsBare.map( function(show) {
-        return scrapeShowPageDetails(show);
-    });
-    Promise.all(scrapePromises).then( (scrapedDetails) => {
-        console.log('show scrapePromises all done!');
-        fs.writeFileSync('htdocs/show-details.json', JSON.stringify(scrapedDetails, null, 2));
-    });
+    let scrapedDetails = [];
+    for (const show of showsBare) {
+        const randomDelay = Math.floor(Math.random() * 2000) + 1000; // 1-3s
+        await sleep(randomDelay);
+        const detail = await scrapeShowPageDetails(show);
+        scrapedDetails.push(detail);
+    }
+    console.log('scrapeShowDetails all done!');
+    fs.writeFileSync('htdocs/show-details.json', JSON.stringify(scrapedDetails, null, 2));
 }
 
 function scrapeReviewsPage() {
