@@ -86,21 +86,25 @@ const venueSort = venues.map(i => i.venue);
 
 // SCRAPE
 
-function scrapeSchedule() {
+async function scrapeSchedule() {
     console.log("scrapeSchedule()...");
     let scheduleData = {
         scrapeTime: + new Date(),
         days: [],
     };
-    let parsePromises = festDays.map( function(d) {
-        return readSchedulePage(`https://minnesotafringe.org/schedule/${festYear}?d=${d.isoDate}`, d.dayNum, scheduleData);
-    });
-    Promise.all(parsePromises).then( (values) => {
-        console.log('all done! writing schedule.json...');
-        // filter out null item at days[0]
-        scheduleData.days = scheduleData.days.filter(d => d);
-        fs.writeFileSync('htdocs/schedule.json', JSON.stringify(scheduleData, null, 2));
-    });
+
+    // Process each day sequentially
+    for (let i = 0; i < festDays.length; i++) {
+        const day = festDays[i];
+        console.log(`Processing day ${i}...`);
+        await readSchedulePage(`https://minnesotafringe.org/schedule/${festYear}?d=${day.isoDate}`, day.dayNum, scheduleData);
+        await sleep(500);
+    }
+
+    console.log('all done! writing schedule.json...');
+    // filter out null item at days[0]
+    scheduleData.days = scheduleData.days.filter(d => d);
+    fs.writeFileSync('htdocs/schedule.json', JSON.stringify(scheduleData, null, 2));
 }
 
 async function readSchedulePage(url, i, scheduleData) {
