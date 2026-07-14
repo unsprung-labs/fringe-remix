@@ -21,7 +21,32 @@ const reqHeaders = {
     'Accept-Language': 'en-US,en;q=0.9',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
 };
-const offStageRoles = ['Director', 'Assistant Director', 'Associate Director', 'Creative Director', 'Artistic Director', 'Dramaturg', 'Producer', 'Production Assistant', 'Production Support', 'Technical Director', 'Box Office', 'Stage Manager', 'Assistant Stage Manager', 'Makeup Designer', 'Sound Designer', 'Set Builder', 'Props', 'Playwright', 'Writer', 'Author', 'Composer', 'Choreographer', 'Fight Choreographer', 'Fight Captain', 'Intimacy Consultant', 'Intimacy Coordinator', 'Lighting Designer', 'Lighting Design', 'Light Design', 'Board Operator', 'Graphic Designer', 'Logo Design', 'Photographer', 'Videographer', 'Dialect Coach', 'Language & Dialect Coach', 'Additional Voices', 'Child Wrangler'];
+// Role name regexps that suggest a person is not on-stage
+const offStageRoles = [
+  /^Playwright|Writer|Author|Composer|Composition|Dramaturg|Producer$/i,
+  /^Build|Props|Set$/i,
+  /^(?:Co-?)(?:Writer|Director|Creator|Producer|Adaptor)$/i,
+  /^(?:(?:Technical|Assistant|Associate|Creative|Artistic|Music) )?Director$/i,
+  /^(?:(?:Assistant|Associate) )?Stage Manager$/i,
+  /^(?:(?:Assistant|Associate|Creative|Executive) )?Producer$/i,
+  /^(?:(?:Vocal|Instrumental|Orchestral?|Music) )?Arrange(?:ments?|r)$/i,
+  /^Light(?:ing)? Design(?:er)$/i,
+  /^(?:Make-?up|Graphic|Logo|Production|Props?|Puppet) Design(?:er)$/i,
+  /^(?:Props?|Puppet|Sets?) Build(?:er)$/i,
+  /^Costume Design(?:er)?|Costumes$/i,
+  /^(?:Sound Desig(ner)?|Sound)$/i,
+  /^Props|Prop Master|Prop Builder$/i,
+  /^Fight (?:Choreographer|Choreograpy|Captain)$/i,
+  /^Intimacy (?:Consultant|Coordinator)$/i,
+  /^Fight\/Intimacy Choreographer$/i,
+  /^Box Office$/i,
+  /^(?:Photo|Video|Choreo)graph(?:er|y)$/i,
+  /^(?:Language|Dialect|Language (?:and|&) Dialect|Voice|Vocal|Fight) Coach$/i,
+  /^Additional Voices?$/i,
+  /^Voice Actor|Voice\s?over$/i,
+  /^(?:Child|Cosplay|Animal) Wrangler$/i
+];
+
 const tagDetails = [
     {
         tag: "BFF",
@@ -542,12 +567,7 @@ function formatShow(show, index) {
 
 function formatCast(castList) {
     return castList
-        .filter(function(person) {
-            // remove people not on stage (@todo or flag, sort last, and display e.g. muted)
-            // break out e.g. "Writer/Director"
-            const roles = person.role.trim().split(/\s*(?:\/|,|&)\s*/);
-            return ! roles.every(role => offStageRoles.includes(role));
-        })
+        .filter((person) => hasOnStageRole(person))
         .map(function(person) {
             // remove "(She/Her)" etc
             person.name = person.name.trim().replace(/\s*\(\w{1,5}\/\w{1,5}\)/, '');
@@ -572,7 +592,8 @@ function renderCsv() {
         'Web Page',
         'Venue',
         'Solo?',
-        'Cast Crew Count',
+        'Cast+Crew Count',
+        'Cast Count',
         'Video',
         'Description',
         'Caption',
@@ -599,6 +620,10 @@ function renderCsv() {
         let title = s.showTitle.replace(/"/g, '""');
         let artist = s.byArtist.replace(/"/g, '""'); // escape quotes
 
+        let castCount = s.castList
+            .filter((person) => hasOnStageRole(person))
+            .length;
+
         let showRow = [
             artist,
             '"' + title + '"',
@@ -606,6 +631,7 @@ function renderCsv() {
             s.venue,
             s.genreTags.includes('Solo Show') ? 'Solo' : '',
             s.castCrewCount,
+            castCount,
             fixVideoLink(s.videoLink),
             '"' + s.description.replace(/"/g, '""') + '"',
             `"""${title}"" presented by ${artist} at ${s.venue} as part of the ${festYear} Minnesota Fringe Festival."`,
@@ -670,6 +696,15 @@ function fixVideoLink(link) {
         return "https://vimeo.com/" + link.match(rxVimeo)[1];
     }
     return link;
+}
+
+function hasOnStageRole(person) {
+    const roles = person.role
+        .trim()
+        .replace(/^\[|\]$/g, '') // e.g. [CHOREOGRAPHER]
+        .trim()
+        .split(/\s*(?:\/|,|&|\|)\s*/);
+    return ! roles.every( (role) => offStageRoles.some((re) => re.test(role)));
 }
 
 // MAIN
