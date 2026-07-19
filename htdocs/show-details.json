@@ -382,7 +382,7 @@
         "role": "Mu Mu (Ganesh)"
       },
       {
-        "name": "Hailey  ",
+        "name": "Hailey  Gillies",
         "role": "Stage Manager "
       },
       {
@@ -1315,7 +1315,7 @@
       "Musical Theater",
       "Storytelling"
     ],
-    "castCrewCount": 7,
+    "castCrewCount": 8,
     "ratingStats": {
       "totalCount": 0
     },
@@ -1347,6 +1347,10 @@
       {
         "name": "Michael Chapman",
         "role": "Perfomer"
+      },
+      {
+        "name": "Christy  Johnson",
+        "role": "Director/Producer/Performer"
       }
     ]
   },
@@ -1595,7 +1599,7 @@
       "Political content",
       "Religious content"
     ],
-    "castCrewCount": 6,
+    "castCrewCount": 7,
     "ratingStats": {
       "totalCount": 0
     },
@@ -1619,6 +1623,10 @@
       {
         "name": "Kaalid ",
         "role": "Puppeteer"
+      },
+      {
+        "name": "Zac Benson (김 민철)",
+        "role": "Consultant"
       },
       {
         "name": "W. Bridger Adkison",
@@ -4081,7 +4089,7 @@
       },
       {
         "name": "Eva Bourgeois",
-        "role": "\"Jebediah 'Jeb' Breadcroft\"/\"Assistant\"/\"Paramedic\""
+        "role": "Jebediah \"Jeb\"  Breadcroft"
       }
     ]
   },
