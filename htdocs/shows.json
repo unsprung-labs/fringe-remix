@@ -240,12 +240,6 @@
     "byArtist": "PhysicalLies"
   },
   {
-    "showUrl": "/shows/2026/i-hate-running",
-    "showFavId": "55170",
-    "showTitle": "I Hate Running",
-    "byArtist": "Charlzik Theatre Company"
-  },
-  {
     "showUrl": "/shows/2026/i-m-afraid-i-have-to-leave",
     "showFavId": "55228",
     "showTitle": "I'm Afraid, I Have To Leave",
@@ -552,12 +546,6 @@
     "byArtist": "be-Creative"
   },
   {
-    "showUrl": "/shows/2026/the-resonance-of-roots",
-    "showFavId": "55410",
-    "showTitle": "The Resonance of Roots",
-    "byArtist": "Minnesota Tamil Sangam"
-  },
-  {
     "showUrl": "/shows/2026/the-shape-of-home",
     "showFavId": "55340",
     "showTitle": "The Shape of Home",
@@ -586,6 +574,12 @@
     "showFavId": "55159",
     "showTitle": "Turn On, Tune In, Drop Dead",
     "byArtist": "John Ervin"
+  },
+  {
+    "showUrl": "/shows/2026/vintage-tunes-modern-gal",
+    "showFavId": "56425",
+    "showTitle": "Vintage Tunes, Modern Gal",
+    "byArtist": "Plucky Rosenthal"
   },
   {
     "showUrl": "/shows/2026/wake-the-improv",

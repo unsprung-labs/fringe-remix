@@ -358,7 +358,7 @@
         "role": "Dance choreographer "
       },
       {
-        "name": "Siem  ",
+        "name": "Siem  Yong",
         "role": "Marah "
       },
       {
@@ -382,7 +382,7 @@
         "role": "Mu Mu (Ganesh)"
       },
       {
-        "name": "Hailey  ",
+        "name": "Hailey  Gillies",
         "role": "Stage Manager "
       },
       {
@@ -398,7 +398,7 @@
         "role": "one of the Angkorian kid"
       },
       {
-        "name": "Anthony  Hoam ",
+        "name": "Tony Hoam ",
         "role": "Siddhartha/monk"
       },
       {
@@ -1022,11 +1022,60 @@
     "genreTags": [
       "Comedy"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 12,
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "Susanne Becker",
+        "role": "Director"
+      },
+      {
+        "name": "Merit Burgett",
+        "role": "Various Roles"
+      },
+      {
+        "name": "Liz Crowe",
+        "role": "Stage Manager"
+      },
+      {
+        "name": "Bridget Foy",
+        "role": "Ilsa"
+      },
+      {
+        "name": "Lolly Foy",
+        "role": "Costumer"
+      },
+      {
+        "name": "Kelvin Hatle",
+        "role": "Captain Louis Renault"
+      },
+      {
+        "name": "Gregory Parks",
+        "role": "Sam"
+      },
+      {
+        "name": "Samuel Poppen",
+        "role": "Rick"
+      },
+      {
+        "name": "Pher Sturz",
+        "role": "Ugarte/Ole Laszlo"
+      },
+      {
+        "name": "Duck Washington",
+        "role": "Co-Writer"
+      },
+      {
+        "name": "Tim Wick",
+        "role": "Co-Writer/Various Roles"
+      },
+      {
+        "name": "Molly Zupon",
+        "role": "Secretary Noem/Margie"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/castrati-a-tale-of-two",
@@ -1315,7 +1364,7 @@
       "Musical Theater",
       "Storytelling"
     ],
-    "castCrewCount": 7,
+    "castCrewCount": 8,
     "ratingStats": {
       "totalCount": 0
     },
@@ -1347,6 +1396,10 @@
       {
         "name": "Michael Chapman",
         "role": "Perfomer"
+      },
+      {
+        "name": "Christy  Johnson",
+        "role": "Director/Producer/Performer"
       }
     ]
   },
@@ -1420,7 +1473,7 @@
       },
       {
         "name": "Laura Berger",
-        "role": "Actor, \"Biff Loman\""
+        "role": "Actor, “Biff Loman”"
       },
       {
         "name": "Steph Callaghan",
@@ -1475,7 +1528,7 @@
     "castList": [
       {
         "name": "Jason  Kruger",
-        "role": "Director, Snake/World Builder"
+        "role": "Snake/World Builder, Director"
       },
       {
         "name": "Phantom Chorus Theatre ",
@@ -1483,7 +1536,7 @@
       },
       {
         "name": "Angela  Fox",
-        "role": "Writer, The Girl/April"
+        "role": "The Girl/April, Writer, Prop Director, Producer"
       },
       {
         "name": "Charles  Hubbell",
@@ -1503,15 +1556,15 @@
       },
       {
         "name": "Amy  Walus",
-        "role": "World Builder"
+        "role": "World Builder, Puppet Captain"
       },
       {
         "name": "Chandra  Reyer",
-        "role": "Prop Creator, World Builder"
+        "role": "World Builder, Prop Captain, Prop Creator"
       },
       {
         "name": "Gillian  Chan",
-        "role": "Prop Creator, World Builder"
+        "role": "World Builder, Prop Captain, Prop Creator"
       },
       {
         "name": "James  Fairbairn",
@@ -1539,7 +1592,7 @@
       },
       {
         "name": "Nicole  Wilder",
-        "role": "Prop Director and Creator"
+        "role": "Prop Creator"
       },
       {
         "name": "Elizabeth  Mark",
@@ -1595,13 +1648,17 @@
       "Political content",
       "Religious content"
     ],
-    "castCrewCount": 6,
+    "castCrewCount": 7,
     "ratingStats": {
       "totalCount": 0
     },
     "castList": [
       {
         "name": "Mackenzie Kelsheimer",
+        "role": "Writer"
+      },
+      {
+        "name": "Zac Benson (김 민철)",
         "role": "Writer"
       },
       {
@@ -1921,11 +1978,11 @@
     },
     "castList": [
       {
-        "name": "Cleo Torres",
+        "name": "Buck Short",
         "role": "producer, creator, actor"
       },
       {
-        "name": "Howdy Partner",
+        "name": "Cleo Torres",
         "role": "producer, creator, actor"
       },
       {
@@ -1959,7 +2016,7 @@
       "Political content",
       "Religious content"
     ],
-    "castCrewCount": 15,
+    "castCrewCount": 16,
     "ratingStats": {
       "totalCount": 0
     },
@@ -1985,7 +2042,7 @@
         "role": "Marvel Scholl"
       },
       {
-        "name": "Moses Young",
+        "name": "Moses R Young",
         "role": "Grant Dunne"
       },
       {
@@ -1997,7 +2054,7 @@
         "role": "Miles Dunne"
       },
       {
-        "name": "Chandler Oja",
+        "name": "Chandler Clement-Oja",
         "role": "Vincent Raymond Dunne"
       },
       {
@@ -2023,6 +2080,10 @@
       {
         "name": "Aaron Lockrem",
         "role": "Props Design"
+      },
+      {
+        "name": "Margaret Lindahl",
+        "role": "Art Design"
       }
     ]
   },
@@ -2063,35 +2124,6 @@
       {
         "name": "Dora Starr Poulos",
         "role": "Co-Stage Manager"
-      }
-    ]
-  },
-  {
-    "showUrl": "/shows/2026/i-hate-running",
-    "showFavId": "55170",
-    "showTitle": "I Hate Running",
-    "byArtist": "Charlzik Theatre Company",
-    "createdBy": "Written by Chuck Beeson",
-    "venue": "Rarig Kilburn Theatre",
-    "description": "Ever run a marathon? Why would you? I HATE RUNNING explores the source of the disease of running and other endurance sports that cost money and destroy your body! Nah, its inspiring come see it!",
-    "genreTags": [
-      "Comedy",
-      "Solo Show",
-      "Storytelling",
-      "Historical content"
-    ],
-    "castCrewCount": 2,
-    "ratingStats": {
-      "totalCount": 0
-    },
-    "castList": [
-      {
-        "name": "Chuck  Beeson",
-        "role": "Producer, Writer, Star of the Show"
-      },
-      {
-        "name": "Brenda Aleshire",
-        "role": "Director"
       }
     ]
   },
@@ -2204,11 +2236,76 @@
       "Audience participation",
       "LGBTQIA+ Content"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 16,
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "Ian Bell Bell",
+        "role": "Director/Writer"
+      },
+      {
+        "name": "Margarit Flynn",
+        "role": "Director/Writer/Tori"
+      },
+      {
+        "name": "Sonja Anderson",
+        "role": "Marketing Manager"
+      },
+      {
+        "name": "Ruby Suro",
+        "role": "Stage Manager/Dramaturg"
+      },
+      {
+        "name": "Jack Kuhn",
+        "role": "Tech Director"
+      },
+      {
+        "name": "Michaela Minock",
+        "role": "Choreographer"
+      },
+      {
+        "name": "Noah Jetland",
+        "role": "Matthew Anderson"
+      },
+      {
+        "name": "Gabriella Jasiczek",
+        "role": "Scarlet Anderson"
+      },
+      {
+        "name": "Berri Stecyk",
+        "role": "Bella DeLuca "
+      },
+      {
+        "name": "Sammi T",
+        "role": "Vic/Ensemble"
+      },
+      {
+        "name": "JB Hunt",
+        "role": "Paul/Ensemble"
+      },
+      {
+        "name": "Hendrix Brod",
+        "role": "Adam/Ensemble"
+      },
+      {
+        "name": "Marines LAST NAME",
+        "role": "Moonlight Muses Singer/Ensemble"
+      },
+      {
+        "name": "Teagan Johnson",
+        "role": "Moonlight Muses Singer/Ensemble"
+      },
+      {
+        "name": "Jackson Miller",
+        "role": "Judge/Ensemble"
+      },
+      {
+        "name": "Parker Kurpiel",
+        "role": "Bailiff/Ensemble"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/is-that-why",
@@ -2490,11 +2587,68 @@
       "Political content",
       "Religious content"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 14,
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "Hannah Wydeven",
+        "role": "Performer"
+      },
+      {
+        "name": "Anna Tobin",
+        "role": "Performer"
+      },
+      {
+        "name": "Anna Weggel",
+        "role": "Performer"
+      },
+      {
+        "name": "Doug  Neithercott",
+        "role": "Director"
+      },
+      {
+        "name": "Erin Kennedy",
+        "role": "Performer"
+      },
+      {
+        "name": "Julia Weiss",
+        "role": "Performer"
+      },
+      {
+        "name": "Lizzie Gardner",
+        "role": "Performer"
+      },
+      {
+        "name": "Meg Heaton",
+        "role": "Performer"
+      },
+      {
+        "name": "Nora Neisen",
+        "role": "Performer"
+      },
+      {
+        "name": "Siri Hellermin",
+        "role": "Performer"
+      },
+      {
+        "name": "Sophia Schott",
+        "role": "Performer"
+      },
+      {
+        "name": "Will Schroder",
+        "role": "Performer"
+      },
+      {
+        "name": "Justin Nellis",
+        "role": "Pianist"
+      },
+      {
+        "name": "John Hilsen",
+        "role": "Pianist"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/m",
@@ -2952,7 +3106,7 @@
         "role": "Etta"
       },
       {
-        "name": "Lily Cornwell",
+        "name": "Lily Mae Cornwell",
         "role": "Alex"
       },
       {
@@ -3884,7 +4038,7 @@
       "Spoken Word",
       "Storytelling"
     ],
-    "castCrewCount": 1,
+    "castCrewCount": 2,
     "ratingStats": {
       "totalCount": 0
     },
@@ -3892,6 +4046,10 @@
       {
         "name": "Jena Young",
         "role": "Creator"
+      },
+      {
+        "name": "Catherine Hansen",
+        "role": "Voiceover"
       }
     ]
   },
@@ -4081,7 +4239,7 @@
       },
       {
         "name": "Eva Bourgeois",
-        "role": "\"Jebediah 'Jeb' Breadcroft\"/\"Assistant\"/\"Paramedic\""
+        "role": "Jebediah \"Jeb\"  Breadcroft"
       }
     ]
   },
@@ -4161,24 +4319,6 @@
         "role": "Director"
       }
     ]
-  },
-  {
-    "showUrl": "/shows/2026/the-resonance-of-roots",
-    "showFavId": "55410",
-    "showTitle": "The Resonance of Roots",
-    "byArtist": "Minnesota Tamil Sangam",
-    "createdBy": "",
-    "venue": "The Southern Theater",
-    "description": "Minnesota Tamil Sangam proudly presents The Resonance of Roots, a captivating theatrical celebration that brings to life the enduring spirit of Tamil classical performing arts. This production beautifully illustrates how the deep-rooted traditions of Tamil culture continue to echo through generations, preserving their richness, elegance, and emotional depth even in a modern world.\nThrough a seamless blend of expressive dance, soul-stirring music, and vibrant folk elements, The Resonance of Roots pays tribute to the timeless legacy of Tamil art forms. Presented by talented local artists, this drama highlights the unbroken connection between heritage and contemporary expression, reminding us that while times may change, the resonance of our roots continues to inspire and thrive.",
-    "genreTags": [
-      "Dance - Classical",
-      "Drama"
-    ],
-    "castCrewCount": 0,
-    "ratingStats": {
-      "totalCount": 0
-    },
-    "castList": []
   },
   {
     "showUrl": "/shows/2026/the-shape-of-home",
@@ -4304,6 +4444,32 @@
       {
         "name": "John Clarkin",
         "role": "Wayne Vernon Geiser"
+      }
+    ]
+  },
+  {
+    "showUrl": "/shows/2026/vintage-tunes-modern-gal",
+    "showFavId": "56425",
+    "showTitle": "Vintage Tunes, Modern Gal",
+    "byArtist": "Plucky Rosenthal",
+    "createdBy": "Created by Plucky Rosenthal",
+    "venue": "Rarig Kilburn Theatre",
+    "description": "A charming musical comedy solo show plucked right out of the vaudeville era following cabaret performer Plucky Rosenthal and her quest to find the one thing she’s never had: a band.",
+    "genreTags": [
+      "Comedy",
+      "Original Music",
+      "Physical Theater",
+      "Solo Show",
+      "Audience participation"
+    ],
+    "castCrewCount": 1,
+    "ratingStats": {
+      "totalCount": 0
+    },
+    "castList": [
+      {
+        "name": "Plucky Rosenthal",
+        "role": "Creator and Performer"
       }
     ]
   },
@@ -4461,11 +4627,20 @@
       "Drama",
       "Storytelling"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 2,
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "David Hellstrom",
+        "role": "Writer/Storyteller"
+      },
+      {
+        "name": "Laura Shelley",
+        "role": "Moth Host"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/who-am-i-again-",
@@ -4577,7 +4752,7 @@
         "role": "Performer"
       },
       {
-        "name": "Syliva Manning",
+        "name": "Sylvia Manning",
         "role": "Performer"
       },
       {
