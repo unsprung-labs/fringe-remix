@@ -22,6 +22,10 @@ const reqHeaders = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
 };
 // Role name regexps that suggest a person is not on-stage
+// "House Manager/Box Office"
+// "Stage Manager/Box Office"
+// "Tech/Misc Assistance"
+// "Lighting & Sound Designer"
 const offStageRoles = [
   /^Playwright|Writer|Author|Composer|Composition|Dramaturg|Producer$/i,
   /^(?:Co-?)(?:Writer|Director|Creator|Producer|Adaptor)$/i,
@@ -30,12 +34,13 @@ const offStageRoles = [
   /^(?:(?:Assistant|Associate) )?House Manager$/i,
   /^(?:(?:Assistant|Associate|Creative|Executive) )?Producer$/i,
   /^(?:(?:Vocal|Instrumental|Orchestral?|Music) )?Arrange(?:ments?|r)$/i,
-  /^Co-?Conspirator$/i,
+  /^Co-?Conspirator|Consultant|Interviewer|Researcher$/i,
+  /^(?:Script|Story(?:telling)?) Consultant$/i,
   /^Light(?:ing|s)|Sound$/i,
   /^Build|Creator|Props|Set|Tech$/i,
   /^Stage ?hand$/i,
   /^Assistance|Misc Assistance|Backstage Assistant$/i,
-  /^(?:Senior )?(?:Communications|Graphics?|Light(?:ing)?|Logo|Make-?up|Media|Production|Props?|Puppet|Scenic|Sound) Design(?:er)$/i,
+  /^(?:Senior )?(?:Art(?:istic)?|Communications|Graphics?|Light(?:ing)?|Logo|Make-?up|Media|Production|Props?|Puppet|Scenic|Sound) Design(?:er)$/i,
   /^(?:Props?|Puppet|Sets?|World) Build(?:er)$/i,
   /^Props|Prop Master|Prop Builder$/i,
   /^Costume Design(?:er)?|Costumes$/i,
@@ -576,6 +581,8 @@ function formatCast(castList) {
         .map(function(person) {
             // remove "(She/Her)" etc
             person.name = person.name.trim().replace(/\s*\(\w{1,5}\/\w{1,5}\)/, '');
+            // remove double spaces
+            person.name = person.name.replace(/\s+/g, ' ');
             return person;
          })
          .filter(person => person.name.length > 0)
