@@ -490,11 +490,11 @@ function renderPage(scheduleData, showData, dayNum) {
     let dayTimeEvents = Object.values(scheduleData.days).find( function(day) {
         return !!day && day.dayNum == dayNum;
     }).events
-    // filter out events with no show (e.g. "TEST SHOW")
+    // filter out events with no show (e.g. "TEST SHOW" or recent drop-outs)
     .filter( (e) => {
         let show = showData.find((s) => !!s && s.showFavId == e.showFavId);
         if(!show) {
-            console.error('no showData found by showFavId (in filter), for event: ', e);
+            console.error('Skipping event where no showData found:', e);
             return false;
         }
         return true;
@@ -755,6 +755,12 @@ if (flags.includes('-d')) {
 if (flags.includes('-r')) {
     render();
 }
+if (flags.includes('-a')) {
+    scrapeShowsList();
+    scrapeSchedule();
+    scrapeShowDetails();
+    render();
+}
 if (flags.includes('-c')) {
     renderCsv();
 }
@@ -765,5 +771,6 @@ if (flags.length == 0) {
     console.info("-d   scrape show Details into show-details.json");
     // console.info("-v   scrape show reViews, update show-details.json");
     console.info("-r   Render html files from saved json");
+    console.info("-a   All of the above!");
     console.info("-c   render Csv file");
 }
