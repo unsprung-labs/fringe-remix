@@ -1447,6 +1447,7 @@
       "Audience participation"
     ],
     "castCrewCount": 13,
+    "videoLink": "https://www.youtube.com/embed/hst40aryENo",
     "ratingStats": {
       "totalCount": 0
     },
@@ -1655,14 +1656,14 @@
     "castList": [
       {
         "name": "Mackenzie Kelsheimer",
-        "role": "Writer"
+        "role": "Playwright"
       },
       {
         "name": "Zac Benson (김 민철)",
         "role": "Writer"
       },
       {
-        "name": "Jeanie B. Nickel",
+        "name": "Joseph Dinh",
         "role": "Actor"
       },
       {
@@ -1670,16 +1671,12 @@
         "role": "Actor"
       },
       {
-        "name": "Joseph Dinh",
+        "name": "Jeanie B. Nickel",
         "role": "Actor"
       },
       {
         "name": "Kaalid ",
         "role": "Puppeteer"
-      },
-      {
-        "name": "Zac Benson (김 민철)",
-        "role": "Consultant"
       },
       {
         "name": "W. Bridger Adkison",
@@ -2282,7 +2279,7 @@
         "role": "Bella DeLuca "
       },
       {
-        "name": "Sammi T",
+        "name": "Sammi Trinidad",
         "role": "Vic/Ensemble"
       },
       {
@@ -2294,7 +2291,7 @@
         "role": "Adam/Ensemble"
       },
       {
-        "name": "Marines LAST NAME",
+        "name": "Marineh Amirkhani Namagerdi",
         "role": "Moonlight Muses Singer/Ensemble"
       },
       {
@@ -2481,7 +2478,14 @@
     "castCrewCount": 8,
     "videoLink": "https://www.youtube.com/embed/dLCezdEOYPA",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
