@@ -1,4 +1,3 @@
-const axios = require('axios').default;
 const cheerio = require('cheerio');
 const fs = require('fs');
 const handlebars = require('handlebars');
@@ -144,9 +143,13 @@ async function scrapeSchedule() {
 
 async function readSchedulePage(url, i, scheduleData) {
     try {
-        const response = await axios.get(url, {headers: reqHeaders});
+        const response = await fetch(url, {headers: reqHeaders});
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const content = await response.text();
         console.log('readSchedulePage success');
-        const events = parseSchedulePage(response.data);
+        const events = parseSchedulePage(content);
         console.log('i, output rows:', i, events.length);
         scheduleData.days[i] = {
             events: events,
@@ -192,8 +195,12 @@ async function scrapeShowsList() {
     try {
         while (nextPageUrl) {
             console.log('scrapeShows from:', nextPageUrl);
-            const response = await axios.get(nextPageUrl, {headers: reqHeaders});
-            let $page = cheerio.load(response.data, {xmlMode: false});
+            const response = await fetch(nextPageUrl, {headers: reqHeaders});
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const content = await response.text();
+            let $page = cheerio.load(content, {xmlMode: false});
             let pagedShowData = await parseShowsList($page);
             showData = showData.concat(pagedShowData);
             nextPageUrl = $page('a.loadMoreBtn').length ? $page('a.loadMoreBtn').attr('href') : false;
@@ -243,9 +250,15 @@ function scrapeReviewsPage() {
     const showDataRaw = fs.readFileSync('htdocs/show-details.json');
     const showData = JSON.parse(showDataRaw);
 
-    axios.get(`https://minnesotafringe.org/reviews/${festYear}`, {headers: reqHeaders})
+    fetch(`https://minnesotafringe.org/reviews/${festYear}`, {headers: reqHeaders})
         .then(function(response){
-            const scores = parseReviewsPage(response.data, showData);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(function(content){
+            const scores = parseReviewsPage(content, showData);
             const showDataWithScores = decorateShowsWithScores(showData, scores);
             fs.writeFileSync('htdocs/show-details.json', JSON.stringify(showDataWithScores, null, 2));
         });
@@ -291,8 +304,12 @@ async function scrapeShowPageDetails(show) {
     while(true) {
         try {
             console.log('scrapeShowPageDetails reading ' + show.showUrl);
-            const response = await axios.get(baseDomain + show.showUrl, {headers: reqHeaders});
-            let details = parseShowPageDetails(response.data);
+            const response = await fetch(baseDomain + show.showUrl, {headers: reqHeaders});
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const content = await response.text();
+            let details = parseShowPageDetails(content);
             return {...show, ...details};
         } catch (error) {
             if (error.response && [502].includes(error.response.status)) {
