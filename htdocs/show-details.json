@@ -4362,11 +4362,28 @@
       "Musical Theater",
       "Physical Theater"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 4,
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "Mads Plonski",
+        "role": "Creator and Performer"
+      },
+      {
+        "name": "Michael Torsch",
+        "role": "Creator and Performer"
+      },
+      {
+        "name": "Caleb Byers",
+        "role": "Co-creator and Performer"
+      },
+      {
+        "name": "Josh  Leininger",
+        "role": "Composer and Musician"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/too-fat-to-run",
