@@ -2419,50 +2419,7 @@
       }
     ]
   },
-  {
-    "showUrl": "/shows/2026/i-will-become-the-silver-surfer-i-will-protect-you-",
-    "showFavId": "55330",
-    "showTitle": "I Will Become The Silver Surfer. I Will Protect You.",
-    "byArtist": "Jake Mierva",
-    "createdBy": "Written by Jake Mierva",
-    "venue": "Rarig Stoll Thrust Theatre",
-    "description": "Galactus has chosen Earth as his next target. But don't worry. I will stop him. I will save you all. I will become The Silver Surfer.",
-    "genreTags": [
-      "Comedy",
-      "Solo Show",
-      "Audience participation"
-    ],
-    "castCrewCount": 6,
-    "ratingStats": {
-      "totalCount": 0
-    },
-    "castList": [
-      {
-        "name": "Jake Mierva",
-        "role": "Writer, Performer"
-      },
-      {
-        "name": "J. McIntyre Godwin",
-        "role": "Director"
-      },
-      {
-        "name": "Eric Wigham",
-        "role": "Lighting & Sound Designer"
-      },
-      {
-        "name": "Thomas Buan",
-        "role": "Dramaturg"
-      },
-      {
-        "name": "Christopher Bales",
-        "role": "Photographer & Videographer"
-      },
-      {
-        "name": "Aaron Thostenson",
-        "role": "Graphic Designer"
-      }
-    ]
-  },
+  null,
   {
     "showUrl": "/shows/2026/just-one-life",
     "showFavId": "55150",
@@ -2763,7 +2720,7 @@
       "Audience participation",
       "Kid friendly"
     ],
-    "castCrewCount": 7,
+    "castCrewCount": 15,
     "ratingStats": {
       "totalCount": 0
     },
@@ -2773,28 +2730,60 @@
         "role": "Director"
       },
       {
+        "name": "Riley Bender",
+        "role": "Stage Manager"
+      },
+      {
+        "name": "Gabrielle  Kangas",
+        "role": "Costume Designer"
+      },
+      {
+        "name": "Gabrielle  Johnson",
+        "role": "Referee"
+      },
+      {
         "name": "Gabriella  Rosen ",
-        "role": "Player/Racer (Actor)"
+        "role": "Player/Racer "
       },
       {
         "name": "Ethan  Carson",
-        "role": "Player/Racer (Actor)"
+        "role": "Player/Racer "
       },
       {
         "name": "Gino  Sturm",
-        "role": "Player/Racer (Actor)"
+        "role": "Player/Racer "
       },
       {
-        "name": "Ryley  Mullins",
-        "role": "Sports Announcer (Actor)"
+        "name": "Madison Fairbanks",
+        "role": "ONOMATOPOEIA The Dice Clown"
+      },
+      {
+        "name": "Ryley  M",
+        "role": "Sports Announcer "
       },
       {
         "name": "Sam  Sides",
-        "role": "Sports Announcer (Actor)"
+        "role": "Sports Announcer "
       },
       {
         "name": "Tollef  Currell",
-        "role": "Musical Clown (Actor)"
+        "role": "Musical Clown "
+      },
+      {
+        "name": "Corey Boe",
+        "role": "Featured Player"
+      },
+      {
+        "name": "Ivy Wolf",
+        "role": "Featured Player"
+      },
+      {
+        "name": "Jay  Johnson",
+        "role": "Featured Player"
+      },
+      {
+        "name": "Tara Gravelle",
+        "role": "Featured Player"
       }
     ]
   },
@@ -3378,7 +3367,7 @@
       "Solo Show",
       "Shakespearian elements"
     ],
-    "castCrewCount": 3,
+    "castCrewCount": 4,
     "ratingStats": {
       "totalCount": 0
     },
@@ -3394,6 +3383,10 @@
       {
         "name": "Deanne McDonald ",
         "role": "Creator "
+      },
+      {
+        "name": "Sequoia  Hauck",
+        "role": "Photographer"
       }
     ]
   },
@@ -3586,6 +3579,7 @@
       "Kid friendly"
     ],
     "castCrewCount": 6,
+    "videoLink": "https://www.youtube.com/embed/L3RVjNG2gXc",
     "ratingStats": {
       "totalCount": 0
     },
@@ -4180,12 +4174,16 @@
       "Storytelling",
       "LGBTQIA+ Content"
     ],
-    "castCrewCount": 4,
+    "castCrewCount": 6,
     "videoLink": "https://www.youtube.com/embed/nJsJZjdusow",
     "ratingStats": {
       "totalCount": 0
     },
     "castList": [
+      {
+        "name": " ",
+        "role": ""
+      },
       {
         "name": "Brian Farrey-Latz",
         "role": "Playwright"
@@ -4201,6 +4199,10 @@
       {
         "name": "Derik  Iverson",
         "role": "Billy Sipple"
+      },
+      {
+        "name": "Nora Persephone",
+        "role": "Cookie"
       }
     ]
   },
@@ -4707,7 +4709,7 @@
       "Historical content",
       "Political content"
     ],
-    "castCrewCount": 20,
+    "castCrewCount": 21,
     "ratingStats": {
       "totalCount": 0
     },
@@ -4739,6 +4741,10 @@
       {
         "name": "Laura Migliorino",
         "role": "Ghost Shoes "
+      },
+      {
+        "name": "Nora Cornell",
+        "role": "Stage Manager"
       },
       {
         "name": "Rahma Abdi",

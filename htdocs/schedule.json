@@ -1,5 +1,5 @@
 {
-  "scrapeTime": 1785144002334,
+  "scrapeTime": 1785230403187,
   "days": [
     {
       "events": [
@@ -37,14 +37,6 @@
         },
         {
           "time": "5:30 PM",
-          "venue": "Rarig Kilburn Theatre",
-          "showTitle": "I Hate Running",
-          "showFavId": "55170",
-          "date": "08/06",
-          "serviceTags": ""
-        },
-        {
-          "time": "5:30 PM",
           "venue": "The Southern Theater",
           "showTitle": "Small Minded",
           "showFavId": "55397",
@@ -66,6 +58,14 @@
           "showFavId": "55322",
           "date": "08/06",
           "serviceTags": "ASL   BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Vintage Tunes, Modern Gal",
+          "showFavId": "56425",
+          "date": "08/06",
+          "serviceTags": ""
         },
         {
           "time": "5:30 PM",
@@ -903,6 +903,14 @@
         },
         {
           "time": "5:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "1 Hour Left to Live: A One Puppet Show by That Felt Good",
+          "showFavId": "56461",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "5:30 PM",
           "venue": "Theatre in the Round",
           "showTitle": "A Real Piece of Work",
           "showFavId": "55297",
@@ -1236,6 +1244,14 @@
       "events": [
         {
           "time": "1:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "1 Hour Left to Live: A One Puppet Show by That Felt Good",
+          "showFavId": "56461",
+          "date": "08/09",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
           "venue": "Theatre in the Round",
           "showTitle": "ANNA",
           "showFavId": "55346",
@@ -1404,14 +1420,6 @@
         },
         {
           "time": "4:00 PM",
-          "venue": "Rarig Kilburn Theatre",
-          "showTitle": "I Hate Running",
-          "showFavId": "55170",
-          "date": "08/09",
-          "serviceTags": ""
-        },
-        {
-          "time": "4:00 PM",
           "venue": "Strike Theater",
           "showTitle": "Improvised Love Is Blind--Minnesota Fringe Edition",
           "showFavId": "55250",
@@ -1489,6 +1497,14 @@
           "showFavId": "55151",
           "date": "08/09",
           "serviceTags": "BFF"
+        },
+        {
+          "time": "4:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Vintage Tunes, Modern Gal",
+          "showFavId": "56425",
+          "date": "08/09",
+          "serviceTags": ""
         },
         {
           "time": "5:30 PM",
@@ -1969,14 +1985,6 @@
         },
         {
           "time": "8:30 PM",
-          "venue": "Rarig Kilburn Theatre",
-          "showTitle": "I Hate Running",
-          "showFavId": "55170",
-          "date": "08/10",
-          "serviceTags": ""
-        },
-        {
-          "time": "8:30 PM",
           "venue": "American School of Storytelling",
           "showTitle": "More Better Stories",
           "showFavId": "55191",
@@ -2006,6 +2014,14 @@
           "showFavId": "55079",
           "date": "08/10",
           "serviceTags": "BFF"
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Vintage Tunes, Modern Gal",
+          "showFavId": "56425",
+          "date": "08/10",
+          "serviceTags": ""
         },
         {
           "time": "8:30 PM",
@@ -2936,6 +2952,14 @@
         },
         {
           "time": "10:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "1 Hour Left to Live: A One Puppet Show by That Felt Good",
+          "showFavId": "56461",
+          "date": "08/13",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
           "venue": "Theatre in the Round",
           "showTitle": "Brakkesyke",
           "showFavId": "55349",
@@ -3160,6 +3184,14 @@
           "venue": "Phoenix Theater",
           "showTitle": "The Label Maker",
           "showFavId": "55130",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "1 Hour Left to Live: A One Puppet Show by That Felt Good",
+          "showFavId": "56461",
           "date": "08/14",
           "serviceTags": ""
         },
@@ -3626,6 +3658,14 @@
         },
         {
           "time": "7:00 PM",
+          "venue": "The Southern Theater",
+          "showTitle": "1 Hour Left to Live: A One Puppet Show by That Felt Good",
+          "showFavId": "56461",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
           "venue": "Rarig Kilburn Theatre",
           "showTitle": "Bangs!",
           "showFavId": "55238",
@@ -3802,14 +3842,6 @@
         },
         {
           "time": "10:00 PM",
-          "venue": "Rarig Kilburn Theatre",
-          "showTitle": "I Hate Running",
-          "showFavId": "55170",
-          "date": "08/15",
-          "serviceTags": ""
-        },
-        {
-          "time": "10:00 PM",
           "venue": "Theatre in the Round",
           "showTitle": "Not Bad for a Punk Band",
           "showFavId": "55242",
@@ -3845,6 +3877,14 @@
           "venue": "Rarig Nolte Xperimental Theatre",
           "showTitle": "The Shape of Home",
           "showFavId": "55340",
+          "date": "08/15",
+          "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Vintage Tunes, Modern Gal",
+          "showFavId": "56425",
           "date": "08/15",
           "serviceTags": ""
         }
@@ -4207,14 +4247,6 @@
         },
         {
           "time": "7:00 PM",
-          "venue": "Rarig Kilburn Theatre",
-          "showTitle": "I Hate Running",
-          "showFavId": "55170",
-          "date": "08/16",
-          "serviceTags": ""
-        },
-        {
-          "time": "7:00 PM",
           "venue": "Strike Theater",
           "showTitle": "Improvised Love Is Blind--Minnesota Fringe Edition",
           "showFavId": "55250",
@@ -4242,6 +4274,14 @@
           "venue": "Open Eye Theatre",
           "showTitle": "The Importance of Living",
           "showFavId": "55062",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Rarig Kilburn Theatre",
+          "showTitle": "Vintage Tunes, Modern Gal",
+          "showFavId": "56425",
           "date": "08/16",
           "serviceTags": ""
         },
