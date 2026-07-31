@@ -35,6 +35,103 @@
     ]
   },
   {
+    "showUrl": "/shows/2026/1-hour-left-to-live-a-one-puppet-show-by-that-felt-good",
+    "showFavId": "56461",
+    "showTitle": "1 Hour Left to Live: A One Puppet Show by That Felt Good",
+    "byArtist": "Sockpop",
+    "createdBy": "Directed by Phoebe Bottoms and Matt Olson",
+    "venue": "The Southern Theater",
+    "description": "A puppet on his deathbed recounts his life through monologue, improvised flashbacks, audience participation, and stand-up comedy guest sets. Every night he lives a new life with new characters and old regrets.",
+    "genreTags": [
+      "Comedy",
+      "Improv",
+      "Puppetry",
+      "Audience participation"
+    ],
+    "castCrewCount": 19,
+    "ratingStats": {
+      "totalCount": 0
+    },
+    "castList": [
+      {
+        "name": " ",
+        "role": ""
+      },
+      {
+        "name": "Matt  Olson",
+        "role": "Writer/Director/Producer"
+      },
+      {
+        "name": "Phoebe Bottoms",
+        "role": "Puppeteer/Director/Producer"
+      },
+      {
+        "name": "Collin Klug",
+        "role": "Writer"
+      },
+      {
+        "name": "Eric  Heiberg",
+        "role": "Improvisor"
+      },
+      {
+        "name": "James Moore",
+        "role": "Improvisor "
+      },
+      {
+        "name": "Philip Simondet ",
+        "role": "Improviser"
+      },
+      {
+        "name": "Meg Trowbridge",
+        "role": "Improviser"
+      },
+      {
+        "name": "Zelia Gonzales",
+        "role": "Improvisor"
+      },
+      {
+        "name": "Chris  Rodriguez",
+        "role": "Improvisor"
+      },
+      {
+        "name": "Steph  Callaghan",
+        "role": "Improvisor"
+      },
+      {
+        "name": "Patrick  McIntyre",
+        "role": "Improvisor"
+      },
+      {
+        "name": "Lily Meyer",
+        "role": "stand-up comedian"
+      },
+      {
+        "name": "Ben  Katzner",
+        "role": "stand-up comedian"
+      },
+      {
+        "name": "Victor  Gonzales",
+        "role": "Padre Perez"
+      },
+      {
+        "name": "Comrade Tripp",
+        "role": "stand-up comedian"
+      },
+      {
+        "name": "Nick  Bocheck ",
+        "role": "Production Manager"
+      },
+      {
+        "name": "James Stanley",
+        "role": "stand-up comedian"
+      },
+      {
+        "name": "Jamie Carbone",
+        "role": "stand-up comedian"
+      }
+    ]
+  },
+  {
     "showUrl": "/shows/2026/a-bench-at-the-edge",
     "showFavId": "55254",
     "showTitle": "A Bench at the Edge",
@@ -336,7 +433,7 @@
       "Kid friendly",
       "Religious content"
     ],
-    "castCrewCount": 19,
+    "castCrewCount": 20,
     "ratingStats": {
       "totalCount": 0
     },
@@ -354,26 +451,6 @@
         "role": "Assistant Director"
       },
       {
-        "name": "Tara  Bart ",
-        "role": "Dance choreographer "
-      },
-      {
-        "name": "Siem  Yong",
-        "role": "Marah "
-      },
-      {
-        "name": "Solina  Hammerschmidt",
-        "role": "Queen Jayarajadevi"
-      },
-      {
-        "name": "Phirum  Pheak ",
-        "role": "King Jayavarman VII"
-      },
-      {
-        "name": "Kaili Joy  Keophothisane",
-        "role": "one of the Angkorian Kid"
-      },
-      {
         "name": "Jame See Yang ",
         "role": "Samutra (Preah Mae Thorani)"
       },
@@ -382,8 +459,40 @@
         "role": "Mu Mu (Ganesh)"
       },
       {
+        "name": "Siem  Yong",
+        "role": "Marah "
+      },
+      {
+        "name": "Phirum  Pheak ",
+        "role": "King Jayavarman VII"
+      },
+      {
+        "name": "Trinity  Haom",
+        "role": "Vivian"
+      },
+      {
+        "name": "Tony Hoam ",
+        "role": "Siddhartha/monk"
+      },
+      {
+        "name": "Lexi  Wolfgram",
+        "role": "Dance Choreographer"
+      },
+      {
+        "name": "Solina  Hammerschmidt",
+        "role": "Queen Jayarajadevi"
+      },
+      {
         "name": "Hailey  Gillies",
         "role": "Stage Manager "
+      },
+      {
+        "name": "Simmia Nelson",
+        "role": "Music Producer"
+      },
+      {
+        "name": "Kaili Joy  Keophothisane",
+        "role": "Coxswain "
       },
       {
         "name": "Sully  Grave",
@@ -396,14 +505,6 @@
       {
         "name": "Atlis Kaiser",
         "role": "one of the Angkorian kid"
-      },
-      {
-        "name": "Tony Hoam ",
-        "role": "Siddhartha/monk"
-      },
-      {
-        "name": "Trinity  Haom",
-        "role": "Coxswain "
       },
       {
         "name": "Tyson Grave ",
@@ -992,7 +1093,7 @@
       "Improv",
       "Audience participation"
     ],
-    "castCrewCount": 3,
+    "castCrewCount": 4,
     "ratingStats": {
       "totalCount": 0
     },
@@ -1008,6 +1109,10 @@
       {
         "name": "Kayla  Dvorak Feld",
         "role": "Performance Advisor"
+      },
+      {
+        "name": "Bonni Allen",
+        "role": "Photographer"
       }
     ]
   },
@@ -2028,7 +2133,7 @@
       },
       {
         "name": "Theo Ebarb",
-        "role": "Playwright/Producer"
+        "role": "Playwright/Dramaturg"
       },
       {
         "name": "Emmett Harvey",
@@ -2291,8 +2396,8 @@
         "role": "Adam/Ensemble"
       },
       {
-        "name": "Marineh Amirkhani Namagerdi",
-        "role": "Moonlight Muses Singer/Ensemble"
+        "name": "Marinè A.N",
+        "role": "Dramaturg/Makeup artist/Lead singer/Ensemble"
       },
       {
         "name": "Teagan Johnson",
@@ -2334,7 +2439,7 @@
     ]
   },
   {
-    "showUrl": "/shows/2026/it-s-a-me-a-musical-",
+    "showUrl": "/shows/2026/it-s-a-me-a-musical",
     "showFavId": "55144",
     "showTitle": "It's-a-Me, a Musical!",
     "byArtist": "Albino Squirrel Productions",
@@ -2419,7 +2524,51 @@
       }
     ]
   },
-  null,
+  {
+    "showUrl": "/shows/2026/i-will-become-the-silver-surfer-i-will-protect-you",
+    "showFavId": "55330",
+    "showTitle": "I Will Become The Silver Surfer. I Will Protect You.",
+    "byArtist": "Jake Mierva",
+    "createdBy": "Written by Jake Mierva",
+    "venue": "Rarig Stoll Thrust Theatre",
+    "description": "Galactus has chosen Earth as his next target. But don't worry. I will stop him. I will save you all. I will become The Silver Surfer.",
+    "genreTags": [
+      "Comedy",
+      "Solo Show",
+      "Audience participation"
+    ],
+    "castCrewCount": 6,
+    "videoLink": "https://www.youtube.com/embed/ywL1NWRKWzw",
+    "ratingStats": {
+      "totalCount": 0
+    },
+    "castList": [
+      {
+        "name": "Jake Mierva",
+        "role": "Writer, Performer"
+      },
+      {
+        "name": "J. McIntyre Godwin",
+        "role": "Director"
+      },
+      {
+        "name": "Eric Wigham",
+        "role": "Lighting & Sound Designer"
+      },
+      {
+        "name": "Thomas Buan",
+        "role": "Dramaturg"
+      },
+      {
+        "name": "Christopher Bales",
+        "role": "Photographer & Videographer"
+      },
+      {
+        "name": "Aaron Thostenson",
+        "role": "Graphic Designer"
+      }
+    ]
+  },
   {
     "showUrl": "/shows/2026/just-one-life",
     "showFavId": "55150",
@@ -2435,14 +2584,7 @@
     "castCrewCount": 8,
     "videoLink": "https://www.youtube.com/embed/dLCezdEOYPA",
     "ratingStats": {
-      "totalCount": 1,
-      "minRating": 5,
-      "maxRating": 5,
-      "avgRating": 5,
-      "distribution": {
-        "5": 1
-      },
-      "weightedAvgRating": 5
+      "totalCount": 0
     },
     "castList": [
       {
@@ -2493,7 +2635,7 @@
       "Storytelling",
       "Political content"
     ],
-    "castCrewCount": 2,
+    "castCrewCount": 3,
     "videoLink": "https://www.youtube.com/embed/hZUw3XdIp8g",
     "ratingStats": {
       "totalCount": 0
@@ -2502,6 +2644,10 @@
       {
         "name": "Didem Ruhi Karci",
         "role": "Performer/Producer"
+      },
+      {
+        "name": "Lauren Wilson",
+        "role": "Director"
       },
       {
         "name": "Talha Karci",
@@ -2520,7 +2666,7 @@
     "genreTags": [
       "Dance - Modern"
     ],
-    "castCrewCount": 2,
+    "castCrewCount": 3,
     "ratingStats": {
       "totalCount": 0
     },
@@ -2532,6 +2678,10 @@
       {
         "name": "Armani Colon",
         "role": "Collaborating Artist"
+      },
+      {
+        "name": "cuerpo x cuerpo  ",
+        "role": "duet company "
       }
     ]
   },
@@ -3440,12 +3590,21 @@
       "Audience participation",
       "Shakespearian elements"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 2,
     "videoLink": "https://www.youtube.com/embed/Gm6ljWeTctM",
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "Cleo DeOrio",
+        "role": "Director and Co-Writer"
+      },
+      {
+        "name": "Tyler West",
+        "role": "Performer and Creator"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/soap-prov-show-of-10-000-secrets",
@@ -3834,7 +3993,7 @@
       "Kid friendly",
       "Non-verbal"
     ],
-    "castCrewCount": 3,
+    "castCrewCount": 4,
     "ratingStats": {
       "totalCount": 0
     },
@@ -3846,6 +4005,10 @@
       {
         "name": "Katie Kimball",
         "role": "Trapeze Artist"
+      },
+      {
+        "name": "Kirsten Stephens",
+        "role": "Mime"
       },
       {
         "name": "Malia L",
@@ -4344,11 +4507,20 @@
       "Storytelling",
       "Political content"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 2,
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "Pawan  Sharma",
+        "role": "Crew for stage set up"
+      },
+      {
+        "name": "Lis  Sundberg",
+        "role": "Crew"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/the-statue-of-liberty-is-nora-in-a-doll-s-house-by-henrik-ibsen",

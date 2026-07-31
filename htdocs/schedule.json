@@ -1,5 +1,5 @@
 {
-  "scrapeTime": 1785230403187,
+  "scrapeTime": 1785510579818,
   "days": [
     {
       "events": [
@@ -1248,7 +1248,7 @@
           "showTitle": "1 Hour Left to Live: A One Puppet Show by That Felt Good",
           "showFavId": "56461",
           "date": "08/09",
-          "serviceTags": ""
+          "serviceTags": "BFF"
         },
         {
           "time": "1:00 PM",
@@ -1504,7 +1504,7 @@
           "showTitle": "Vintage Tunes, Modern Gal",
           "showFavId": "56425",
           "date": "08/09",
-          "serviceTags": ""
+          "serviceTags": "BFF"
         },
         {
           "time": "5:30 PM",
