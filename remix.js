@@ -475,7 +475,7 @@ function render() {
     let scheduleData = JSON.parse(scheduleDataRaw);
     const showDataRaw = fs.readFileSync('htdocs/show-details.json');
     let showData = JSON.parse(showDataRaw);
-    showData = showData.map(formatShow);
+    showData = showData.filter(show => show !== null).map(formatShow);
     globalRatingTotalCountMax = showData.filter(s => s).reduce((max, show) => Math.max(show.ratingStats.totalCount, max), 0);
     festDays.forEach( function(day) {
         // console.log('festDay', day);
