@@ -131,41 +131,7 @@
       }
     ]
   },
-  {
-    "showUrl": "/shows/2026/a-bench-at-the-edge",
-    "showFavId": "55254",
-    "showTitle": "A Bench at the Edge",
-    "byArtist": "Samantha Odens",
-    "createdBy": "Written by Luigi Jannuzzi",
-    "venue": "Mixed Blood",
-    "description": "A person sits on a bench at the edge of an abyss. A second person approaches their “heroic dive” at the edge. The two contemplate what pushes and pulls them from the edge in this award-winning dark comedy.",
-    "genreTags": [
-      "Comedy",
-      "Drama"
-    ],
-    "castCrewCount": 4,
-    "ratingStats": {
-      "totalCount": 0
-    },
-    "castList": [
-      {
-        "name": "Drew Stutz",
-        "role": "Man One"
-      },
-      {
-        "name": "Luke Rentschler",
-        "role": "Man Two"
-      },
-      {
-        "name": "Samantha Odens",
-        "role": "Director/Producer"
-      },
-      {
-        "name": "Luigi Jannuzzi",
-        "role": "Playwright"
-      }
-    ]
-  },
+  null,
   {
     "showUrl": "/shows/2026/a-confluence-of-magical-arseholes",
     "showFavId": "55275",
@@ -433,7 +399,7 @@
       "Kid friendly",
       "Religious content"
     ],
-    "castCrewCount": 20,
+    "castCrewCount": 21,
     "ratingStats": {
       "totalCount": 0
     },
@@ -517,6 +483,10 @@
       {
         "name": "Mila  Kaiser",
         "role": "one of the Angkorian kid"
+      },
+      {
+        "name": "Diana Yang ",
+        "role": "Costumes Designer "
       }
     ]
   },
@@ -3220,11 +3190,48 @@
       "Dance - Modern",
       "Non-verbal"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 9,
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "Lian DelaBarre",
+        "role": "Dancer"
+      },
+      {
+        "name": "Nina Hodder",
+        "role": "Dancer"
+      },
+      {
+        "name": "Natalia  Hong",
+        "role": "Dancer"
+      },
+      {
+        "name": "Genesis Mora",
+        "role": "Dancer"
+      },
+      {
+        "name": "Jessica Olson",
+        "role": "Dancer"
+      },
+      {
+        "name": "Marissa Starr",
+        "role": "Dancer"
+      },
+      {
+        "name": "Brooklyn ",
+        "role": "Dancer"
+      },
+      {
+        "name": "Stella Stockton",
+        "role": "Choreographer"
+      },
+      {
+        "name": "Margaret Marinoff",
+        "role": "Choreographer/Producer"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/not-bad-for-a-punk-band",
