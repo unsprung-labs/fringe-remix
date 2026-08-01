@@ -131,7 +131,6 @@
       }
     ]
   },
-  null,
   {
     "showUrl": "/shows/2026/a-confluence-of-magical-arseholes",
     "showFavId": "55275",
@@ -4388,38 +4387,14 @@
       "Comedy",
       "LGBTQIA+ Content"
     ],
-    "castCrewCount": 7,
+    "castCrewCount": 1,
     "ratingStats": {
       "totalCount": 0
     },
     "castList": [
       {
-        "name": "Daniel Rangel",
-        "role": "\"John Glorius\" / Playwright "
-      },
-      {
         "name": "Maureen Bourgeois",
-        "role": "\"Detective Walters\" / Director "
-      },
-      {
-        "name": "Gracen Yang",
-        "role": "\"Jane Calder\""
-      },
-      {
-        "name": "Andy Whitman",
-        "role": "\"Detective Donaldson\""
-      },
-      {
-        "name": "Sayer Keeley",
-        "role": "\"Ched Meshbesherson\" / Choreographer"
-      },
-      {
-        "name": "Maycee Klein",
-        "role": "\"Tritch Hamentaschen\" / Assistant Choreographer"
-      },
-      {
-        "name": "Eva Bourgeois",
-        "role": "Jebediah \"Jeb\"  Breadcroft"
+        "role": "Creator"
       }
     ]
   },
@@ -4563,6 +4538,33 @@
       {
         "name": "Josh  Leininger",
         "role": "Composer and Musician"
+      }
+    ]
+  },
+  {
+    "showUrl": "/shows/2026/this-body-this-fruit",
+    "showFavId": "56482",
+    "showTitle": "This Body, This Fruit",
+    "byArtist": "",
+    "createdBy": "Created by Davi Gray",
+    "venue": "Mixed Blood",
+    "description": "This Body, This Fruit is a solo performance in 3 acts: a narrative journey built from poetry bringing the audience into, through, & out of the rage, sorrow, despair, revelation, awakening, & joy of transness.",
+    "genreTags": [
+      "Drama",
+      "Solo Show",
+      "Spoken Word",
+      "Storytelling",
+      "LGBTQIA+ Content",
+      "Religious content"
+    ],
+    "castCrewCount": 1,
+    "ratingStats": {
+      "totalCount": 0
+    },
+    "castList": [
+      {
+        "name": "Davi Gray",
+        "role": "Writer, Director, Performer"
       }
     ]
   },

@@ -1,16 +1,8 @@
 {
-  "scrapeTime": 1785576003476,
+  "scrapeTime": 1785607189097,
   "days": [
     {
       "events": [
-        {
-          "time": "5:30 PM",
-          "venue": "Mixed Blood",
-          "showTitle": "A Bench at the Edge",
-          "showFavId": "55254",
-          "date": "08/06",
-          "serviceTags": "BFF"
-        },
         {
           "time": "5:30 PM",
           "venue": "Barbara Barker Center for Dance",
@@ -58,6 +50,14 @@
           "showFavId": "55322",
           "date": "08/06",
           "serviceTags": "ASL   BFF"
+        },
+        {
+          "time": "5:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "This Body, This Fruit",
+          "showFavId": "56482",
+          "date": "08/06",
+          "serviceTags": "BFF"
         },
         {
           "time": "5:30 PM",
@@ -647,14 +647,6 @@
       "events": [
         {
           "time": "1:00 PM",
-          "venue": "Mixed Blood",
-          "showTitle": "A Bench at the Edge",
-          "showFavId": "55254",
-          "date": "08/08",
-          "serviceTags": ""
-        },
-        {
-          "time": "1:00 PM",
           "venue": "Theatre in the Round",
           "showTitle": "Cyrano",
           "showFavId": "55148",
@@ -722,6 +714,14 @@
           "venue": "Phoenix Theater",
           "showTitle": "The Lousiest Werewolves: Mania in the Moonlight",
           "showFavId": "55145",
+          "date": "08/08",
+          "serviceTags": ""
+        },
+        {
+          "time": "1:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "This Body, This Fruit",
+          "showFavId": "56482",
           "date": "08/08",
           "serviceTags": ""
         },
@@ -3197,14 +3197,6 @@
         },
         {
           "time": "8:30 PM",
-          "venue": "Mixed Blood",
-          "showTitle": "A Bench at the Edge",
-          "showFavId": "55254",
-          "date": "08/14",
-          "serviceTags": ""
-        },
-        {
-          "time": "8:30 PM",
           "venue": "Rarig Kilburn Theatre",
           "showTitle": "Bangs!",
           "showFavId": "55238",
@@ -3264,6 +3256,14 @@
           "venue": "Barbara Barker Center for Dance",
           "showTitle": "Socks & Shoes & Coats",
           "showFavId": "55190",
+          "date": "08/14",
+          "serviceTags": ""
+        },
+        {
+          "time": "8:30 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "This Body, This Fruit",
+          "showFavId": "56482",
           "date": "08/14",
           "serviceTags": ""
         },
@@ -3826,14 +3826,6 @@
         },
         {
           "time": "10:00 PM",
-          "venue": "Mixed Blood",
-          "showTitle": "A Bench at the Edge",
-          "showFavId": "55254",
-          "date": "08/15",
-          "serviceTags": "BFF"
-        },
-        {
-          "time": "10:00 PM",
           "venue": "Rarig Stoll Thrust Theatre",
           "showTitle": "A Confluence of Magical Arseholes",
           "showFavId": "55275",
@@ -3879,6 +3871,14 @@
           "showFavId": "55340",
           "date": "08/15",
           "serviceTags": ""
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "This Body, This Fruit",
+          "showFavId": "56482",
+          "date": "08/15",
+          "serviceTags": "BFF"
         },
         {
           "time": "10:00 PM",
@@ -4215,14 +4215,6 @@
         },
         {
           "time": "7:00 PM",
-          "venue": "Mixed Blood",
-          "showTitle": "A Bench at the Edge",
-          "showFavId": "55254",
-          "date": "08/16",
-          "serviceTags": ""
-        },
-        {
-          "time": "7:00 PM",
           "venue": "The Southern Theater",
           "showTitle": "Buckeroohaiku's Reverse Armando ",
           "showFavId": "55076",
@@ -4274,6 +4266,14 @@
           "venue": "Open Eye Theatre",
           "showTitle": "The Importance of Living",
           "showFavId": "55062",
+          "date": "08/16",
+          "serviceTags": ""
+        },
+        {
+          "time": "7:00 PM",
+          "venue": "Mixed Blood",
+          "showTitle": "This Body, This Fruit",
+          "showFavId": "56482",
           "date": "08/16",
           "serviceTags": ""
         },
