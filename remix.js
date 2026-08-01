@@ -120,6 +120,12 @@ const venueSort = venues.map(i => i.venue);
 
 // SCRAPE
 
+async function scrapeAll() {
+    await scrapeShowsList();
+    await scrapeSchedule();
+    await scrapeShowDetails();
+}
+
 async function scrapeSchedule() {
     console.log("scrapeSchedule()...");
     let scheduleData = {
@@ -756,10 +762,11 @@ if (flags.includes('-r')) {
     render();
 }
 if (flags.includes('-a')) {
-    scrapeShowsList();
-    scrapeSchedule();
-    scrapeShowDetails();
-    render();
+    (async () => {
+        await scrapeAll();
+        console.info('Scraped all, ready to render...');
+        render();
+    })();
 }
 if (flags.includes('-c')) {
     renderCsv();
