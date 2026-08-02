@@ -1,4 +1,4 @@
-name: Deploy to DreamHost
+name: Deploy to Web Host
 
 on:
   push:
@@ -18,11 +18,11 @@ jobs:
         name: id_ed25519
         known_hosts: unnecessary
 
-    # 2. Add DreamHost to known_hosts to prevent interactive prompts
+    # 2. Add web host to known_hosts to prevent interactive prompts
     - name: Add Known Hosts
       run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-    # 3. Log into DreamHost and run git pull
+    # 3. Log into web host and run git pull
     - name: Trigger Remote Git Pull
       run: |
-        ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /home/alexwohlhueter/unsprung.com/fringe && git pull origin main"
+        ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd '${{ secrets.SSH_DEPLOY_DIR }}' && git pull origin main"
