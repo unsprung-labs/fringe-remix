@@ -896,11 +896,24 @@
       "Drama",
       "Political content"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 3,
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "Faith King",
+        "role": "Corporal"
+      },
+      {
+        "name": "Myle Yan Tay",
+        "role": "Writer"
+      },
+      {
+        "name": "Charles Dykstal",
+        "role": "Producer"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/buckeroohaiku-s-reverse-armando-",
