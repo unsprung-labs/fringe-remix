@@ -896,7 +896,7 @@
       "Drama",
       "Political content"
     ],
-    "castCrewCount": 3,
+    "castCrewCount": 6,
     "ratingStats": {
       "totalCount": 0
     },
@@ -904,6 +904,18 @@
       {
         "name": "Faith King",
         "role": "Corporal"
+      },
+      {
+        "name": "Josiah Fagerstrom",
+        "role": "Sergeant "
+      },
+      {
+        "name": "Nicholas Richard",
+        "role": "Lieutenant "
+      },
+      {
+        "name": "Spencer Byham-Carson",
+        "role": "Director"
       },
       {
         "name": "Myle Yan Tay",
@@ -4012,7 +4024,7 @@
       "Kid friendly",
       "Non-verbal"
     ],
-    "castCrewCount": 4,
+    "castCrewCount": 10,
     "ratingStats": {
       "totalCount": 0
     },
@@ -4032,6 +4044,30 @@
       {
         "name": "Malia L",
         "role": "Trapeze Artist"
+      },
+      {
+        "name": "Ady ",
+        "role": "Tap Dancer"
+      },
+      {
+        "name": "Amelia ",
+        "role": "Tap Dancer"
+      },
+      {
+        "name": "Cooper ",
+        "role": "Tap Dancer"
+      },
+      {
+        "name": "Madi Smith",
+        "role": "Youth Choreographer"
+      },
+      {
+        "name": "Emily Moody",
+        "role": "Tap Dancer"
+      },
+      {
+        "name": "Jancyn Bindman",
+        "role": "Tap Dancer"
       }
     ]
   },
@@ -4356,16 +4392,12 @@
       "Storytelling",
       "LGBTQIA+ Content"
     ],
-    "castCrewCount": 6,
+    "castCrewCount": 5,
     "videoLink": "https://www.youtube.com/embed/nJsJZjdusow",
     "ratingStats": {
       "totalCount": 0
     },
     "castList": [
-      {
-        "name": " ",
-        "role": ""
-      },
       {
         "name": "Brian Farrey-Latz",
         "role": "Playwright"
@@ -4375,16 +4407,16 @@
         "role": "Harvey Milk"
       },
       {
-        "name": "Debbie Schneider",
-        "role": "Producer/Director"
-      },
-      {
         "name": "Derik  Iverson",
         "role": "Billy Sipple"
       },
       {
         "name": "Nora Persephone",
         "role": "Cookie"
+      },
+      {
+        "name": "Debbie Schneider",
+        "role": "Producer "
       }
     ]
   },
