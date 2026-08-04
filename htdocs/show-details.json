@@ -11,7 +11,7 @@
       "Comedy",
       "Storytelling"
     ],
-    "castCrewCount": 4,
+    "castCrewCount": 5,
     "ratingStats": {
       "totalCount": 0
     },
@@ -31,6 +31,10 @@
       {
         "name": "Rebecca Jo Malmstrom",
         "role": "Production Guru"
+      },
+      {
+        "name": "Kevin McLaughlin",
+        "role": "Stage Manager / Tech "
       }
     ]
   },
@@ -152,7 +156,7 @@
     "castList": [
       {
         "name": "Amber Bjork",
-        "role": "Lady Gregory / Director"
+        "role": "Amber / Director"
       },
       {
         "name": "André Johnson, Jr.",
@@ -192,7 +196,7 @@
       },
       {
         "name": "Michael Rogers",
-        "role": "Alister Crowley"
+        "role": "Aleister Crowley"
       },
       {
         "name": "Sam Landman",
@@ -897,6 +901,7 @@
       "Political content"
     ],
     "castCrewCount": 6,
+    "videoLink": "https://www.youtube.com/embed/bj-NaQtcRrE",
     "ratingStats": {
       "totalCount": 0
     },
@@ -2290,27 +2295,27 @@
     "castList": [
       {
         "name": "Michael DallaValle",
-        "role": "Director/Performer"
+        "role": "Director/Improviser"
       },
       {
         "name": "Danna Sheridan",
-        "role": "Director/Performer"
+        "role": "Director/Improviser"
       },
       {
         "name": "Robbie Darling",
-        "role": "Performer"
+        "role": "Improviser"
       },
       {
         "name": "Lisa Fulton",
-        "role": "Performer"
+        "role": "Improviser"
       },
       {
         "name": "Derek Landseidel",
-        "role": "Performer"
+        "role": "Improviser"
       },
       {
         "name": "Olivia Wulf",
-        "role": "Performer"
+        "role": "Improviser"
       },
       {
         "name": "Jackson Mizusaki",
