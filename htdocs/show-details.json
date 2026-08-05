@@ -1920,7 +1920,7 @@
       "Political content",
       "Shakespearian elements"
     ],
-    "castCrewCount": 17,
+    "castCrewCount": 18,
     "ratingStats": {
       "totalCount": 0
     },
@@ -1960,6 +1960,10 @@
       {
         "name": "Nic Holleschau",
         "role": "Barbara Ann"
+      },
+      {
+        "name": "Cherrice Charrier",
+        "role": "Betsy/Lighting Designer"
       },
       {
         "name": "Anna Sullivan",
@@ -2663,7 +2667,9 @@
     "venue": "Rarig Nolte Xperimental Theatre",
     "description": "Latin Papi is a bold, playful, and provocative contemporary dance performance blending sensual movement, voice, humor, and theatrical flair created by Armani Rey Colón and Gabriel Mata of CuerpoxCuerpo.",
     "genreTags": [
-      "Dance - Modern"
+      "Dance",
+      "Dance - Modern",
+      "LGBTQIA+ Content"
     ],
     "castCrewCount": 3,
     "ratingStats": {
@@ -4031,7 +4037,14 @@
     ],
     "castCrewCount": 10,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -4426,29 +4439,6 @@
     ]
   },
   {
-    "showUrl": "/shows/2026/the-queerest-midwest-bake-off-a-murder-mystery",
-    "showFavId": "55327",
-    "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
-    "byArtist": "Lady Z Productions",
-    "createdBy": "Written by Daniel Rangel",
-    "venue": "Rarig Nolte Xperimental Theatre",
-    "description": "After a deadly stage collapse at a flamboyant bake-off, the show’s image-obsessed host is the prime suspect. Detectives navigate wildly contradictory accounts as paranoia and performance spiral into mystery.",
-    "genreTags": [
-      "Comedy",
-      "LGBTQIA+ Content"
-    ],
-    "castCrewCount": 1,
-    "ratingStats": {
-      "totalCount": 0
-    },
-    "castList": [
-      {
-        "name": "Maureen Bourgeois",
-        "role": "Creator"
-      }
-    ]
-  },
-  {
     "showUrl": "/shows/2026/the-quiet-piggy",
     "showFavId": "55193",
     "showTitle": "The Quiet Piggy",
@@ -4702,6 +4692,30 @@
       {
         "name": "John Clarkin",
         "role": "Wayne Vernon Geiser"
+      }
+    ]
+  },
+  {
+    "showUrl": "/shows/2026/underserved-recipes-for-resilience",
+    "showFavId": "55327",
+    "showTitle": "Underserved: Recipes for Resilience",
+    "byArtist": "Lady Z Productions",
+    "createdBy": "Created by Maureen L. Bourgeois",
+    "venue": "Rarig Nolte Xperimental Theatre",
+    "description": "A baker racing against the clock to finish one final bake discovers that the most important ingredients aren't flour and butter—they're the stories that people refuse to let disappear.",
+    "genreTags": [
+      "Comedy",
+      "Drama",
+      "LGBTQIA+ Content"
+    ],
+    "castCrewCount": 1,
+    "ratingStats": {
+      "totalCount": 0
+    },
+    "castList": [
+      {
+        "name": "Maureen Bourgeois",
+        "role": "Creator"
       }
     ]
   },

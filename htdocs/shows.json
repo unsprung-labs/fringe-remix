@@ -528,12 +528,6 @@
     "byArtist": "Applause Community Theatre"
   },
   {
-    "showUrl": "/shows/2026/the-queerest-midwest-bake-off-a-murder-mystery",
-    "showFavId": "55327",
-    "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
-    "byArtist": "Lady Z Productions"
-  },
-  {
     "showUrl": "/shows/2026/the-quiet-piggy",
     "showFavId": "55193",
     "showTitle": "The Quiet Piggy",
@@ -580,6 +574,12 @@
     "showFavId": "55159",
     "showTitle": "Turn On, Tune In, Drop Dead",
     "byArtist": "John Ervin"
+  },
+  {
+    "showUrl": "/shows/2026/underserved-recipes-for-resilience",
+    "showFavId": "55327",
+    "showTitle": "Underserved: Recipes for Resilience",
+    "byArtist": "Lady Z Productions"
   },
   {
     "showUrl": "/shows/2026/vintage-tunes-modern-gal",

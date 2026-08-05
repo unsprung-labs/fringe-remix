@@ -1,5 +1,5 @@
 {
-  "scrapeTime": 1785835210430,
+  "scrapeTime": 1785921610984,
   "days": [
     {
       "events": [
@@ -1215,19 +1215,19 @@
         },
         {
           "time": "10:00 PM",
-          "venue": "Rarig Nolte Xperimental Theatre",
-          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
-          "showFavId": "55327",
-          "date": "08/08",
-          "serviceTags": ""
-        },
-        {
-          "time": "10:00 PM",
           "venue": "Open Eye Theatre",
           "showTitle": "Too Fat To Run",
           "showFavId": "55347",
           "date": "08/08",
           "serviceTags": "BFF"
+        },
+        {
+          "time": "10:00 PM",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Underserved: Recipes for Resilience",
+          "showFavId": "55327",
+          "date": "08/08",
+          "serviceTags": ""
         },
         {
           "time": "10:00 PM",
@@ -1669,7 +1669,7 @@
         {
           "time": "7:00 PM",
           "venue": "Rarig Nolte Xperimental Theatre",
-          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
+          "showTitle": "Underserved: Recipes for Resilience",
           "showFavId": "55327",
           "date": "08/09",
           "serviceTags": ""
@@ -2150,17 +2150,17 @@
         },
         {
           "time": "5:30 PM",
-          "venue": "Rarig Nolte Xperimental Theatre",
-          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
-          "showFavId": "55327",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "the statue of liberty is nora in a doll's house by henrik ibsen",
+          "showFavId": "55337",
           "date": "08/11",
           "serviceTags": ""
         },
         {
           "time": "5:30 PM",
-          "venue": "Rarig Stoll Thrust Theatre",
-          "showTitle": "the statue of liberty is nora in a doll's house by henrik ibsen",
-          "showFavId": "55337",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Underserved: Recipes for Resilience",
+          "showFavId": "55327",
           "date": "08/11",
           "serviceTags": ""
         },
@@ -3819,7 +3819,7 @@
         {
           "time": "8:30 PM",
           "venue": "Rarig Nolte Xperimental Theatre",
-          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
+          "showTitle": "Underserved: Recipes for Resilience",
           "showFavId": "55327",
           "date": "08/15",
           "serviceTags": ""
@@ -4119,17 +4119,17 @@
         },
         {
           "time": "4:00 PM",
-          "venue": "Rarig Nolte Xperimental Theatre",
-          "showTitle": "The Queerest Midwest Bake-off: A Murder Mystery",
-          "showFavId": "55327",
+          "venue": "Rarig Stoll Thrust Theatre",
+          "showTitle": "the statue of liberty is nora in a doll's house by henrik ibsen",
+          "showFavId": "55337",
           "date": "08/16",
           "serviceTags": ""
         },
         {
           "time": "4:00 PM",
-          "venue": "Rarig Stoll Thrust Theatre",
-          "showTitle": "the statue of liberty is nora in a doll's house by henrik ibsen",
-          "showFavId": "55337",
+          "venue": "Rarig Nolte Xperimental Theatre",
+          "showTitle": "Underserved: Recipes for Resilience",
+          "showFavId": "55327",
           "date": "08/16",
           "serviceTags": ""
         },
