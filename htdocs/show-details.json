@@ -2013,7 +2013,14 @@
     ],
     "castCrewCount": 12,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3431,7 +3438,7 @@
       "Musical Theater",
       "Audience participation"
     ],
-    "castCrewCount": 2,
+    "castCrewCount": 3,
     "ratingStats": {
       "totalCount": 0
     },
@@ -3443,6 +3450,10 @@
       {
         "name": "Rich Mansfield",
         "role": "performer"
+      },
+      {
+        "name": "Justin  Johnson",
+        "role": "Musician "
       }
     ]
   },
@@ -4037,14 +4048,7 @@
     ],
     "castCrewCount": 10,
     "ratingStats": {
-      "totalCount": 1,
-      "minRating": 5,
-      "maxRating": 5,
-      "avgRating": 5,
-      "distribution": {
-        "5": 1
-      },
-      "weightedAvgRating": 5
+      "totalCount": 0
     },
     "castList": [
       {
@@ -4304,7 +4308,7 @@
       "Improv",
       "Original Music"
     ],
-    "castCrewCount": 9,
+    "castCrewCount": 13,
     "ratingStats": {
       "totalCount": 0
     },
@@ -4344,6 +4348,22 @@
       {
         "name": "Linc Owens",
         "role": "Improviser"
+      },
+      {
+        "name": "Robyn Jamner",
+        "role": "Musical Guest"
+      },
+      {
+        "name": "Dogpile ",
+        "role": "Musical Guest"
+      },
+      {
+        "name": "Brendan Wells",
+        "role": "Musical Guest"
+      },
+      {
+        "name": "BOOBLESS ",
+        "role": "Musical Guest"
       }
     ]
   },
@@ -4597,7 +4617,7 @@
       "LGBTQIA+ Content",
       "Religious content"
     ],
-    "castCrewCount": 1,
+    "castCrewCount": 5,
     "ratingStats": {
       "totalCount": 0
     },
@@ -4605,6 +4625,22 @@
       {
         "name": "Davi Gray",
         "role": "Writer, Director, Performer"
+      },
+      {
+        "name": "Maximilian McDowell",
+        "role": "Lighting Designer & Tech"
+      },
+      {
+        "name": "Cecily McMillan",
+        "role": "Stage manager"
+      },
+      {
+        "name": "Kao Vang",
+        "role": "Make Up Artist & Stagehand"
+      },
+      {
+        "name": "Erika Thorne",
+        "role": "Stagehand"
       }
     ]
   },
@@ -4909,7 +4945,7 @@
         "role": "Writer/Storyteller"
       },
       {
-        "name": "Laura Shelley",
+        "name": "Delaney Zellner",
         "role": "Moth Host"
       }
     ]
