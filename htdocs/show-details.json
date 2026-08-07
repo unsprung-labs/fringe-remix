@@ -49,10 +49,15 @@
     "genreTags": [
       "Comedy",
       "Improv",
+      "Musical Theater",
+      "Original Music",
       "Puppetry",
-      "Audience participation"
+      "Storytelling",
+      "Audience participation",
+      "LGBTQIA+ Content",
+      "Religious content"
     ],
-    "castCrewCount": 19,
+    "castCrewCount": 21,
     "ratingStats": {
       "totalCount": 0
     },
@@ -63,11 +68,11 @@
       },
       {
         "name": "Matt  Olson",
-        "role": "Writer/Director/Producer"
+        "role": "Director/Writer/Producer"
       },
       {
         "name": "Phoebe Bottoms",
-        "role": "Puppeteer/Director/Producer"
+        "role": "Puppeteer/Writer/Producer"
       },
       {
         "name": "Collin Klug",
@@ -75,11 +80,23 @@
       },
       {
         "name": "Eric  Heiberg",
-        "role": "Improvisor"
+        "role": "Improviser"
+      },
+      {
+        "name": "Bonnie Bottoms",
+        "role": "Movement Director"
       },
       {
         "name": "James Moore",
-        "role": "Improvisor "
+        "role": "Improviser"
+      },
+      {
+        "name": "John  Hilsen",
+        "role": "Musical Director/Pianist"
+      },
+      {
+        "name": "Victor  Gonzalez",
+        "role": "Father Padre/writer"
       },
       {
         "name": "Philip Simondet ",
@@ -91,19 +108,19 @@
       },
       {
         "name": "Zelia Gonzales",
-        "role": "Improvisor"
+        "role": "Improviser"
       },
       {
         "name": "Chris  Rodriguez",
-        "role": "Improvisor"
+        "role": "Improviser"
       },
       {
         "name": "Steph  Callaghan",
-        "role": "Improvisor"
+        "role": "Improviser"
       },
       {
         "name": "Patrick  McIntyre",
-        "role": "Improvisor"
+        "role": "Improviser"
       },
       {
         "name": "Lily Meyer",
@@ -112,10 +129,6 @@
       {
         "name": "Ben  Katzner",
         "role": "stand-up comedian"
-      },
-      {
-        "name": "Victor  Gonzales",
-        "role": "Padre Perez"
       },
       {
         "name": "Comrade Tripp",
@@ -223,7 +236,15 @@
     "castCrewCount": 16,
     "videoLink": "https://www.youtube.com/embed/flwIezJw6M8",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 4,
+      "maxRating": 5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4": 1,
+        "5": 1
+      },
+      "weightedAvgRating": 4.261203874963741
     },
     "castList": [
       {
@@ -1200,7 +1221,16 @@
     "castCrewCount": 0,
     "videoLink": "https://www.youtube.com/embed/jP_edl9tl7w",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 4,
+      "maxRating": 5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4": 1,
+        "5": 1,
+        "4.5": 1
+      },
+      "weightedAvgRating": 4.338636238163395
     },
     "castList": []
   },
@@ -1219,7 +1249,15 @@
     ],
     "castCrewCount": 8,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 4.5,
+      "maxRating": 5,
+      "avgRating": 4.833333333333333,
+      "distribution": {
+        "5": 1,
+        "4.5": 0.5
+      },
+      "weightedAvgRating": 4.760612308660186
     },
     "castList": [
       {
@@ -1274,7 +1312,15 @@
     ],
     "castCrewCount": 17,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 4.5,
+      "maxRating": 5,
+      "avgRating": 4.75,
+      "distribution": {
+        "5": 1,
+        "4.5": 1
+      },
+      "weightedAvgRating": 4.676235222544712
     },
     "castList": [
       {
@@ -1367,7 +1413,14 @@
     "castCrewCount": 3,
     "videoLink": "https://www.youtube.com/embed/jNojew5RIt0",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2013,7 +2066,7 @@
     ],
     "castCrewCount": 12,
     "ratingStats": {
-      "totalCount": 1,
+      "totalCount": 2,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -2134,7 +2187,14 @@
     ],
     "castCrewCount": 16,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2257,7 +2317,14 @@
     ],
     "castCrewCount": 6,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2354,7 +2421,15 @@
     ],
     "castCrewCount": 16,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 3,
+      "maxRating": 4,
+      "avgRating": 3.5,
+      "distribution": {
+        "3": 1,
+        "4": 1
+      },
+      "weightedAvgRating": 3.3524704450894247
     },
     "castList": [
       {
@@ -2465,7 +2540,14 @@
     ],
     "castCrewCount": 16,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 4,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2525,12 +2607,12 @@
         "role": "Associate Producer "
       },
       {
-        "name": "Zach Miller",
-        "role": "Composer"
-      },
-      {
         "name": "Trevor Woggon",
         "role": "Composer/Music Director"
+      },
+      {
+        "name": "Zach Miller",
+        "role": "Legacy Composer"
       }
     ]
   },
@@ -2550,7 +2632,14 @@
     "castCrewCount": 6,
     "videoLink": "https://www.youtube.com/embed/ywL1NWRKWzw",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2680,7 +2769,14 @@
     ],
     "castCrewCount": 3,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2756,7 +2852,7 @@
         "role": "Performer"
       },
       {
-        "name": "Siri Hellermin",
+        "name": "Siri Hellerman",
         "role": "Performer"
       },
       {
@@ -2764,7 +2860,7 @@
         "role": "Performer"
       },
       {
-        "name": "Will Schroder",
+        "name": "Will Schroeder",
         "role": "Performer"
       },
       {
@@ -2856,11 +2952,76 @@
       "Literary adaptation",
       "Political content"
     ],
-    "castCrewCount": 0,
+    "castCrewCount": 16,
     "ratingStats": {
       "totalCount": 0
     },
-    "castList": []
+    "castList": [
+      {
+        "name": "Renee Hatton",
+        "role": "Director, Music & Sound Design"
+      },
+      {
+        "name": "Kym Longhi",
+        "role": "Producer"
+      },
+      {
+        "name": "Lizzy Rooney",
+        "role": "Stage Manager"
+      },
+      {
+        "name": "Brigid  Boente",
+        "role": "Lyra Coach & Choreographer"
+      },
+      {
+        "name": "Alex Clark",
+        "role": "Lighting Designer"
+      },
+      {
+        "name": "Noah Carlson",
+        "role": "Lighting Designer"
+      },
+      {
+        "name": "Anna Pladson",
+        "role": "Ensemble / Young Woman"
+      },
+      {
+        "name": "Alvaro  Araque",
+        "role": "Ensemble / Husband"
+      },
+      {
+        "name": "Ella  Eastman-Kiesow i",
+        "role": "Ensemble"
+      },
+      {
+        "name": "Ella Hendrickson",
+        "role": "Ensemble"
+      },
+      {
+        "name": "Gavin Wells",
+        "role": "Ensemble"
+      },
+      {
+        "name": "Lily Jones",
+        "role": "Ensemble / Mother"
+      },
+      {
+        "name": "Matthew Wilhelm",
+        "role": "Ensemble / Lover"
+      },
+      {
+        "name": "Michael DiPrima",
+        "role": "Ensemble / Doctor"
+      },
+      {
+        "name": "Nitalia Michelle",
+        "role": "Ensemble"
+      },
+      {
+        "name": "Vincent Strunk",
+        "role": "Ensemble"
+      }
+    ]
   },
   {
     "showUrl": "/shows/2026/magical-athlete-stadium-showdown",
@@ -2992,7 +3153,14 @@
     ],
     "castCrewCount": 10,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 4.5,
+      "maxRating": 4.5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4.5": 1
+      },
+      "weightedAvgRating": 4.5
     },
     "castList": [
       {
@@ -3507,7 +3675,15 @@
     ],
     "castCrewCount": 11,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 3,
+      "maxRating": 5,
+      "avgRating": 4,
+      "distribution": {
+        "3": 1,
+        "5": 1
+      },
+      "weightedAvgRating": 3.3227809555928176
     },
     "castList": [
       {
@@ -3612,7 +3788,14 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3646,7 +3829,14 @@
     "castCrewCount": 2,
     "videoLink": "https://www.youtube.com/embed/Gm6ljWeTctM",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 5,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3844,7 +4034,14 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3927,7 +4124,14 @@
     ],
     "castCrewCount": 3,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3959,7 +4163,14 @@
     ],
     "castCrewCount": 1,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -4048,7 +4259,16 @@
     ],
     "castCrewCount": 10,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 4,
+      "minRating": 2.5,
+      "maxRating": 5,
+      "avgRating": 4.125,
+      "distribution": {
+        "4": 0.5,
+        "5": 1,
+        "2.5": 0.5
+      },
+      "weightedAvgRating": 3.3124450219279153
     },
     "castList": [
       {
@@ -4383,7 +4603,14 @@
     ],
     "castCrewCount": 3,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 2.5,
+      "maxRating": 2.5,
+      "avgRating": 2.5,
+      "distribution": {
+        "2.5": 1
+      },
+      "weightedAvgRating": 2.5
     },
     "castList": [
       {
@@ -4433,7 +4660,15 @@
     "castCrewCount": 5,
     "videoLink": "https://www.youtube.com/embed/nJsJZjdusow",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 4,
+      "minRating": 4,
+      "maxRating": 5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4": 1,
+        "5": 1
+      },
+      "weightedAvgRating": 4.261203874963741
     },
     "castList": [
       {
@@ -4651,7 +4886,7 @@
     "byArtist": "Fat Theatre Project",
     "createdBy": "Created by Eileen Tull",
     "venue": "Open Eye Theatre",
-    "description": "TBD",
+    "description": "Too Fat To Run is an autobiographical solo show that was created in response to a \"concerned\" acquaintance telling Chicago-based performer Eileen Tull that she was in fact too fat to run the marathon she was already training for. Produced by Fat Theatre Project, this show invites audiences to rethink what health and strength truly look like.",
     "genreTags": [
       "Comedy",
       "Physical Theater",
@@ -4772,7 +5007,14 @@
     ],
     "castCrewCount": 1,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -4865,7 +5107,14 @@
     "castCrewCount": 13,
     "videoLink": "https://www.youtube.com/embed/c2oiaCubF5w",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 6,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -4937,7 +5186,14 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -4992,7 +5248,14 @@
     ],
     "castCrewCount": 21,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
