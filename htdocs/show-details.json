@@ -63,10 +63,6 @@
     },
     "castList": [
       {
-        "name": " ",
-        "role": ""
-      },
-      {
         "name": "Matt  Olson",
         "role": "Director/Writer/Producer"
       },
@@ -75,28 +71,32 @@
         "role": "Puppeteer/Writer/Producer"
       },
       {
-        "name": "Collin Klug",
-        "role": "Writer"
-      },
-      {
-        "name": "Eric  Heiberg",
-        "role": "Improviser"
+        "name": "Victor  Gonzalez",
+        "role": "Father Padre/writer"
       },
       {
         "name": "Bonnie Bottoms",
         "role": "Movement Director"
       },
       {
-        "name": "James Moore",
-        "role": "Improviser"
+        "name": "Collin Klug",
+        "role": "Writer"
       },
       {
         "name": "John  Hilsen",
         "role": "Musical Director/Pianist"
       },
       {
-        "name": "Victor  Gonzalez",
-        "role": "Father Padre/writer"
+        "name": "Nick  Bocheck ",
+        "role": "Production Manager"
+      },
+      {
+        "name": "Eric  Heiberg",
+        "role": "Improviser"
+      },
+      {
+        "name": "James Moore",
+        "role": "Improviser"
       },
       {
         "name": "Philip Simondet ",
@@ -105,6 +105,10 @@
       {
         "name": "Meg Trowbridge",
         "role": "Improviser"
+      },
+      {
+        "name": "Ron  Lynch",
+        "role": "Comedy Club Announcer"
       },
       {
         "name": "Zelia Gonzales",
@@ -133,10 +137,6 @@
       {
         "name": "Comrade Tripp",
         "role": "stand-up comedian"
-      },
-      {
-        "name": "Nick  Bocheck ",
-        "role": "Production Manager"
       },
       {
         "name": "James Stanley",
@@ -329,7 +329,14 @@
     ],
     "castCrewCount": 5,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -371,7 +378,16 @@
     ],
     "castCrewCount": 1,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 4,
+      "maxRating": 5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4": 1,
+        "5": 1,
+        "4.5": 1
+      },
+      "weightedAvgRating": 4.338636238163395
     },
     "castList": [
       {
@@ -425,7 +441,15 @@
     ],
     "castCrewCount": 21,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 2.5,
+      "maxRating": 3,
+      "avgRating": 2.75,
+      "distribution": {
+        "3": 1,
+        "2.5": 1
+      },
+      "weightedAvgRating": 2.721224839894213
     },
     "castList": [
       {
@@ -528,9 +552,17 @@
       "Storytelling",
       "Literary adaptation"
     ],
-    "castCrewCount": 5,
+    "castCrewCount": 6,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 4,
+      "minRating": 4.5,
+      "maxRating": 5,
+      "avgRating": 4.875,
+      "distribution": {
+        "5": 1,
+        "4.5": 0.3333333333333333
+      },
+      "weightedAvgRating": 4.810102051443364
     },
     "castList": [
       {
@@ -552,6 +584,10 @@
       {
         "name": "Shawna Evans",
         "role": "Director"
+      },
+      {
+        "name": "Hannah Halvorson",
+        "role": "Intimacy Choreographer"
       }
     ]
   },
@@ -570,7 +606,14 @@
     "castCrewCount": 6,
     "videoLink": "https://www.youtube.com/embed/ectZ5FMqtdg",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 4.5,
+      "maxRating": 4.5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4.5": 1
+      },
+      "weightedAvgRating": 4.5
     },
     "castList": [
       {
@@ -778,7 +821,15 @@
     ],
     "castCrewCount": 0,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 3,
+      "maxRating": 4,
+      "avgRating": 3.6666666666666665,
+      "distribution": {
+        "3": 0.5,
+        "4": 1
+      },
+      "weightedAvgRating": 3.5212246173203727
     },
     "castList": []
   },
@@ -797,7 +848,14 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -924,7 +982,14 @@
     "castCrewCount": 6,
     "videoLink": "https://www.youtube.com/embed/bj-NaQtcRrE",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 7,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -1221,16 +1286,19 @@
     "castCrewCount": 0,
     "videoLink": "https://www.youtube.com/embed/jP_edl9tl7w",
     "ratingStats": {
-      "totalCount": 3,
-      "minRating": 4,
+      "totalCount": 13,
+      "minRating": 2,
       "maxRating": 5,
-      "avgRating": 4.5,
+      "avgRating": 3.9615384615384617,
       "distribution": {
-        "4": 1,
-        "5": 1,
-        "4.5": 1
+        "2": 0.4,
+        "4": 0.2,
+        "5": 0.6,
+        "4.5": 1,
+        "2.5": 0.2,
+        "3.5": 0.2
       },
-      "weightedAvgRating": 4.338636238163395
+      "weightedAvgRating": 3.1278889749920484
     },
     "castList": []
   },
@@ -1249,15 +1317,16 @@
     ],
     "castCrewCount": 8,
     "ratingStats": {
-      "totalCount": 3,
-      "minRating": 4.5,
+      "totalCount": 4,
+      "minRating": 4,
       "maxRating": 5,
-      "avgRating": 4.833333333333333,
+      "avgRating": 4.625,
       "distribution": {
+        "4": 0.5,
         "5": 1,
         "4.5": 0.5
       },
-      "weightedAvgRating": 4.760612308660186
+      "weightedAvgRating": 4.437857504873139
     },
     "castList": [
       {
@@ -1312,15 +1381,16 @@
     ],
     "castCrewCount": 17,
     "ratingStats": {
-      "totalCount": 2,
-      "minRating": 4.5,
+      "totalCount": 5,
+      "minRating": 3.5,
       "maxRating": 5,
-      "avgRating": 4.75,
+      "avgRating": 4.6,
       "distribution": {
         "5": 1,
-        "4.5": 1
+        "3.5": 0.3333333333333333,
+        "4.5": 0.3333333333333333
       },
-      "weightedAvgRating": 4.676235222544712
+      "weightedAvgRating": 4.220949145123924
     },
     "castList": [
       {
@@ -1413,7 +1483,7 @@
     "castCrewCount": 3,
     "videoLink": "https://www.youtube.com/embed/jNojew5RIt0",
     "ratingStats": {
-      "totalCount": 2,
+      "totalCount": 6,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -1497,7 +1567,14 @@
     ],
     "castCrewCount": 1,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -1523,7 +1600,14 @@
     ],
     "castCrewCount": 8,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 4.5,
+      "maxRating": 4.5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4.5": 1
+      },
+      "weightedAvgRating": 4.5
     },
     "castList": [
       {
@@ -1606,7 +1690,15 @@
     "castCrewCount": 13,
     "videoLink": "https://www.youtube.com/embed/hst40aryENo",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 8,
+      "minRating": 4.5,
+      "maxRating": 5,
+      "avgRating": 4.9375,
+      "distribution": {
+        "5": 1,
+        "4.5": 0.14285714285714285
+      },
+      "weightedAvgRating": 4.896056754524803
     },
     "castList": [
       {
@@ -1681,7 +1773,14 @@
     "castCrewCount": 19,
     "videoLink": "https://www.youtube.com/embed/ImzECjuDmQA",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -1808,7 +1907,15 @@
     ],
     "castCrewCount": 7,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 4,
+      "maxRating": 5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4": 1,
+        "5": 1
+      },
+      "weightedAvgRating": 4.261203874963741
     },
     "castList": [
       {
@@ -1925,7 +2032,14 @@
     ],
     "castCrewCount": 6,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -1973,9 +2087,17 @@
       "Political content",
       "Shakespearian elements"
     ],
-    "castCrewCount": 18,
+    "castCrewCount": 20,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 3,
+      "maxRating": 5,
+      "avgRating": 4,
+      "distribution": {
+        "3": 1,
+        "5": 1
+      },
+      "weightedAvgRating": 3.3227809555928176
     },
     "castList": [
       {
@@ -2043,12 +2165,20 @@
         "role": "Vocal Arrangments/Composition"
       },
       {
+        "name": "Luciana Stich",
+        "role": "Intimacy Coordinator"
+      },
+      {
         "name": "Marsh Kelly",
         "role": "Costume Designer"
       },
       {
         "name": "Azu Esparza",
         "role": "Photographer"
+      },
+      {
+        "name": "Joe Sanders",
+        "role": "Drums"
       }
     ]
   },
@@ -2066,7 +2196,7 @@
     ],
     "castCrewCount": 12,
     "ratingStats": {
-      "totalCount": 2,
+      "totalCount": 3,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -2143,7 +2273,14 @@
     ],
     "castCrewCount": 5,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2187,7 +2324,7 @@
     ],
     "castCrewCount": 16,
     "ratingStats": {
-      "totalCount": 3,
+      "totalCount": 5,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -2317,7 +2454,7 @@
     ],
     "castCrewCount": 6,
     "ratingStats": {
-      "totalCount": 3,
+      "totalCount": 7,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -2368,7 +2505,14 @@
     ],
     "castCrewCount": 7,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2421,19 +2565,21 @@
     ],
     "castCrewCount": 16,
     "ratingStats": {
-      "totalCount": 2,
-      "minRating": 3,
-      "maxRating": 4,
-      "avgRating": 3.5,
+      "totalCount": 7,
+      "minRating": 1,
+      "maxRating": 5,
+      "avgRating": 4,
       "distribution": {
-        "3": 1,
-        "4": 1
+        "1": 0.25,
+        "3": 0.25,
+        "4": 0.25,
+        "5": 1
       },
-      "weightedAvgRating": 3.3524704450894247
+      "weightedAvgRating": 2.5030255251443982
     },
     "castList": [
       {
-        "name": "Ian Bell Bell",
+        "name": "Ian Bell",
         "role": "Director/Writer"
       },
       {
@@ -2514,7 +2660,14 @@
     ],
     "castCrewCount": 1,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 4.5,
+      "maxRating": 4.5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4.5": 1
+      },
+      "weightedAvgRating": 4.5
     },
     "castList": [
       {
@@ -2540,14 +2693,15 @@
     ],
     "castCrewCount": 16,
     "ratingStats": {
-      "totalCount": 4,
-      "minRating": 5,
+      "totalCount": 8,
+      "minRating": 4,
       "maxRating": 5,
-      "avgRating": 5,
+      "avgRating": 4.875,
       "distribution": {
+        "4": 0.14285714285714285,
         "5": 1
       },
-      "weightedAvgRating": 5
+      "weightedAvgRating": 4.712219759189675
     },
     "castList": [
       {
@@ -2632,14 +2786,15 @@
     "castCrewCount": 6,
     "videoLink": "https://www.youtube.com/embed/ywL1NWRKWzw",
     "ratingStats": {
-      "totalCount": 2,
-      "minRating": 5,
+      "totalCount": 8,
+      "minRating": 4.5,
       "maxRating": 5,
-      "avgRating": 5,
+      "avgRating": 4.9375,
       "distribution": {
-        "5": 1
+        "5": 1,
+        "4.5": 0.14285714285714285
       },
-      "weightedAvgRating": 5
+      "weightedAvgRating": 4.896056754524803
     },
     "castList": [
       {
@@ -2683,7 +2838,16 @@
     "castCrewCount": 8,
     "videoLink": "https://www.youtube.com/embed/dLCezdEOYPA",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 3.5,
+      "maxRating": 4.5,
+      "avgRating": 4,
+      "distribution": {
+        "4": 1,
+        "4.5": 1,
+        "3.5": 1
+      },
+      "weightedAvgRating": 3.877254951437641
     },
     "castList": [
       {
@@ -2737,7 +2901,14 @@
     "castCrewCount": 3,
     "videoLink": "https://www.youtube.com/embed/hZUw3XdIp8g",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2769,7 +2940,7 @@
     ],
     "castCrewCount": 3,
     "ratingStats": {
-      "totalCount": 3,
+      "totalCount": 8,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -2812,7 +2983,14 @@
     ],
     "castCrewCount": 14,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -2887,7 +3065,16 @@
     ],
     "castCrewCount": 11,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 7,
+      "minRating": 3,
+      "maxRating": 5,
+      "avgRating": 4.285714285714286,
+      "distribution": {
+        "3": 0.6666666666666666,
+        "5": 1,
+        "4.5": 0.6666666666666666
+      },
+      "weightedAvgRating": 3.674498304036384
     },
     "castList": [
       {
@@ -2954,7 +3141,14 @@
     ],
     "castCrewCount": 16,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3045,7 +3239,14 @@
     ],
     "castCrewCount": 15,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 4,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3127,7 +3328,14 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3153,14 +3361,15 @@
     ],
     "castCrewCount": 10,
     "ratingStats": {
-      "totalCount": 1,
+      "totalCount": 3,
       "minRating": 4.5,
-      "maxRating": 4.5,
-      "avgRating": 4.5,
+      "maxRating": 5,
+      "avgRating": 4.666666666666667,
       "distribution": {
+        "5": 0.5,
         "4.5": 1
       },
-      "weightedAvgRating": 4.5
+      "weightedAvgRating": 4.60696938456699
     },
     "castList": [
       {
@@ -3542,7 +3751,14 @@
     ],
     "castCrewCount": 5,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 4,
+      "maxRating": 4,
+      "avgRating": 4,
+      "distribution": {
+        "4": 1
+      },
+      "weightedAvgRating": 4
     },
     "castList": [
       {
@@ -3584,7 +3800,14 @@
     ],
     "castCrewCount": 1,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 2,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3675,15 +3898,15 @@
     ],
     "castCrewCount": 11,
     "ratingStats": {
-      "totalCount": 2,
+      "totalCount": 6,
       "minRating": 3,
       "maxRating": 5,
-      "avgRating": 4,
+      "avgRating": 4.666666666666667,
       "distribution": {
-        "3": 1,
+        "3": 0.2,
         "5": 1
       },
-      "weightedAvgRating": 3.3227809555928176
+      "weightedAvgRating": 3.9807621135331592
     },
     "castList": [
       {
@@ -3788,7 +4011,7 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 1,
+      "totalCount": 3,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -3829,14 +4052,15 @@
     "castCrewCount": 2,
     "videoLink": "https://www.youtube.com/embed/Gm6ljWeTctM",
     "ratingStats": {
-      "totalCount": 5,
-      "minRating": 5,
+      "totalCount": 9,
+      "minRating": 4.5,
       "maxRating": 5,
-      "avgRating": 5,
+      "avgRating": 4.944444444444445,
       "distribution": {
-        "5": 1
+        "5": 1,
+        "4.5": 0.125
       },
-      "weightedAvgRating": 5
+      "weightedAvgRating": 4.9066231879859865
     },
     "castList": [
       {
@@ -3868,7 +4092,14 @@
     "castCrewCount": 10,
     "videoLink": "https://www.youtube.com/embed/0fLNjfslMSk?si=47GzfLf8pY4y1hPH",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -3928,7 +4159,14 @@
     ],
     "castCrewCount": 8,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -4034,7 +4272,7 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 1,
+      "totalCount": 2,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -4071,7 +4309,14 @@
     ],
     "castCrewCount": 7,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 4.5,
+      "maxRating": 4.5,
+      "avgRating": 4.5,
+      "distribution": {
+        "4.5": 1
+      },
+      "weightedAvgRating": 4.5
     },
     "castList": [
       {
@@ -4124,14 +4369,15 @@
     ],
     "castCrewCount": 3,
     "ratingStats": {
-      "totalCount": 1,
-      "minRating": 5,
+      "totalCount": 6,
+      "minRating": 3,
       "maxRating": 5,
-      "avgRating": 5,
+      "avgRating": 4.666666666666667,
       "distribution": {
+        "3": 0.2,
         "5": 1
       },
-      "weightedAvgRating": 5
+      "weightedAvgRating": 3.9807621135331592
     },
     "castList": [
       {
@@ -4163,14 +4409,16 @@
     ],
     "castCrewCount": 1,
     "ratingStats": {
-      "totalCount": 2,
-      "minRating": 5,
+      "totalCount": 6,
+      "minRating": 3.5,
       "maxRating": 5,
-      "avgRating": 5,
+      "avgRating": 4.666666666666667,
       "distribution": {
-        "5": 1
+        "5": 1,
+        "3.5": 0.25,
+        "4.5": 0.25
       },
-      "weightedAvgRating": 5
+      "weightedAvgRating": 4.300525620017413
     },
     "castList": [
       {
@@ -4259,16 +4507,15 @@
     ],
     "castCrewCount": 10,
     "ratingStats": {
-      "totalCount": 4,
-      "minRating": 2.5,
+      "totalCount": 3,
+      "minRating": 4,
       "maxRating": 5,
-      "avgRating": 4.125,
+      "avgRating": 4.666666666666667,
       "distribution": {
         "4": 0.5,
-        "5": 1,
-        "2.5": 0.5
+        "5": 1
       },
-      "weightedAvgRating": 3.3124450219279153
+      "weightedAvgRating": 4.414213562373095
     },
     "castList": [
       {
@@ -4470,7 +4717,15 @@
     ],
     "castCrewCount": 3,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 4,
+      "maxRating": 5,
+      "avgRating": 4.666666666666667,
+      "distribution": {
+        "4": 0.5,
+        "5": 1
+      },
+      "weightedAvgRating": 4.414213562373095
     },
     "castList": [
       {
@@ -4603,14 +4858,16 @@
     ],
     "castCrewCount": 3,
     "ratingStats": {
-      "totalCount": 1,
+      "totalCount": 3,
       "minRating": 2.5,
-      "maxRating": 2.5,
-      "avgRating": 2.5,
+      "maxRating": 5,
+      "avgRating": 4,
       "distribution": {
-        "2.5": 1
+        "5": 1,
+        "2.5": 1,
+        "4.5": 1
       },
-      "weightedAvgRating": 2.5
+      "weightedAvgRating": 3.1578820402059633
     },
     "castList": [
       {
@@ -4660,15 +4917,16 @@
     "castCrewCount": 5,
     "videoLink": "https://www.youtube.com/embed/nJsJZjdusow",
     "ratingStats": {
-      "totalCount": 4,
-      "minRating": 4,
+      "totalCount": 7,
+      "minRating": 3.5,
       "maxRating": 5,
       "avgRating": 4.5,
       "distribution": {
-        "4": 1,
-        "5": 1
+        "4": 0.5,
+        "5": 1,
+        "3.5": 0.25
       },
-      "weightedAvgRating": 4.261203874963741
+      "weightedAvgRating": 4.148686324123939
     },
     "castList": [
       {
@@ -4757,7 +5015,16 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 4,
+      "minRating": 3.5,
+      "maxRating": 5,
+      "avgRating": 4,
+      "distribution": {
+        "4": 0.5,
+        "5": 0.5,
+        "3.5": 1
+      },
+      "weightedAvgRating": 3.7483537960818953
     },
     "castList": [
       {
@@ -4815,7 +5082,14 @@
     ],
     "castCrewCount": 4,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 4,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -4921,7 +5195,14 @@
     "castCrewCount": 1,
     "videoLink": "https://www.youtube.com/embed/iwE1bSQO8m8?si=05sPnUOkDxTIP5qp",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 4,
+      "maxRating": 4,
+      "avgRating": 4,
+      "distribution": {
+        "4": 1
+      },
+      "weightedAvgRating": 4
     },
     "castList": [
       {
@@ -5007,7 +5288,7 @@
     ],
     "castCrewCount": 1,
     "ratingStats": {
-      "totalCount": 2,
+      "totalCount": 3,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -5037,7 +5318,14 @@
     ],
     "castCrewCount": 11,
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 2.5,
+      "maxRating": 2.5,
+      "avgRating": 2.5,
+      "distribution": {
+        "2.5": 1
+      },
+      "weightedAvgRating": 2.5
     },
     "castList": [
       {
@@ -5107,7 +5395,7 @@
     "castCrewCount": 13,
     "videoLink": "https://www.youtube.com/embed/c2oiaCubF5w",
     "ratingStats": {
-      "totalCount": 6,
+      "totalCount": 17,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -5186,7 +5474,7 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 1,
+      "totalCount": 4,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -5224,7 +5512,14 @@
     "castCrewCount": 1,
     "videoLink": "https://www.youtube.com/watch?v=l5p757VzpZM",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 1,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
@@ -5248,7 +5543,7 @@
     ],
     "castCrewCount": 21,
     "ratingStats": {
-      "totalCount": 2,
+      "totalCount": 3,
       "minRating": 5,
       "maxRating": 5,
       "avgRating": 5,
@@ -5363,7 +5658,14 @@
     "castCrewCount": 6,
     "videoLink": "https://www.youtube.com/shorts/J1h-6qeRl6M",
     "ratingStats": {
-      "totalCount": 0
+      "totalCount": 3,
+      "minRating": 5,
+      "maxRating": 5,
+      "avgRating": 5,
+      "distribution": {
+        "5": 1
+      },
+      "weightedAvgRating": 5
     },
     "castList": [
       {
