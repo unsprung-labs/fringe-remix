@@ -1304,17 +1304,17 @@
     ],
     "castCrewCount": 4,
     "ratingStats": {
-      "totalCount": 34,
+      "totalCount": 37,
       "minRating": 3.5,
       "maxRating": 5,
-      "avgRating": 4.852941176470588,
+      "avgRating": 4.851351351351352,
       "distribution": {
-        "4": 0.037037037037037035,
+        "4": 0.034482758620689655,
         "5": 1,
-        "4.5": 0.18518518518518517,
-        "3.5": 0.037037037037037035
+        "4.5": 0.20689655172413793,
+        "3.5": 0.034482758620689655
       },
-      "weightedAvgRating": 4.689284002210499
+      "weightedAvgRating": 4.695131690603886
     },
     "castList": [
       {
@@ -1863,19 +1863,19 @@
     "castCrewCount": 13,
     "videoLink": "https://www.youtube.com/embed/hst40aryENo",
     "ratingStats": {
-      "totalCount": 55,
+      "totalCount": 56,
       "minRating": 0.5,
       "maxRating": 5,
-      "avgRating": 4.654545454545454,
+      "avgRating": 4.651785714285714,
       "distribution": {
         "3": 0.02564102564102564,
         "4": 0.1282051282051282,
         "5": 1,
-        "4.5": 0.15384615384615385,
+        "4.5": 0.1794871794871795,
         "3.5": 0.07692307692307693,
         "0.5": 0.02564102564102564
       },
-      "weightedAvgRating": 3.8750578980002386
+      "weightedAvgRating": 3.887022761078753
     },
     "castList": [
       {
@@ -1950,16 +1950,16 @@
     "castCrewCount": 19,
     "videoLink": "https://www.youtube.com/embed/ImzECjuDmQA",
     "ratingStats": {
-      "totalCount": 15,
+      "totalCount": 17,
       "minRating": 3,
       "maxRating": 5,
-      "avgRating": 4.833333333333333,
+      "avgRating": 4.852941176470588,
       "distribution": {
-        "3": 0.07692307692307693,
+        "3": 0.06666666666666667,
         "5": 1,
-        "4.5": 0.07692307692307693
+        "4.5": 0.06666666666666667
       },
-      "weightedAvgRating": 4.435396036118101
+      "weightedAvgRating": 4.486646165654566
     },
     "castList": [
       {
@@ -2155,18 +2155,18 @@
     ],
     "castCrewCount": 12,
     "ratingStats": {
-      "totalCount": 30,
+      "totalCount": 31,
       "minRating": 2,
       "maxRating": 5,
-      "avgRating": 4.5,
+      "avgRating": 4.516129032258065,
       "distribution": {
-        "2": 0.06666666666666667,
-        "4": 0.26666666666666666,
+        "2": 0.0625,
+        "4": 0.25,
         "5": 1,
-        "4.5": 0.4666666666666667,
-        "3.5": 0.2
+        "4.5": 0.4375,
+        "3.5": 0.1875
       },
-      "weightedAvgRating": 3.991540868707219
+      "weightedAvgRating": 4.008339541759921
     },
     "castList": [
       {
@@ -2406,15 +2406,16 @@
     ],
     "castCrewCount": 12,
     "ratingStats": {
-      "totalCount": 19,
+      "totalCount": 20,
       "minRating": 4,
       "maxRating": 5,
-      "avgRating": 4.947368421052632,
+      "avgRating": 4.925,
       "distribution": {
         "4": 0.05555555555555555,
-        "5": 1
+        "5": 1,
+        "4.5": 0.05555555555555555
       },
-      "weightedAvgRating": 4.86420351821066
+      "weightedAvgRating": 4.834683619025394
     },
     "castList": [
       {
@@ -2681,17 +2682,17 @@
     ],
     "castCrewCount": 6,
     "ratingStats": {
-      "totalCount": 28,
+      "totalCount": 29,
       "minRating": 3.5,
       "maxRating": 5,
-      "avgRating": 4.803571428571429,
+      "avgRating": 4.793103448275862,
       "distribution": {
         "4": 0.05,
         "5": 1,
-        "4.5": 0.3,
+        "4.5": 0.35,
         "3.5": 0.05
       },
-      "weightedAvgRating": 4.622551636158776
+      "weightedAvgRating": 4.616872132860145
     },
     "castList": [
       {
@@ -3147,16 +3148,16 @@
     "castCrewCount": 3,
     "videoLink": "https://www.youtube.com/embed/hZUw3XdIp8g",
     "ratingStats": {
-      "totalCount": 18,
+      "totalCount": 19,
       "minRating": 3.5,
       "maxRating": 5,
-      "avgRating": 4.861111111111111,
+      "avgRating": 4.868421052631579,
       "distribution": {
         "5": 1,
-        "3.5": 0.06666666666666667,
-        "4.5": 0.13333333333333333
+        "3.5": 0.0625,
+        "4.5": 0.125
       },
-      "weightedAvgRating": 4.6567658160024035
+      "weightedAvgRating": 4.671292967028076
     },
     "castList": [
       {
@@ -3816,17 +3817,17 @@
     ],
     "castCrewCount": 13,
     "ratingStats": {
-      "totalCount": 42,
+      "totalCount": 43,
       "minRating": 3,
       "maxRating": 5,
-      "avgRating": 4.809523809523809,
+      "avgRating": 4.813953488372093,
       "distribution": {
-        "3": 0.030303030303030304,
-        "4": 0.12121212121212122,
+        "3": 0.029411764705882353,
+        "4": 0.11764705882352941,
         "5": 1,
-        "4.5": 0.12121212121212122
+        "4.5": 0.11764705882352941
       },
-      "weightedAvgRating": 4.553623050631315
+      "weightedAvgRating": 4.561338049460544
     },
     "castList": [
       {
@@ -4093,16 +4094,17 @@
     ],
     "castCrewCount": 5,
     "ratingStats": {
-      "totalCount": 10,
+      "totalCount": 11,
       "minRating": 2.5,
       "maxRating": 5,
-      "avgRating": 4.45,
+      "avgRating": 4.454545454545454,
       "distribution": {
         "4": 0.5,
         "5": 1,
-        "2.5": 0.16666666666666666
+        "2.5": 0.16666666666666666,
+        "4.5": 0.16666666666666666
       },
-      "weightedAvgRating": 3.8182942230793158
+      "weightedAvgRating": 3.873054043893136
     },
     "castList": [
       {
@@ -4221,19 +4223,19 @@
     "castCrewCount": 2,
     "videoLink": "https://www.youtube.com/embed/JS3wOM7baHE?si=H2n3TcmlFAawjEWl",
     "ratingStats": {
-      "totalCount": 9,
+      "totalCount": 10,
       "minRating": 1.5,
       "maxRating": 5,
-      "avgRating": 3.3333333333333335,
+      "avgRating": 3.5,
       "distribution": {
         "3": 1,
-        "5": 0.5,
+        "5": 1,
         "2.5": 1,
         "1.5": 0.5,
         "4.5": 1,
         "3.5": 0.5
       },
-      "weightedAvgRating": 2.726866804188197
+      "weightedAvgRating": 2.7801502791590655
     },
     "castList": [
       {
@@ -4265,16 +4267,17 @@
     ],
     "castCrewCount": 11,
     "ratingStats": {
-      "totalCount": 21,
+      "totalCount": 22,
       "minRating": 3,
       "maxRating": 5,
-      "avgRating": 4.761904761904762,
+      "avgRating": 4.75,
       "distribution": {
         "3": 0.1111111111111111,
         "4": 0.05555555555555555,
-        "5": 1
+        "5": 1,
+        "4.5": 0.05555555555555555
       },
-      "weightedAvgRating": 4.243674464835037
+      "weightedAvgRating": 4.257919193006876
     },
     "castList": [
       {
@@ -4388,16 +4391,15 @@
     "castCrewCount": 2,
     "ratingStats": {
       "totalCount": 10,
-      "minRating": 2.5,
+      "minRating": 3.5,
       "maxRating": 5,
-      "avgRating": 4.55,
+      "avgRating": 4.8,
       "distribution": {
         "5": 1,
-        "3.5": 0.14285714285714285,
-        "2.5": 0.14285714285714285,
-        "4.5": 0.14285714285714285
+        "3.5": 0.125,
+        "4.5": 0.125
       },
-      "weightedAvgRating": 3.7993720835969986
+      "weightedAvgRating": 4.503419365234188
     },
     "castList": [
       {
@@ -4542,18 +4544,18 @@
     ],
     "castCrewCount": 8,
     "ratingStats": {
-      "totalCount": 22,
+      "totalCount": 23,
       "minRating": 2.5,
       "maxRating": 5,
-      "avgRating": 4.545454545454546,
+      "avgRating": 4.5,
       "distribution": {
         "4": 0.2857142857142857,
         "5": 1,
         "4.5": 0.07142857142857142,
-        "3.5": 0.14285714285714285,
+        "3.5": 0.21428571428571427,
         "2.5": 0.07142857142857142
       },
-      "weightedAvgRating": 4.027493735701928
+      "weightedAvgRating": 3.981724922366975
     },
     "castList": [
       {
@@ -4608,16 +4610,16 @@
     "castCrewCount": 6,
     "videoLink": "https://www.youtube.com/embed/L3RVjNG2gXc",
     "ratingStats": {
-      "totalCount": 7,
+      "totalCount": 8,
       "minRating": 3.5,
       "maxRating": 5,
-      "avgRating": 4.642857142857143,
+      "avgRating": 4.6875,
       "distribution": {
-        "4": 0.2,
+        "4": 0.16666666666666666,
         "5": 1,
-        "3.5": 0.2
+        "3.5": 0.16666666666666666
       },
-      "weightedAvgRating": 4.256642567779798
+      "weightedAvgRating": 4.31480245235709
     },
     "castList": [
       {
@@ -4668,17 +4670,17 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 14,
+      "totalCount": 15,
       "minRating": 3.5,
       "maxRating": 5,
-      "avgRating": 4.75,
+      "avgRating": 4.766666666666667,
       "distribution": {
-        "4": 0.1,
+        "4": 0.09090909090909091,
         "5": 1,
-        "3.5": 0.1,
-        "4.5": 0.2
+        "3.5": 0.09090909090909091,
+        "4.5": 0.18181818181818182
       },
-      "weightedAvgRating": 4.482055658408752
+      "weightedAvgRating": 4.506196047997188
     },
     "castList": [
       {
@@ -5591,15 +5593,15 @@
     ],
     "castCrewCount": 2,
     "ratingStats": {
-      "totalCount": 7,
+      "totalCount": 8,
       "minRating": 4.5,
       "maxRating": 5,
-      "avgRating": 4.928571428571429,
+      "avgRating": 4.9375,
       "distribution": {
         "5": 1,
-        "4.5": 0.16666666666666666
+        "4.5": 0.14285714285714285
       },
-      "weightedAvgRating": 4.882793810842539
+      "weightedAvgRating": 4.896056754524803
     },
     "castList": [
       {
@@ -5628,18 +5630,18 @@
     ],
     "castCrewCount": 4,
     "ratingStats": {
-      "totalCount": 41,
+      "totalCount": 43,
       "minRating": 1.5,
       "maxRating": 5,
-      "avgRating": 4.7317073170731705,
+      "avgRating": 4.72093023255814,
       "distribution": {
-        "3": 0.058823529411764705,
-        "4": 0.08823529411764706,
+        "3": 0.05714285714285714,
+        "4": 0.11428571428571428,
         "5": 1,
-        "1.5": 0.029411764705882353,
-        "4.5": 0.029411764705882353
+        "1.5": 0.02857142857142857,
+        "4.5": 0.02857142857142857
       },
-      "weightedAvgRating": 4.010292457262693
+      "weightedAvgRating": 4.024400390392534
     },
     "castList": [
       {
@@ -5842,15 +5844,15 @@
     ],
     "castCrewCount": 1,
     "ratingStats": {
-      "totalCount": 2,
+      "totalCount": 3,
       "minRating": 1.5,
       "maxRating": 3,
-      "avgRating": 2.25,
+      "avgRating": 2.5,
       "distribution": {
         "3": 1,
-        "1.5": 1
+        "1.5": 0.5
       },
-      "weightedAvgRating": 2.028705667634137
+      "weightedAvgRating": 2.281836925980559
     },
     "castList": [
       {
@@ -6141,16 +6143,16 @@
     ],
     "castCrewCount": 21,
     "ratingStats": {
-      "totalCount": 10,
+      "totalCount": 11,
       "minRating": 3,
       "maxRating": 5,
-      "avgRating": 4.7,
+      "avgRating": 4.7272727272727275,
       "distribution": {
-        "3": 0.125,
-        "4": 0.125,
+        "3": 0.1111111111111111,
+        "4": 0.1111111111111111,
         "5": 1
       },
-      "weightedAvgRating": 4.174971678288998
+      "weightedAvgRating": 4.223432688407421
     },
     "castList": [
       {
@@ -6258,17 +6260,17 @@
     "castCrewCount": 6,
     "videoLink": "https://www.youtube.com/shorts/J1h-6qeRl6M",
     "ratingStats": {
-      "totalCount": 15,
+      "totalCount": 16,
       "minRating": 3.5,
       "maxRating": 5,
-      "avgRating": 4.733333333333333,
+      "avgRating": 4.75,
       "distribution": {
-        "4": 0.18181818181818182,
+        "4": 0.16666666666666666,
         "5": 1,
-        "4.5": 0.09090909090909091,
-        "3.5": 0.09090909090909091
+        "4.5": 0.08333333333333333,
+        "3.5": 0.08333333333333333
       },
-      "weightedAvgRating": 4.4429195637486885
+      "weightedAvgRating": 4.466678882443464
     },
     "castList": [
       {
